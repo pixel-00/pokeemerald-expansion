@@ -28,7 +28,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_WATERFALL]                       = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_SOOTOPOLIS_DEEP_WATER]           = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_OCEAN_WATER]                     = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE | TILE_FLAG_HAS_ENCOUNTERS,
-    [MB_PUDDLE]                          = TILE_FLAG_UNUSED,
+    [MB_PUDDLE]                          = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_SHALLOW_WATER]                   = TILE_FLAG_UNUSED,
     [MB_NO_SURFACING]                    = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_STAIRS_OUTSIDE_ABANDONED_SHIP]   = TILE_FLAG_UNUSED,
@@ -819,6 +819,7 @@ bool8 MetatileBehavior_IsBridgeOverWaterNoEdge(u8 metatileBehavior)
 bool8 MetatileBehavior_IsLandWildEncounter(u8 metatileBehavior)
 {
     if (MetatileBehavior_IsSurfableWaterOrUnderwater(metatileBehavior) == FALSE
+     && MetatileBehavior_IsPuddle(metatileBehavior) == FALSE
      && MetatileBehavior_IsEncounterTile(metatileBehavior) == TRUE)
         return TRUE;
     else
@@ -828,6 +829,15 @@ bool8 MetatileBehavior_IsLandWildEncounter(u8 metatileBehavior)
 bool8 MetatileBehavior_IsWaterWildEncounter(u8 metatileBehavior)
 {
     if (MetatileBehavior_IsSurfableWaterOrUnderwater(metatileBehavior) == TRUE
+     && MetatileBehavior_IsEncounterTile(metatileBehavior) == TRUE)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsPuddleWildEncounter(u8 metatileBehavior)
+{
+    if (MetatileBehavior_IsPuddle(metatileBehavior) == TRUE
      && MetatileBehavior_IsEncounterTile(metatileBehavior) == TRUE)
         return TRUE;
     else
