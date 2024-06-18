@@ -735,6 +735,24 @@ LittlerootTown_BrendansHouse_1F_Movement_FaceLeft:
 	face_left
 	step_end
 
+PlayersHouse_1F_EventScript_TV::
+# 377 "data/maps/LittlerootTown_BrendansHouse_1F/scripts.pory"
+	lockall
+# 378 "data/maps/LittlerootTown_BrendansHouse_1F/scripts.pory"
+	msgbox PlayersHouse_1F_EventScript_TV_Text_0
+# 379 "data/maps/LittlerootTown_BrendansHouse_1F/scripts.pory"
+	releaseall
+	end
+
+
+PlayersHouse_1F_EventScript_TV_Text_0:
+# 378 "data/maps/LittlerootTown_BrendansHouse_1F/scripts.pory"
+	.string "It's a documentary about the life of\n"
+	.string "Cynthia, the current Champion of the\l"
+	.string "Sinnoh region.\l"
+	.string "… … … … … … … … … … … … … … … …\p"
+	.string "Better get going!$"
+
 PlayersHouse_1F_Text_GoodMorningClock::
 # 368 "data/maps/LittlerootTown_BrendansHouse_1F/scripts.pory"
 	.string "MOM: Good morning, {PLAYER}!\n"

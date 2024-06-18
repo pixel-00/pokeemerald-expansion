@@ -370,5 +370,12 @@ text PlayersHouse_1F_Text_GoodMorningClock {
 }
 
 text PlayersHouse_1F_Text_RunningShoesManual {
-    format("This book is titled ‘Principles of Mathematical Analysis’ by Walter Rudin.\p… … … … … … … … … … … … … … … …\p Looks tough!")
+    format("This book is titled ‘Principles of Mathematical Analysis’ by Walter Rudin.\p … … … … … … … … … … … … … … … …\p Looks tough!")
+}
+
+script PlayersHouse_1F_EventScript_TV {
+    lockall
+    msgbox(format("It's a documentary about the life of Cynthia, the current Champion of the Sinnoh region.\l … … … … … … … … … … … … … … … …\p Better get going!"))
+    releaseall
+    end
 }
