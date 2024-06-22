@@ -1254,12 +1254,12 @@ TrendWatcher_Text_Intro::
 @ Identical to below, may have been different in other languages
 TrendWatcher_Text_MaleTaughtMePhrase::
 	.string "Old man: {STR_VAR_1} {STR_VAR_2}\n"
-	.string "was what {STR_VAR_3} from LITTLEROOT\l"
+	.string "was what {STR_VAR_3} from TINYBUD\l"
 	.string "taught me as being trendy…$"
 
 TrendWatcher_Text_FemaleTaughtMePhrase::
 	.string "Old man: {STR_VAR_1} {STR_VAR_2}\n"
-	.string "was what {STR_VAR_3} from LITTLEROOT\l"
+	.string "was what {STR_VAR_3} from TINYBUD\l"
 	.string "taught me as being trendy…$"
 
 TrendWatcher_Text_PhraseWasHopeless::

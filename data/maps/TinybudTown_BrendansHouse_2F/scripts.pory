@@ -1,0 +1,84 @@
+raw `
+.set LOCALID_RIVAL, 1
+
+TinybudTown_BrendansHouse_2F_OnTransition:
+    call_if_eq VAR_INTRO_STATE, 1, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
+	call SecretBase_EventScript_SetDecorationFlags
+	setvar VAR_SECRET_BASE_INITIALIZED, 0
+	end
+
+TinybudTown_BrendansHouse_2F_EventScript_CheckInitDecor::
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, SecretBase_EventScript_InitDecorations
+	end
+
+TinybudTown_BrendansHouse_2F_EventScript_CheckPlayersPC::
+	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
+	playse SE_PC_ON
+	msgbox gText_PlayerHouseBootPC, MSGBOX_DEFAULT
+	special BedroomPC
+	waitstate
+	releaseall
+	end
+
+TinybudTown_BrendansHouse_2F_EventScript_TurnOffPlayerPC::
+	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
+	playse SE_PC_OFF
+	special DoPCTurnOffEffect
+	releaseall
+	end
+
+TinybudTown_BrendansHouse_2F_EventScript_CheckRivalsPC::
+	msgbox gText_PokemonTrainerSchoolEmail, MSGBOX_DEFAULT
+	releaseall
+	end
+
+PlayersHouse_2F_EventScript_Notebook::
+	msgbox PlayersHouse_2F_Text_Notebook, MSGBOX_SIGN
+	end
+
+PlayersHouse_2F_Text_ClockIsStopped:
+	.string "The clock is stopped…\p"
+	.string "Better set it and start it!$"
+
+PlayersHouse_2F_Text_Notebook:
+	.string "{PLAYER} flipped open the notebook.\p"
+	.string "ADVENTURE RULE NO. 1\n"
+	.string "Open the MENU with START.\p"
+	.string "ADVENTURE RULE NO. 2\n"
+	.string "Record your progress with SAVE.\p"
+	.string "The remaining pages are blank…$"
+
+Common_Text_LookCloserAtMap:
+	.string "{PLAYER} took a closer look at the\n"
+	.string "HOENN region map.$"
+`
+
+mapscripts TinybudTown_BrendansHouse_2F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: TinybudTown_BrendansHouse_2F_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_INTRO_STATE, 0: TinybudTown_BrendansHouse_2F_OnFrame_0
+    ]
+	MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
+        VAR_SECRET_BASE_INITIALIZED, 0: TinybudTown_BrendansHouse_2F_EventScript_CheckInitDecor
+    ]
+}
+
+script TinybudTown_BrendansHouse_2F_OnFrame_0 {
+    lockall
+    setrespawn(HEAL_LOCATION_TINYBUD_TOWN_BRENDANS_HOUSE_2F)
+	setvar(VAR_INTRO_STATE, 1)
+	setflag(FLAG_HIDE_TINYBUD_TOWN_MAYS_HOUSE_MOM)
+	setvar(VAR_TINYBUD_HOUSES_STATE_BRENDAN, 1)
+	setdynamicwarp(MAP_TINYBUD_TOWN, 3, 10)
+    setflag(FLAG_SYS_B_DASH)
+	releaseall
+	end
+}
+
+script PlayersHouse_2F_EventScript_TogepiDoll {
+	lockall
+	msgbox(format("It's a cute Togepi plush."))
+	releaseall
+	end
+}

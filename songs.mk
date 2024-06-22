@@ -297,7 +297,7 @@ $(MID_SUBDIR)/mus_encounter_magma.s: %.s: %.mid
 $(MID_SUBDIR)/mus_lilycove.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G054 -V085
 
-$(MID_SUBDIR)/mus_littleroot.s: %.s: %.mid
+$(MID_SUBDIR)/mus_tinybud.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G051 -V100
 
 $(MID_SUBDIR)/mus_surf.s: %.s: %.mid
@@ -603,7 +603,7 @@ $(MID_SUBDIR)/mus_link_contest_p3.s: %.s: %.mid
 $(MID_SUBDIR)/mus_link_contest_p4.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G042 -V090
 
-$(MID_SUBDIR)/mus_littleroot_test.s: %.s: %.mid
+$(MID_SUBDIR)/mus_tinybud_test.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G034 -V099
 
 $(MID_SUBDIR)/mus_credits.s: %.s: %.mid

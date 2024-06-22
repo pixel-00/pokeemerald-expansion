@@ -1,0 +1,195 @@
+raw `
+.set LOCALID_TWIN, 1
+.set LOCALID_MOM, 4
+.set LOCALID_RIVAL, 7
+.set LOCALID_BIRCH, 8
+
+TinybudTown_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, TinybudTown_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, TinybudTown_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, TinybudTown_OnWarp
+	.byte 0
+
+	@ State descriptions for VAR_TINYBUD_TOWN_STATE
+	@ 1: Met Rival
+	@ 2: Saving Birch
+	@ 3: Received Pokedex
+	@ 4: Received Running Shoes
+
+	@ State descriptions for VAR_INTRO_STATE
+	@ 1: In truck male
+	@ 2: In truck female
+	@ 3: Entered house
+	@ 4: Told to go set clock
+	@ 5: Entered 2F to set clock
+	@ 6: Set clock
+	@ 7: Told to go meet rival
+
+	@ State descriptions for VAR_TINYBUD_HOUSES_STATE_MAY
+	@                    and VAR_TINYBUD_HOUSES_STATE_BRENDAN
+	@ 1: On Truck (and is corresponding gender)
+	@ 2: Met Rival's Mom (and is corresponding gender)
+	@ 3: Entered Hall of Fame
+	@ 4: Completed Lati TV / SS Ticket event
+	@ 5: Exited house after above event
+
+	@ State descriptions for VAR_TINYBUD_RIVAL_STATE
+	@ 1: Never occurs
+	@ 2: Entered Rival's bedroom
+	@ 3: Met Rival
+	@ 4: Received Pokedex
+
+
+TinybudTown_OnTransition:
+	setflag FLAG_VISITED_TINYBUD_TOWN
+	call Common_EventScript_SetupRivalGfxId
+	call_if_eq VAR_INTRO_STATE, 2, TinybudTown_EventScript_MoveMomToMaysDoor
+	call_if_eq VAR_TINYBUD_TOWN_STATE, 3, TinybudTown_EventScript_SetMomStandingInFrontOfDoorPos
+	call_if_eq VAR_TINYBUD_HOUSES_STATE_MAY, 4, TinybudTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
+	call_if_eq VAR_TINYBUD_HOUSES_STATE_BRENDAN, 4, TinybudTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
+	call_if_eq VAR_OLDALE_RIVAL_STATE, 1, TinybudTown_EventScript_MoveRivalFromOldale
+	call_if_eq VAR_TINYBUD_RIVAL_STATE, 3, TinybudTown_EventScript_SetRivalLeftForRoute103
+	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, TinybudTown_EventScript_HideMapNamePopup
+	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, TinybudTown_EventScript_LeftLabAfterDexUpgrade
+	end
+
+TinybudTown_EventScript_LeftLabAfterDexUpgrade::
+	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3
+	return
+
+TinybudTown_EventScript_HideMapNamePopup::
+	setflag FLAG_HIDE_MAP_NAME_POPUP
+	return
+
+TinybudTown_EventScript_SetRivalLeftForRoute103::
+	setflag FLAG_RIVAL_LEFT_FOR_ROUTE103
+	return
+
+TinybudTown_EventScript_MoveRivalFromOldale::
+	setvar VAR_OLDALE_RIVAL_STATE, 2
+	setflag FLAG_HIDE_OLDALE_TOWN_RIVAL
+	return
+
+TinybudTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent::
+	setvar VAR_TINYBUD_HOUSES_STATE_MAY, 5
+	setvar VAR_TINYBUD_HOUSES_STATE_BRENDAN, 5
+	return
+
+TinybudTown_EventScript_MoveMomToMaysDoor::
+	setobjectxyperm LOCALID_MOM, 14, 8
+	return
+
+TinybudTown_EventScript_SetMomStandingInFrontOfDoorPos::
+	setobjectmovementtype LOCALID_MOM, MOVEMENT_TYPE_FACE_DOWN
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, TinybudTown_EventScript_SetMomInFrontOfDoorMale
+	call_if_eq VAR_RESULT, FEMALE, TinybudTown_EventScript_SetMomInFrontOfDoorFemale
+	return
+
+TinybudTown_EventScript_SetMomInFrontOfDoorMale::
+	setobjectxyperm LOCALID_MOM, 5, 9
+	return
+
+TinybudTown_EventScript_SetMomInFrontOfDoorFemale::
+	setobjectxyperm LOCALID_MOM, 14, 9
+	return
+
+TinybudTown_OnFrame:
+	.2byte 0
+
+TinybudTown_OnWarp:
+	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, TinybudTown_EventScript_SetRivalBirchPosForDexUpgrade
+	.2byte 0
+
+TinybudTown_EventScript_SetRivalBirchPosForDexUpgrade::
+	addobject LOCALID_BIRCH
+	addobject LOCALID_RIVAL
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, TinybudTown_EventScript_SetRivalBirchPosForDexUpgradeMale
+	goto TinybudTown_EventScript_SetRivalBirchPosForDexUpgradeFemale
+	end
+
+TinybudTown_EventScript_SetRivalBirchPosForDexUpgradeMale::
+	setobjectxy LOCALID_RIVAL, 6, 10
+	setobjectxy LOCALID_BIRCH, 5, 10
+	end
+
+TinybudTown_EventScript_SetRivalBirchPosForDexUpgradeFemale::
+	setobjectxy LOCALID_RIVAL, 13, 10
+	setobjectxy LOCALID_BIRCH, 14, 10
+	end
+
+TinybudTown_EventScript_FatMan::
+	msgbox TinybudTown_Text_CanUsePCToStoreItems, MSGBOX_NPC
+	end
+
+TinybudTown_EventScript_Boy::
+	msgbox TinybudTown_Text_BirchSpendsDaysInLab, MSGBOX_NPC
+	end
+
+TinybudTown_EventScript_TownSign::
+	msgbox TinybudTown_Text_TownSign, MSGBOX_SIGN
+	end
+
+TinybudTown_EventScript_BirchsLabSign::
+	msgbox TinybudTown_Text_ProfBirchsLab, MSGBOX_SIGN
+	end
+
+TinybudTown_EventScript_PlayersHouseSign::
+	lockall
+	msgbox TinybudTown_Text_PlayersHouse, MSGBOX_DEFAULT
+	releaseall
+	end
+
+TinybudTown_EventScript_BirchsHouseSignFemale::
+	msgbox TinybudTown_Text_ProfBirchsHouse, MSGBOX_DEFAULT
+	return
+
+TinybudTown_EventScript_BirchsHouseSignMale::
+	msgbox TinybudTown_Text_ProfBirchsHouse, MSGBOX_DEFAULT
+	return
+
+TinybudTown_Text_CanUsePCToStoreItems:
+	.string "If you use a PC, you can store items\n"
+	.string "and POKéMON.\p"
+	.string "The power of science is staggering!$"
+
+TinybudTown_Text_BirchSpendsDaysInLab:
+	.string "PROF. BIRCH spends days in his LAB\n"
+	.string "studying, then he'll suddenly go out in\l"
+	.string "the wild to do more research…\p"
+	.string "When does PROF. BIRCH spend time\n"
+	.string "at home?$"
+
+TinybudTown_Text_TownSign:
+	.string "TINYBUD TOWN\n"
+	.string "“A town that can't be shaded any hue.”$"
+
+TinybudTown_Text_ProfBirchsLab:
+	.string "PROF. BIRCH'S POKéMON LAB$"
+
+TinybudTown_Text_PlayersHouse:
+	.string "{PLAYER}'s HOUSE$"
+
+TinybudTown_Text_ProfBirchsHouse:
+	.string "PROF. BIRCH'S HOUSE$"
+`
+
+script TinybudTown_EventScript_Girl {
+	lock
+	faceplayer
+	msgbox(format("My brother caught this ZIGZAGOON for me!"))
+	release
+	end
+}
+
+script TinybudTown_EventScript_Zigzagoon {
+	lock
+	faceplayer
+	waitse
+	playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_NORMAL)
+	msgbox("ZIGZAGOON is full of energy!")
+	waitmoncry
+	release
+	end
+}

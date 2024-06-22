@@ -13,13 +13,13 @@
 # 7 "data/scripts/players_house.pory"
 PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet::
 # 8 "data/scripts/players_house.pory"
-	setvar VAR_LITTLEROOT_INTRO_STATE, 2
+	setvar VAR_INTRO_STATE, 2
 # 9 "data/scripts/players_house.pory"
 	return
 # 10 "data/scripts/players_house.pory"
 
 # 11 "data/scripts/players_house.pory"
-LittlerootTown_BrendansHouse_2F_EventScript_WallClock::
+TinybudTown_BrendansHouse_2F_EventScript_WallClock::
 # 12 "data/scripts/players_house.pory"
 	lockall
 # 13 "data/scripts/players_house.pory"
@@ -43,7 +43,7 @@ PlayersHouse_2F_EventScript_WallClock::
 # 22 "data/scripts/players_house.pory"
 	delay 30
 # 23 "data/scripts/players_house.pory"
-	setvar VAR_LITTLEROOT_INTRO_STATE, 3
+	setvar VAR_INTRO_STATE, 3
 # 24 "data/scripts/players_house.pory"
 	setflag FLAG_SET_WALL_CLOCK
 # 25 "data/scripts/players_house.pory"
@@ -137,7 +137,7 @@ PlayersHouse_2F_Movement_MomExitsFemale:
 # 69 "data/scripts/players_house.pory"
 PlayersHouse_1F_EventScript_SetWatchedBroadcast::
 # 70 "data/scripts/players_house.pory"
-	setvar VAR_LITTLEROOT_INTRO_STATE, 7
+	setvar VAR_INTRO_STATE, 7
 # 71 "data/scripts/players_house.pory"
 	releaseall
 # 72 "data/scripts/players_house.pory"
@@ -459,673 +459,673 @@ PlayersHouse_1F_EventScript_Mom::
 # 230 "data/scripts/players_house.pory"
 	faceplayer
 # 231 "data/scripts/players_house.pory"
-	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 3, PlayersHouse_1F_EventScript_MomBeforeStarter
+	call_if_eq VAR_INTRO_STATE, 3, PlayersHouse_1F_EventScript_MomBeforeStarter
 # 232 "data/scripts/players_house.pory"
-	goto_if_eq VAR_LITTLEROOT_HOUSES_STATE_MAY, 4, PlayersHouse_1F_EventScript_DontPushYourselfTooHard
+	call_if_eq VAR_INTRO_STATE, 4, PlayersHouse_1F_EventScript_MomAreYouMeetingDad
 # 233 "data/scripts/players_house.pory"
-	goto_if_eq VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 4, PlayersHouse_1F_EventScript_DontPushYourselfTooHard
+	goto_if_eq VAR_TINYBUD_HOUSES_STATE_MAY, 4, PlayersHouse_1F_EventScript_DontPushYourselfTooHard
 # 234 "data/scripts/players_house.pory"
-	goto_if_set FLAG_HAS_MATCH_CALL, PlayersHouse_1F_EventScript_TryRegisterMom
+	goto_if_eq VAR_TINYBUD_HOUSES_STATE_BRENDAN, 4, PlayersHouse_1F_EventScript_DontPushYourselfTooHard
 # 235 "data/scripts/players_house.pory"
-	goto_if_set FLAG_RESCUED_BIRCH, PlayersHouse_1F_EventScript_MomHealsParty
+	goto_if_set FLAG_HAS_MATCH_CALL, PlayersHouse_1F_EventScript_TryRegisterMom
 # 236 "data/scripts/players_house.pory"
-	goto_if_eq VAR_TEMP_1, 1, PlayersHouse_1F_EventScript_SeeYouHoney
+	goto_if_set FLAG_RESCUED_BIRCH, PlayersHouse_1F_EventScript_MomHealsParty
 # 237 "data/scripts/players_house.pory"
-	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 7, PlayersHouse_1F_EventScript_DidYouMeetProfBirch
+	goto_if_eq VAR_TEMP_1, 1, PlayersHouse_1F_EventScript_SeeYouHoney
 # 238 "data/scripts/players_house.pory"
-	release
+	goto_if_eq VAR_INTRO_STATE, 7, PlayersHouse_1F_EventScript_DidYouMeetProfBirch
 # 239 "data/scripts/players_house.pory"
-	end
+	release
 # 240 "data/scripts/players_house.pory"
-
+	end
 # 241 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_DontPushYourselfTooHard::
+
 # 242 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_DontPushYourselfTooHard, MSGBOX_DEFAULT
+PlayersHouse_1F_EventScript_DontPushYourselfTooHard::
 # 243 "data/scripts/players_house.pory"
-	release
-# 244 "data/scripts/players_house.pory"
-	end
-# 245 "data/scripts/players_house.pory"
-
-# 246 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_TryRegisterMom::
-# 247 "data/scripts/players_house.pory"
-	goto_if_set FLAG_ENABLE_MOM_MATCH_CALL, PlayersHouse_1F_EventScript_CheckGiveAmuletCoin
-# 248 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_IsThatAPokenav, MSGBOX_DEFAULT
-# 249 "data/scripts/players_house.pory"
-	closemessage
-# 250 "data/scripts/players_house.pory"
-	delay 30
-# 251 "data/scripts/players_house.pory"
-	playfanfare MUS_REGISTER_MATCH_CALL
-# 252 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_RegisteredMom, MSGBOX_DEFAULT
-# 253 "data/scripts/players_house.pory"
-	waitfanfare
-# 254 "data/scripts/players_house.pory"
-	closemessage
-# 255 "data/scripts/players_house.pory"
-	delay 30
-# 256 "data/scripts/players_house.pory"
-	setflag FLAG_ENABLE_MOM_MATCH_CALL
-# 257 "data/scripts/players_house.pory"
-	release
-# 258 "data/scripts/players_house.pory"
-	end
-# 259 "data/scripts/players_house.pory"
-
-# 260 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_CheckGiveAmuletCoin::
-# 261 "data/scripts/players_house.pory"
-	goto_if_set FLAG_BADGE05_GET, PlayersHouse_1F_EventScript_TryGiveAmuletCoin
-# 262 "data/scripts/players_house.pory"
-	goto PlayersHouse_1F_EventScript_MomHealsParty
-# 263 "data/scripts/players_house.pory"
-
-# 264 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_TryGiveAmuletCoin::
-# 265 "data/scripts/players_house.pory"
-	goto_if_set FLAG_RECEIVED_AMULET_COIN, PlayersHouse_1F_EventScript_MomHealsParty
-# 266 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom, MSGBOX_DEFAULT
-# 267 "data/scripts/players_house.pory"
-	giveitem ITEM_AMULET_COIN
-# 268 "data/scripts/players_house.pory"
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-# 269 "data/scripts/players_house.pory"
 	msgbox PlayersHouse_1F_Text_DontPushYourselfTooHard, MSGBOX_DEFAULT
-# 270 "data/scripts/players_house.pory"
-	setflag FLAG_RECEIVED_AMULET_COIN
-# 271 "data/scripts/players_house.pory"
+# 244 "data/scripts/players_house.pory"
 	release
-# 272 "data/scripts/players_house.pory"
+# 245 "data/scripts/players_house.pory"
 	end
-# 273 "data/scripts/players_house.pory"
+# 246 "data/scripts/players_house.pory"
 
-# 274 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_MomHealsParty::
-# 275 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_YouShouldRestABit, MSGBOX_DEFAULT
-# 276 "data/scripts/players_house.pory"
-	goto PlayersHouse_1F_EventScript_HealParty
-# 277 "data/scripts/players_house.pory"
-	end
-# 278 "data/scripts/players_house.pory"
-
-# 279 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_SeeYouHoney::
-# 280 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_SeeYouHoney, MSGBOX_DEFAULT
-# 281 "data/scripts/players_house.pory"
-	release
-# 282 "data/scripts/players_house.pory"
-	end
-# 283 "data/scripts/players_house.pory"
-
-# 284 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_HealParty::
-# 285 "data/scripts/players_house.pory"
+# 247 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_TryRegisterMom::
+# 248 "data/scripts/players_house.pory"
+	goto_if_set FLAG_ENABLE_MOM_MATCH_CALL, PlayersHouse_1F_EventScript_CheckGiveAmuletCoin
+# 249 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_IsThatAPokenav, MSGBOX_DEFAULT
+# 250 "data/scripts/players_house.pory"
 	closemessage
+# 251 "data/scripts/players_house.pory"
+	delay 30
+# 252 "data/scripts/players_house.pory"
+	playfanfare MUS_REGISTER_MATCH_CALL
+# 253 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_RegisteredMom, MSGBOX_DEFAULT
+# 254 "data/scripts/players_house.pory"
+	waitfanfare
+# 255 "data/scripts/players_house.pory"
+	closemessage
+# 256 "data/scripts/players_house.pory"
+	delay 30
+# 257 "data/scripts/players_house.pory"
+	setflag FLAG_ENABLE_MOM_MATCH_CALL
+# 258 "data/scripts/players_house.pory"
+	release
+# 259 "data/scripts/players_house.pory"
+	end
+# 260 "data/scripts/players_house.pory"
+
+# 261 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_CheckGiveAmuletCoin::
+# 262 "data/scripts/players_house.pory"
+	goto_if_set FLAG_BADGE05_GET, PlayersHouse_1F_EventScript_TryGiveAmuletCoin
+# 263 "data/scripts/players_house.pory"
+	goto PlayersHouse_1F_EventScript_MomHealsParty
+# 264 "data/scripts/players_house.pory"
+
+# 265 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_TryGiveAmuletCoin::
+# 266 "data/scripts/players_house.pory"
+	goto_if_set FLAG_RECEIVED_AMULET_COIN, PlayersHouse_1F_EventScript_MomHealsParty
+# 267 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom, MSGBOX_DEFAULT
+# 268 "data/scripts/players_house.pory"
+	giveitem ITEM_AMULET_COIN
+# 269 "data/scripts/players_house.pory"
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+# 270 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_DontPushYourselfTooHard, MSGBOX_DEFAULT
+# 271 "data/scripts/players_house.pory"
+	setflag FLAG_RECEIVED_AMULET_COIN
+# 272 "data/scripts/players_house.pory"
+	release
+# 273 "data/scripts/players_house.pory"
+	end
+# 274 "data/scripts/players_house.pory"
+
+# 275 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_MomHealsParty::
+# 276 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_YouShouldRestABit, MSGBOX_DEFAULT
+# 277 "data/scripts/players_house.pory"
+	goto PlayersHouse_1F_EventScript_HealParty
+# 278 "data/scripts/players_house.pory"
+	end
+# 279 "data/scripts/players_house.pory"
+
+# 280 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_SeeYouHoney::
+# 281 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_SeeYouHoney, MSGBOX_DEFAULT
+# 282 "data/scripts/players_house.pory"
+	release
+# 283 "data/scripts/players_house.pory"
+	end
+# 284 "data/scripts/players_house.pory"
+
+# 285 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_HealParty::
 # 286 "data/scripts/players_house.pory"
-	call Common_EventScript_OutOfCenterPartyHeal
+	closemessage
 # 287 "data/scripts/players_house.pory"
-	incrementgamestat GAME_STAT_RESTED_AT_HOME
+	call Common_EventScript_OutOfCenterPartyHeal
 # 288 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_TakeCareHoney, MSGBOX_DEFAULT
+	incrementgamestat GAME_STAT_RESTED_AT_HOME
 # 289 "data/scripts/players_house.pory"
-	release
+	msgbox PlayersHouse_1F_Text_TakeCareHoney, MSGBOX_DEFAULT
 # 290 "data/scripts/players_house.pory"
-	end
-# 291 "data/scripts/players_house.pory"
-
-# 292 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_DidYouMeetProfBirch::
-# 293 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_DidYouMeetProfBirch, MSGBOX_DEFAULT
-# 294 "data/scripts/players_house.pory"
 	release
-# 295 "data/scripts/players_house.pory"
+# 291 "data/scripts/players_house.pory"
 	end
-# 296 "data/scripts/players_house.pory"
+# 292 "data/scripts/players_house.pory"
 
+# 293 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_DidYouMeetProfBirch::
+# 294 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_DidYouMeetProfBirch, MSGBOX_DEFAULT
+# 295 "data/scripts/players_house.pory"
+	release
+# 296 "data/scripts/players_house.pory"
+	end
 # 297 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_PlayerApproachTVForGymMale:
+
 # 298 "data/scripts/players_house.pory"
-	walk_down
+PlayersHouse_1F_Movement_PlayerApproachTVForGymMale:
 # 299 "data/scripts/players_house.pory"
 	walk_down
 # 300 "data/scripts/players_house.pory"
-	walk_left
+	walk_down
 # 301 "data/scripts/players_house.pory"
 	walk_left
 # 302 "data/scripts/players_house.pory"
 	walk_left
 # 303 "data/scripts/players_house.pory"
-	step_end
-# 304 "data/scripts/players_house.pory"
-
-# 305 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_PlayerMoveToTVMale:
-# 306 "data/scripts/players_house.pory"
 	walk_left
-# 307 "data/scripts/players_house.pory"
+# 304 "data/scripts/players_house.pory"
 	step_end
-# 308 "data/scripts/players_house.pory"
+# 305 "data/scripts/players_house.pory"
 
+# 306 "data/scripts/players_house.pory"
+PlayersHouse_1F_Movement_PlayerMoveToTVMale:
+# 307 "data/scripts/players_house.pory"
+	walk_left
+# 308 "data/scripts/players_house.pory"
+	step_end
 # 309 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_PlayerApproachTVForGymFemale:
+
 # 310 "data/scripts/players_house.pory"
-	walk_down
+PlayersHouse_1F_Movement_PlayerApproachTVForGymFemale:
 # 311 "data/scripts/players_house.pory"
 	walk_down
 # 312 "data/scripts/players_house.pory"
-	walk_right
+	walk_down
 # 313 "data/scripts/players_house.pory"
 	walk_right
 # 314 "data/scripts/players_house.pory"
 	walk_right
 # 315 "data/scripts/players_house.pory"
-	step_end
+	walk_right
 # 316 "data/scripts/players_house.pory"
-
+	step_end
 # 317 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_PlayerMoveToTVFemale:
+
 # 318 "data/scripts/players_house.pory"
-	walk_right
+PlayersHouse_1F_Movement_PlayerMoveToTVFemale:
 # 319 "data/scripts/players_house.pory"
-	step_end
-# 320 "data/scripts/players_house.pory"
-
-# 321 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_MovePlayerAwayFromDoor:
-# 322 "data/scripts/players_house.pory"
-	walk_up
-# 323 "data/scripts/players_house.pory"
-	step_end
-# 324 "data/scripts/players_house.pory"
-
-# 325 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV::
-# 326 "data/scripts/players_house.pory"
-	lockall
-# 327 "data/scripts/players_house.pory"
-	checkplayergender
-# 328 "data/scripts/players_house.pory"
-	call_if_eq VAR_RESULT, MALE, PlayersHouse_1F_EventScript_SetUpObjectEventVarsMale
-# 329 "data/scripts/players_house.pory"
-	call_if_eq VAR_RESULT, FEMALE, PlayersHouse_1F_EventScript_SetUpObjectEventVarsFemale
-# 330 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_PlayerEnterRoomMale
-# 331 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_PlayerEnterRoomFemale
-# 332 "data/scripts/players_house.pory"
-	applymovement VAR_0x8009, Common_Movement_FacePlayer
-# 333 "data/scripts/players_house.pory"
-	waitmovement 0
-# 334 "data/scripts/players_house.pory"
-	playse SE_PIN
-# 335 "data/scripts/players_house.pory"
-	applymovement VAR_0x8009, Common_Movement_ExclamationMark
-# 336 "data/scripts/players_house.pory"
-	waitmovement 0
-# 337 "data/scripts/players_house.pory"
-	applymovement VAR_0x8009, Common_Movement_Delay48
-# 338 "data/scripts/players_house.pory"
-	waitmovement 0
-# 339 "data/scripts/players_house.pory"
-	delay 20
-# 340 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_DadApproachPlayerMale
-# 341 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_DadApproachPlayerFemale
-# 342 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_TicketFromBrineyCameForYou, MSGBOX_DEFAULT
-# 343 "data/scripts/players_house.pory"
-	giveitem ITEM_SS_TICKET
-# 344 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_PortsInSlateportLilycove, MSGBOX_DEFAULT
-# 345 "data/scripts/players_house.pory"
-	closemessage
-# 346 "data/scripts/players_house.pory"
-	delay 20
-# 347 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_MomApproachDadMale
-# 348 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_MomApproachDadFemale
-# 349 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_BetterGetBackToGym, MSGBOX_DEFAULT
-# 350 "data/scripts/players_house.pory"
-	closemessage
-# 351 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_DadExitsMale
-# 352 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_DadExitsFemale
-# 353 "data/scripts/players_house.pory"
-	playse SE_DOOR
-# 354 "data/scripts/players_house.pory"
-	removeobject VAR_0x8009
-# 355 "data/scripts/players_house.pory"
-	setflag FLAG_RECEIVED_SS_TICKET
-# 356 "data/scripts/players_house.pory"
-	delay 30
-# 357 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_MomApproachPlayerMale
-# 358 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_MomApproachPlayerFemale
-# 359 "data/scripts/players_house.pory"
-	delay 20
-# 360 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_DadShouldStayLonger, MSGBOX_DEFAULT
-# 361 "data/scripts/players_house.pory"
-	closemessage
-# 362 "data/scripts/players_house.pory"
-	setflag FLAG_SYS_TV_LATIAS_LATIOS
-# 363 "data/scripts/players_house.pory"
-	special TurnOnTVScreen
-# 364 "data/scripts/players_house.pory"
-	delay 60
-# 365 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_MomNoticesLatiBroadcastMale
-# 366 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_MomNoticesLatiBroadcastFemale
-# 367 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_IsThatABreakingStory, MSGBOX_DEFAULT
-# 368 "data/scripts/players_house.pory"
-	closemessage
-# 369 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_PlayerApproachTVForLatiMale
-# 370 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_PlayerApproachTVForLatiFemale
-# 371 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_LatiEmergencyNewsFlash, MSGBOX_DEFAULT
-# 372 "data/scripts/players_house.pory"
-	closemessage
-# 373 "data/scripts/players_house.pory"
-	clearflag FLAG_SYS_TV_LATIAS_LATIOS
-# 374 "data/scripts/players_house.pory"
-	setflag FLAG_LATIOS_OR_LATIAS_ROAMING
-# 375 "data/scripts/players_house.pory"
-	special TurnOffTVScreen
-# 376 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_MomApproachPlayerAfterTVMale
-# 377 "data/scripts/players_house.pory"
-	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_MomApproachPlayerAfterTVFemale
-# 378 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_WhatColorDidTheySay, MSGBOX_DEFAULT
-# 379 "data/scripts/players_house.pory"
-	multichoice 22, 8, MULTI_TV_LATI, TRUE
-# 380 "data/scripts/players_house.pory"
-	copyvar VAR_0x8004, VAR_RESULT
-# 381 "data/scripts/players_house.pory"
-	special InitRoamer
-# 382 "data/scripts/players_house.pory"
-	copyvar VAR_ROAMER_POKEMON, VAR_RESULT
-# 383 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_StillUnknownPokemon, MSGBOX_DEFAULT
-# 384 "data/scripts/players_house.pory"
-	closemessage
-# 385 "data/scripts/players_house.pory"
-	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 4
-# 386 "data/scripts/players_house.pory"
-	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 4
-# 387 "data/scripts/players_house.pory"
-	releaseall
-# 388 "data/scripts/players_house.pory"
-	end
-# 389 "data/scripts/players_house.pory"
-
-# 390 "data/scripts/players_house.pory"
-@ Never called.
-# 391 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_AirLatiBroadcast::
-# 392 "data/scripts/players_house.pory"
-	setflag FLAG_SYS_TV_LATIAS_LATIOS
-# 393 "data/scripts/players_house.pory"
-	return
-# 394 "data/scripts/players_house.pory"
-
-# 395 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_SetUpObjectEventVarsMale::
-# 396 "data/scripts/players_house.pory"
-	setvar VAR_0x8008, MALE
-# 397 "data/scripts/players_house.pory"
-	setvar VAR_0x8009, LOCALID_DAD
-# 398 "data/scripts/players_house.pory"
-	setvar VAR_0x800A, LOCALID_MOM
-# 399 "data/scripts/players_house.pory"
-	return
-# 400 "data/scripts/players_house.pory"
-
-# 401 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_SetUpObjectEventVarsFemale::
-# 402 "data/scripts/players_house.pory"
-	setvar VAR_0x8008, FEMALE
-# 403 "data/scripts/players_house.pory"
-	setvar VAR_0x8009, LOCALID_DAD
-# 404 "data/scripts/players_house.pory"
-	setvar VAR_0x800A, LOCALID_MOM
-# 405 "data/scripts/players_house.pory"
-	return
-# 406 "data/scripts/players_house.pory"
-
-# 407 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_DadApproachPlayerMale::
-# 408 "data/scripts/players_house.pory"
-	applymovement VAR_0x8009, PlayersHouse_1F_Movement_DadApproachPlayerMale
-# 409 "data/scripts/players_house.pory"
-	waitmovement 0
-# 410 "data/scripts/players_house.pory"
-	return
-# 411 "data/scripts/players_house.pory"
-
-# 412 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_DadApproachPlayerFemale::
-# 413 "data/scripts/players_house.pory"
-	applymovement VAR_0x8009, PlayersHouse_1F_Movement_DadApproachPlayerFemale
-# 414 "data/scripts/players_house.pory"
-	waitmovement 0
-# 415 "data/scripts/players_house.pory"
-	return
-# 416 "data/scripts/players_house.pory"
-
-# 417 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_MomApproachDadMale::
-# 418 "data/scripts/players_house.pory"
-	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomApproachDadMale
-# 419 "data/scripts/players_house.pory"
-	waitmovement 0
-# 420 "data/scripts/players_house.pory"
-	applymovement VAR_0x8009, PlayersHouse_1F_Movement_DadFaceMomMale
-# 421 "data/scripts/players_house.pory"
-	waitmovement 0
-# 422 "data/scripts/players_house.pory"
-	return
-# 423 "data/scripts/players_house.pory"
-
-# 424 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_MomApproachDadFemale::
-# 425 "data/scripts/players_house.pory"
-	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomApproachDadFemale
-# 426 "data/scripts/players_house.pory"
-	waitmovement 0
-# 427 "data/scripts/players_house.pory"
-	applymovement VAR_0x8009, PlayersHouse_1F_Movement_DadFaceMomFemale
-# 428 "data/scripts/players_house.pory"
-	waitmovement 0
-# 429 "data/scripts/players_house.pory"
-	return
-# 430 "data/scripts/players_house.pory"
-
-# 431 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_DadExitsMale::
-# 432 "data/scripts/players_house.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_MomAndPlayerWatchDadExit
-# 433 "data/scripts/players_house.pory"
-	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomAndPlayerWatchDadExit
-# 434 "data/scripts/players_house.pory"
-	applymovement VAR_0x8009, PlayersHouse_1F_Movement_DadExitsMale
-# 435 "data/scripts/players_house.pory"
-	waitmovement 0
-# 436 "data/scripts/players_house.pory"
-	return
-# 437 "data/scripts/players_house.pory"
-
-# 438 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_DadExitsFemale::
-# 439 "data/scripts/players_house.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_MomAndPlayerWatchDadExit
-# 440 "data/scripts/players_house.pory"
-	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomAndPlayerWatchDadExit
-# 441 "data/scripts/players_house.pory"
-	applymovement VAR_0x8009, PlayersHouse_1F_Movement_DadExitsFemale
-# 442 "data/scripts/players_house.pory"
-	waitmovement 0
-# 443 "data/scripts/players_house.pory"
-	return
-# 444 "data/scripts/players_house.pory"
-
-# 445 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_PlayerEnterRoomMale::
-# 446 "data/scripts/players_house.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerEnterRoomMale
-# 447 "data/scripts/players_house.pory"
-	waitmovement 0
-# 448 "data/scripts/players_house.pory"
-	return
-# 449 "data/scripts/players_house.pory"
-
-# 450 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_PlayerEnterRoomFemale::
-# 451 "data/scripts/players_house.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerEnterRoomFemale
-# 452 "data/scripts/players_house.pory"
-	waitmovement 0
-# 453 "data/scripts/players_house.pory"
-	return
-# 454 "data/scripts/players_house.pory"
-
-# 455 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_PlayerApproachTVForLatiMale::
-# 456 "data/scripts/players_house.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerApproachTVForLatiMale
-# 457 "data/scripts/players_house.pory"
-	waitmovement 0
-# 458 "data/scripts/players_house.pory"
-	applymovement VAR_0x800A, Common_Movement_WalkInPlaceFasterLeft
-# 459 "data/scripts/players_house.pory"
-	waitmovement 0
-# 460 "data/scripts/players_house.pory"
-	return
-# 461 "data/scripts/players_house.pory"
-
-# 462 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_PlayerApproachTVForLatiFemale::
-# 463 "data/scripts/players_house.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerApproachTVForLatiFemale
-# 464 "data/scripts/players_house.pory"
-	waitmovement 0
-# 465 "data/scripts/players_house.pory"
-	applymovement VAR_0x800A, Common_Movement_WalkInPlaceFasterRight
-# 466 "data/scripts/players_house.pory"
-	waitmovement 0
-# 467 "data/scripts/players_house.pory"
-	return
-# 468 "data/scripts/players_house.pory"
-
-# 469 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_MomApproachPlayerMale::
-# 470 "data/scripts/players_house.pory"
-	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomApproachPlayerMale
-# 471 "data/scripts/players_house.pory"
-	waitmovement 0
-# 472 "data/scripts/players_house.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-# 473 "data/scripts/players_house.pory"
-	waitmovement 0
-# 474 "data/scripts/players_house.pory"
-	return
-# 475 "data/scripts/players_house.pory"
-
-# 476 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_MomApproachPlayerFemale::
-# 477 "data/scripts/players_house.pory"
-	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomApproachPlayerFemale
-# 478 "data/scripts/players_house.pory"
-	waitmovement 0
-# 479 "data/scripts/players_house.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-# 480 "data/scripts/players_house.pory"
-	waitmovement 0
-# 481 "data/scripts/players_house.pory"
-	return
-# 482 "data/scripts/players_house.pory"
-
-# 483 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_MomNoticesLatiBroadcastMale::
-# 484 "data/scripts/players_house.pory"
-	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomNoticesLatiBroadcastMale
-# 485 "data/scripts/players_house.pory"
-	waitmovement 0
-# 486 "data/scripts/players_house.pory"
-	return
-# 487 "data/scripts/players_house.pory"
-
-# 488 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_MomNoticesLatiBroadcastFemale::
-# 489 "data/scripts/players_house.pory"
-	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomNoticesLatiBroadcastFemale
-# 490 "data/scripts/players_house.pory"
-	waitmovement 0
-# 491 "data/scripts/players_house.pory"
-	return
-# 492 "data/scripts/players_house.pory"
-
-# 493 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_MomApproachPlayerAfterTVMale::
-# 494 "data/scripts/players_house.pory"
-	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomApproachPlayerAfterTVMale
-# 495 "data/scripts/players_house.pory"
-	waitmovement 0
-# 496 "data/scripts/players_house.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-# 497 "data/scripts/players_house.pory"
-	waitmovement 0
-# 498 "data/scripts/players_house.pory"
-	return
-# 499 "data/scripts/players_house.pory"
-
-# 500 "data/scripts/players_house.pory"
-PlayersHouse_1F_EventScript_MomApproachPlayerAfterTVFemale::
-# 501 "data/scripts/players_house.pory"
-	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomApproachPlayerAfterTVFemale
-# 502 "data/scripts/players_house.pory"
-	waitmovement 0
-# 503 "data/scripts/players_house.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-# 504 "data/scripts/players_house.pory"
-	waitmovement 0
-# 505 "data/scripts/players_house.pory"
-	return
-# 506 "data/scripts/players_house.pory"
-
-# 507 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_DadApproachPlayerMale:
-# 508 "data/scripts/players_house.pory"
 	walk_right
+# 320 "data/scripts/players_house.pory"
+	step_end
+# 321 "data/scripts/players_house.pory"
+
+# 322 "data/scripts/players_house.pory"
+PlayersHouse_1F_Movement_MovePlayerAwayFromDoor:
+# 323 "data/scripts/players_house.pory"
+	walk_up
+# 324 "data/scripts/players_house.pory"
+	step_end
+# 325 "data/scripts/players_house.pory"
+
+# 326 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV::
+# 327 "data/scripts/players_house.pory"
+	lockall
+# 328 "data/scripts/players_house.pory"
+	checkplayergender
+# 329 "data/scripts/players_house.pory"
+	call_if_eq VAR_RESULT, MALE, PlayersHouse_1F_EventScript_SetUpObjectEventVarsMale
+# 330 "data/scripts/players_house.pory"
+	call_if_eq VAR_RESULT, FEMALE, PlayersHouse_1F_EventScript_SetUpObjectEventVarsFemale
+# 331 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_PlayerEnterRoomMale
+# 332 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_PlayerEnterRoomFemale
+# 333 "data/scripts/players_house.pory"
+	applymovement VAR_0x8009, Common_Movement_FacePlayer
+# 334 "data/scripts/players_house.pory"
+	waitmovement 0
+# 335 "data/scripts/players_house.pory"
+	playse SE_PIN
+# 336 "data/scripts/players_house.pory"
+	applymovement VAR_0x8009, Common_Movement_ExclamationMark
+# 337 "data/scripts/players_house.pory"
+	waitmovement 0
+# 338 "data/scripts/players_house.pory"
+	applymovement VAR_0x8009, Common_Movement_Delay48
+# 339 "data/scripts/players_house.pory"
+	waitmovement 0
+# 340 "data/scripts/players_house.pory"
+	delay 20
+# 341 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_DadApproachPlayerMale
+# 342 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_DadApproachPlayerFemale
+# 343 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_TicketFromBrineyCameForYou, MSGBOX_DEFAULT
+# 344 "data/scripts/players_house.pory"
+	giveitem ITEM_SS_TICKET
+# 345 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_PortsInSlateportLilycove, MSGBOX_DEFAULT
+# 346 "data/scripts/players_house.pory"
+	closemessage
+# 347 "data/scripts/players_house.pory"
+	delay 20
+# 348 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_MomApproachDadMale
+# 349 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_MomApproachDadFemale
+# 350 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_BetterGetBackToGym, MSGBOX_DEFAULT
+# 351 "data/scripts/players_house.pory"
+	closemessage
+# 352 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_DadExitsMale
+# 353 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_DadExitsFemale
+# 354 "data/scripts/players_house.pory"
+	playse SE_DOOR
+# 355 "data/scripts/players_house.pory"
+	removeobject VAR_0x8009
+# 356 "data/scripts/players_house.pory"
+	setflag FLAG_RECEIVED_SS_TICKET
+# 357 "data/scripts/players_house.pory"
+	delay 30
+# 358 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_MomApproachPlayerMale
+# 359 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_MomApproachPlayerFemale
+# 360 "data/scripts/players_house.pory"
+	delay 20
+# 361 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_DadShouldStayLonger, MSGBOX_DEFAULT
+# 362 "data/scripts/players_house.pory"
+	closemessage
+# 363 "data/scripts/players_house.pory"
+	setflag FLAG_SYS_TV_LATIAS_LATIOS
+# 364 "data/scripts/players_house.pory"
+	special TurnOnTVScreen
+# 365 "data/scripts/players_house.pory"
+	delay 60
+# 366 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_MomNoticesLatiBroadcastMale
+# 367 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_MomNoticesLatiBroadcastFemale
+# 368 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_IsThatABreakingStory, MSGBOX_DEFAULT
+# 369 "data/scripts/players_house.pory"
+	closemessage
+# 370 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_PlayerApproachTVForLatiMale
+# 371 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_PlayerApproachTVForLatiFemale
+# 372 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_LatiEmergencyNewsFlash, MSGBOX_DEFAULT
+# 373 "data/scripts/players_house.pory"
+	closemessage
+# 374 "data/scripts/players_house.pory"
+	clearflag FLAG_SYS_TV_LATIAS_LATIOS
+# 375 "data/scripts/players_house.pory"
+	setflag FLAG_LATIOS_OR_LATIAS_ROAMING
+# 376 "data/scripts/players_house.pory"
+	special TurnOffTVScreen
+# 377 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_MomApproachPlayerAfterTVMale
+# 378 "data/scripts/players_house.pory"
+	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_MomApproachPlayerAfterTVFemale
+# 379 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_WhatColorDidTheySay, MSGBOX_DEFAULT
+# 380 "data/scripts/players_house.pory"
+	multichoice 22, 8, MULTI_TV_LATI, TRUE
+# 381 "data/scripts/players_house.pory"
+	copyvar VAR_0x8004, VAR_RESULT
+# 382 "data/scripts/players_house.pory"
+	special InitRoamer
+# 383 "data/scripts/players_house.pory"
+	copyvar VAR_ROAMER_POKEMON, VAR_RESULT
+# 384 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_StillUnknownPokemon, MSGBOX_DEFAULT
+# 385 "data/scripts/players_house.pory"
+	closemessage
+# 386 "data/scripts/players_house.pory"
+	setvar VAR_TINYBUD_HOUSES_STATE_MAY, 4
+# 387 "data/scripts/players_house.pory"
+	setvar VAR_TINYBUD_HOUSES_STATE_BRENDAN, 4
+# 388 "data/scripts/players_house.pory"
+	releaseall
+# 389 "data/scripts/players_house.pory"
+	end
+# 390 "data/scripts/players_house.pory"
+
+# 391 "data/scripts/players_house.pory"
+@ Never called.
+# 392 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_AirLatiBroadcast::
+# 393 "data/scripts/players_house.pory"
+	setflag FLAG_SYS_TV_LATIAS_LATIOS
+# 394 "data/scripts/players_house.pory"
+	return
+# 395 "data/scripts/players_house.pory"
+
+# 396 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_SetUpObjectEventVarsMale::
+# 397 "data/scripts/players_house.pory"
+	setvar VAR_0x8008, MALE
+# 398 "data/scripts/players_house.pory"
+	setvar VAR_0x8009, LOCALID_DAD
+# 399 "data/scripts/players_house.pory"
+	setvar VAR_0x800A, LOCALID_MOM
+# 400 "data/scripts/players_house.pory"
+	return
+# 401 "data/scripts/players_house.pory"
+
+# 402 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_SetUpObjectEventVarsFemale::
+# 403 "data/scripts/players_house.pory"
+	setvar VAR_0x8008, FEMALE
+# 404 "data/scripts/players_house.pory"
+	setvar VAR_0x8009, LOCALID_DAD
+# 405 "data/scripts/players_house.pory"
+	setvar VAR_0x800A, LOCALID_MOM
+# 406 "data/scripts/players_house.pory"
+	return
+# 407 "data/scripts/players_house.pory"
+
+# 408 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_DadApproachPlayerMale::
+# 409 "data/scripts/players_house.pory"
+	applymovement VAR_0x8009, PlayersHouse_1F_Movement_DadApproachPlayerMale
+# 410 "data/scripts/players_house.pory"
+	waitmovement 0
+# 411 "data/scripts/players_house.pory"
+	return
+# 412 "data/scripts/players_house.pory"
+
+# 413 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_DadApproachPlayerFemale::
+# 414 "data/scripts/players_house.pory"
+	applymovement VAR_0x8009, PlayersHouse_1F_Movement_DadApproachPlayerFemale
+# 415 "data/scripts/players_house.pory"
+	waitmovement 0
+# 416 "data/scripts/players_house.pory"
+	return
+# 417 "data/scripts/players_house.pory"
+
+# 418 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_MomApproachDadMale::
+# 419 "data/scripts/players_house.pory"
+	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomApproachDadMale
+# 420 "data/scripts/players_house.pory"
+	waitmovement 0
+# 421 "data/scripts/players_house.pory"
+	applymovement VAR_0x8009, PlayersHouse_1F_Movement_DadFaceMomMale
+# 422 "data/scripts/players_house.pory"
+	waitmovement 0
+# 423 "data/scripts/players_house.pory"
+	return
+# 424 "data/scripts/players_house.pory"
+
+# 425 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_MomApproachDadFemale::
+# 426 "data/scripts/players_house.pory"
+	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomApproachDadFemale
+# 427 "data/scripts/players_house.pory"
+	waitmovement 0
+# 428 "data/scripts/players_house.pory"
+	applymovement VAR_0x8009, PlayersHouse_1F_Movement_DadFaceMomFemale
+# 429 "data/scripts/players_house.pory"
+	waitmovement 0
+# 430 "data/scripts/players_house.pory"
+	return
+# 431 "data/scripts/players_house.pory"
+
+# 432 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_DadExitsMale::
+# 433 "data/scripts/players_house.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_MomAndPlayerWatchDadExit
+# 434 "data/scripts/players_house.pory"
+	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomAndPlayerWatchDadExit
+# 435 "data/scripts/players_house.pory"
+	applymovement VAR_0x8009, PlayersHouse_1F_Movement_DadExitsMale
+# 436 "data/scripts/players_house.pory"
+	waitmovement 0
+# 437 "data/scripts/players_house.pory"
+	return
+# 438 "data/scripts/players_house.pory"
+
+# 439 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_DadExitsFemale::
+# 440 "data/scripts/players_house.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_MomAndPlayerWatchDadExit
+# 441 "data/scripts/players_house.pory"
+	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomAndPlayerWatchDadExit
+# 442 "data/scripts/players_house.pory"
+	applymovement VAR_0x8009, PlayersHouse_1F_Movement_DadExitsFemale
+# 443 "data/scripts/players_house.pory"
+	waitmovement 0
+# 444 "data/scripts/players_house.pory"
+	return
+# 445 "data/scripts/players_house.pory"
+
+# 446 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_PlayerEnterRoomMale::
+# 447 "data/scripts/players_house.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerEnterRoomMale
+# 448 "data/scripts/players_house.pory"
+	waitmovement 0
+# 449 "data/scripts/players_house.pory"
+	return
+# 450 "data/scripts/players_house.pory"
+
+# 451 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_PlayerEnterRoomFemale::
+# 452 "data/scripts/players_house.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerEnterRoomFemale
+# 453 "data/scripts/players_house.pory"
+	waitmovement 0
+# 454 "data/scripts/players_house.pory"
+	return
+# 455 "data/scripts/players_house.pory"
+
+# 456 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_PlayerApproachTVForLatiMale::
+# 457 "data/scripts/players_house.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerApproachTVForLatiMale
+# 458 "data/scripts/players_house.pory"
+	waitmovement 0
+# 459 "data/scripts/players_house.pory"
+	applymovement VAR_0x800A, Common_Movement_WalkInPlaceFasterLeft
+# 460 "data/scripts/players_house.pory"
+	waitmovement 0
+# 461 "data/scripts/players_house.pory"
+	return
+# 462 "data/scripts/players_house.pory"
+
+# 463 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_PlayerApproachTVForLatiFemale::
+# 464 "data/scripts/players_house.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerApproachTVForLatiFemale
+# 465 "data/scripts/players_house.pory"
+	waitmovement 0
+# 466 "data/scripts/players_house.pory"
+	applymovement VAR_0x800A, Common_Movement_WalkInPlaceFasterRight
+# 467 "data/scripts/players_house.pory"
+	waitmovement 0
+# 468 "data/scripts/players_house.pory"
+	return
+# 469 "data/scripts/players_house.pory"
+
+# 470 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_MomApproachPlayerMale::
+# 471 "data/scripts/players_house.pory"
+	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomApproachPlayerMale
+# 472 "data/scripts/players_house.pory"
+	waitmovement 0
+# 473 "data/scripts/players_house.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+# 474 "data/scripts/players_house.pory"
+	waitmovement 0
+# 475 "data/scripts/players_house.pory"
+	return
+# 476 "data/scripts/players_house.pory"
+
+# 477 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_MomApproachPlayerFemale::
+# 478 "data/scripts/players_house.pory"
+	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomApproachPlayerFemale
+# 479 "data/scripts/players_house.pory"
+	waitmovement 0
+# 480 "data/scripts/players_house.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
+# 481 "data/scripts/players_house.pory"
+	waitmovement 0
+# 482 "data/scripts/players_house.pory"
+	return
+# 483 "data/scripts/players_house.pory"
+
+# 484 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_MomNoticesLatiBroadcastMale::
+# 485 "data/scripts/players_house.pory"
+	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomNoticesLatiBroadcastMale
+# 486 "data/scripts/players_house.pory"
+	waitmovement 0
+# 487 "data/scripts/players_house.pory"
+	return
+# 488 "data/scripts/players_house.pory"
+
+# 489 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_MomNoticesLatiBroadcastFemale::
+# 490 "data/scripts/players_house.pory"
+	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomNoticesLatiBroadcastFemale
+# 491 "data/scripts/players_house.pory"
+	waitmovement 0
+# 492 "data/scripts/players_house.pory"
+	return
+# 493 "data/scripts/players_house.pory"
+
+# 494 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_MomApproachPlayerAfterTVMale::
+# 495 "data/scripts/players_house.pory"
+	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomApproachPlayerAfterTVMale
+# 496 "data/scripts/players_house.pory"
+	waitmovement 0
+# 497 "data/scripts/players_house.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
+# 498 "data/scripts/players_house.pory"
+	waitmovement 0
+# 499 "data/scripts/players_house.pory"
+	return
+# 500 "data/scripts/players_house.pory"
+
+# 501 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_MomApproachPlayerAfterTVFemale::
+# 502 "data/scripts/players_house.pory"
+	applymovement VAR_0x800A, PlayersHouse_1F_Movement_MomApproachPlayerAfterTVFemale
+# 503 "data/scripts/players_house.pory"
+	waitmovement 0
+# 504 "data/scripts/players_house.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+# 505 "data/scripts/players_house.pory"
+	waitmovement 0
+# 506 "data/scripts/players_house.pory"
+	return
+# 507 "data/scripts/players_house.pory"
+
+# 508 "data/scripts/players_house.pory"
+PlayersHouse_1F_Movement_DadApproachPlayerMale:
 # 509 "data/scripts/players_house.pory"
 	walk_right
 # 510 "data/scripts/players_house.pory"
-	step_end
+	walk_right
 # 511 "data/scripts/players_house.pory"
-
+	step_end
 # 512 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_DadApproachPlayerFemale:
+
 # 513 "data/scripts/players_house.pory"
-	walk_left
+PlayersHouse_1F_Movement_DadApproachPlayerFemale:
 # 514 "data/scripts/players_house.pory"
 	walk_left
 # 515 "data/scripts/players_house.pory"
-	step_end
-# 516 "data/scripts/players_house.pory"
-
-# 517 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_DadFaceMomMale:
-# 518 "data/scripts/players_house.pory"
-	face_left
-# 519 "data/scripts/players_house.pory"
-	step_end
-# 520 "data/scripts/players_house.pory"
-
-# 521 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_DadFaceMomFemale:
-# 522 "data/scripts/players_house.pory"
-	face_right
-# 523 "data/scripts/players_house.pory"
-	step_end
-# 524 "data/scripts/players_house.pory"
-
-# 525 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_DadExitsMale:
-# 526 "data/scripts/players_house.pory"
-	walk_down
-# 527 "data/scripts/players_house.pory"
-	walk_right
-# 528 "data/scripts/players_house.pory"
-	walk_down
-# 529 "data/scripts/players_house.pory"
-	delay_8
-# 530 "data/scripts/players_house.pory"
-	step_end
-# 531 "data/scripts/players_house.pory"
-
-# 532 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_DadExitsFemale:
-# 533 "data/scripts/players_house.pory"
-	walk_down
-# 534 "data/scripts/players_house.pory"
 	walk_left
-# 535 "data/scripts/players_house.pory"
-	walk_down
-# 536 "data/scripts/players_house.pory"
-	delay_8
-# 537 "data/scripts/players_house.pory"
+# 516 "data/scripts/players_house.pory"
 	step_end
-# 538 "data/scripts/players_house.pory"
+# 517 "data/scripts/players_house.pory"
 
-# 539 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_PlayerEnterRoomMale:
-# 540 "data/scripts/players_house.pory"
-	delay_16
-# 541 "data/scripts/players_house.pory"
+# 518 "data/scripts/players_house.pory"
+PlayersHouse_1F_Movement_DadFaceMomMale:
+# 519 "data/scripts/players_house.pory"
+	face_left
+# 520 "data/scripts/players_house.pory"
+	step_end
+# 521 "data/scripts/players_house.pory"
+
+# 522 "data/scripts/players_house.pory"
+PlayersHouse_1F_Movement_DadFaceMomFemale:
+# 523 "data/scripts/players_house.pory"
+	face_right
+# 524 "data/scripts/players_house.pory"
+	step_end
+# 525 "data/scripts/players_house.pory"
+
+# 526 "data/scripts/players_house.pory"
+PlayersHouse_1F_Movement_DadExitsMale:
+# 527 "data/scripts/players_house.pory"
 	walk_down
+# 528 "data/scripts/players_house.pory"
+	walk_right
+# 529 "data/scripts/players_house.pory"
+	walk_down
+# 530 "data/scripts/players_house.pory"
+	delay_8
+# 531 "data/scripts/players_house.pory"
+	step_end
+# 532 "data/scripts/players_house.pory"
+
+# 533 "data/scripts/players_house.pory"
+PlayersHouse_1F_Movement_DadExitsFemale:
+# 534 "data/scripts/players_house.pory"
+	walk_down
+# 535 "data/scripts/players_house.pory"
+	walk_left
+# 536 "data/scripts/players_house.pory"
+	walk_down
+# 537 "data/scripts/players_house.pory"
+	delay_8
+# 538 "data/scripts/players_house.pory"
+	step_end
+# 539 "data/scripts/players_house.pory"
+
+# 540 "data/scripts/players_house.pory"
+PlayersHouse_1F_Movement_PlayerEnterRoomMale:
+# 541 "data/scripts/players_house.pory"
+	delay_16
 # 542 "data/scripts/players_house.pory"
 	walk_down
 # 543 "data/scripts/players_house.pory"
 	walk_down
 # 544 "data/scripts/players_house.pory"
-	walk_in_place_faster_left
+	walk_down
 # 545 "data/scripts/players_house.pory"
-	step_end
+	walk_in_place_faster_left
 # 546 "data/scripts/players_house.pory"
-
+	step_end
 # 547 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_MomAndPlayerWatchDadExit:
+
 # 548 "data/scripts/players_house.pory"
-	delay_8
+PlayersHouse_1F_Movement_MomAndPlayerWatchDadExit:
 # 549 "data/scripts/players_house.pory"
-	delay_16
+	delay_8
 # 550 "data/scripts/players_house.pory"
 	delay_16
 # 551 "data/scripts/players_house.pory"
-	walk_in_place_faster_down
-# 552 "data/scripts/players_house.pory"
-	step_end
-# 553 "data/scripts/players_house.pory"
-
-# 554 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_PlayerEnterRoomFemale:
-# 555 "data/scripts/players_house.pory"
 	delay_16
+# 552 "data/scripts/players_house.pory"
+	walk_in_place_faster_down
+# 553 "data/scripts/players_house.pory"
+	step_end
+# 554 "data/scripts/players_house.pory"
+
+# 555 "data/scripts/players_house.pory"
+PlayersHouse_1F_Movement_PlayerEnterRoomFemale:
 # 556 "data/scripts/players_house.pory"
-	walk_down
+	delay_16
 # 557 "data/scripts/players_house.pory"
 	walk_down
 # 558 "data/scripts/players_house.pory"
 	walk_down
 # 559 "data/scripts/players_house.pory"
-	walk_in_place_faster_right
+	walk_down
 # 560 "data/scripts/players_house.pory"
-	step_end
+	walk_in_place_faster_right
 # 561 "data/scripts/players_house.pory"
-
+	step_end
 # 562 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_PlayerApproachTVForLatiMale:
+
 # 563 "data/scripts/players_house.pory"
-	walk_up
+PlayersHouse_1F_Movement_PlayerApproachTVForLatiMale:
 # 564 "data/scripts/players_house.pory"
-	walk_left
+	walk_up
 # 565 "data/scripts/players_house.pory"
 	walk_left
 # 566 "data/scripts/players_house.pory"
@@ -1133,17 +1133,17 @@ PlayersHouse_1F_Movement_PlayerApproachTVForLatiMale:
 # 567 "data/scripts/players_house.pory"
 	walk_left
 # 568 "data/scripts/players_house.pory"
-	walk_in_place_faster_up
+	walk_left
 # 569 "data/scripts/players_house.pory"
-	step_end
+	walk_in_place_faster_up
 # 570 "data/scripts/players_house.pory"
-
+	step_end
 # 571 "data/scripts/players_house.pory"
-PlayersHouse_1F_Movement_PlayerApproachTVForLatiFemale:
+
 # 572 "data/scripts/players_house.pory"
-	walk_up
+PlayersHouse_1F_Movement_PlayerApproachTVForLatiFemale:
 # 573 "data/scripts/players_house.pory"
-	walk_right
+	walk_up
 # 574 "data/scripts/players_house.pory"
 	walk_right
 # 575 "data/scripts/players_house.pory"
@@ -1151,37 +1151,56 @@ PlayersHouse_1F_Movement_PlayerApproachTVForLatiFemale:
 # 576 "data/scripts/players_house.pory"
 	walk_right
 # 577 "data/scripts/players_house.pory"
-	walk_in_place_faster_up
+	walk_right
 # 578 "data/scripts/players_house.pory"
-	step_end
+	walk_in_place_faster_up
 # 579 "data/scripts/players_house.pory"
-
+	step_end
 # 580 "data/scripts/players_house.pory"
-EventScript_RunningShoesManual::
+
 # 581 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_Text_RunningShoesManual, MSGBOX_SIGN
+EventScript_RunningShoesManual::
 # 582 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_Text_RunningShoesManual, MSGBOX_SIGN
+# 583 "data/scripts/players_house.pory"
 	end
 
 PlayersHouse_1F_EventScript_MomBeforeStarter::
-# 585 "data/scripts/players_house.pory"
-	msgbox PlayersHouse_1F_EventScript_MomBeforeStarter_Text_0
 # 586 "data/scripts/players_house.pory"
-	closemessage
+	msgbox PlayersHouse_1F_EventScript_MomBeforeStarter_Text_0
 # 587 "data/scripts/players_house.pory"
-	applymovement LOCALID_MOM, PlayersHouse_1F_Movement_MomFaceRight
+	closemessage
 # 588 "data/scripts/players_house.pory"
+	applymovement LOCALID_MOM, PlayersHouse_1F_Movement_MomFaceRight
+# 589 "data/scripts/players_house.pory"
 	waitmovement 0
 	return
 
 
-# 592 "data/scripts/players_house.pory"
+PlayersHouse_1F_EventScript_MomAreYouMeetingDad::
+# 594 "data/scripts/players_house.pory"
+	msgbox PlayersHouse_1F_EventScript_MomAreYouMeetingDad_Text_0
+# 595 "data/scripts/players_house.pory"
+	closemessage
+# 596 "data/scripts/players_house.pory"
+	applymovement LOCALID_MOM, PlayersHouse_1F_Movement_MomFaceRight
+# 597 "data/scripts/players_house.pory"
+	waitmovement 0
+	return
+
+
+# 601 "data/scripts/players_house.pory"
 PlayersHouse_1F_Movement_MomFaceRight:
-# 593 "data/scripts/players_house.pory"
+# 602 "data/scripts/players_house.pory"
 	face_right
 	step_end
 
 PlayersHouse_1F_EventScript_MomBeforeStarter_Text_0:
-# 585 "data/scripts/players_house.pory"
+# 586 "data/scripts/players_house.pory"
 	.string "MOM: Make sure you have everything you\n"
 	.string "need from your desk, hon.$"
+
+PlayersHouse_1F_EventScript_MomAreYouMeetingDad_Text_0:
+# 594 "data/scripts/players_house.pory"
+	.string "MOM: Are you going to head to Route 12\n"
+	.string "to meet DAD?$"

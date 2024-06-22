@@ -351,7 +351,7 @@ gSongTable::
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
-	song mus_littleroot_test, 0, 0
+	song mus_tinybud_test, 0, 0
 	song mus_gsc_route38, 0, 0
 	song mus_caught, 0, 0
 	song mus_victory_wild, 0, 0
@@ -406,7 +406,7 @@ gSongTable::
 	song mus_route119, 0, 0
 	song mus_cycling, 0, 0
 	song mus_poke_mart, 0, 0
-	song mus_littleroot, 0, 0
+	song mus_tinybud, 0, 0
 	song mus_mt_chimney, 0, 0
 	song mus_encounter_female, 0, 0
 	song mus_lilycove, 0, 0

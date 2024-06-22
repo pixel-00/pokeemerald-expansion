@@ -1,9 +1,9 @@
 {
-  "id": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
-  "name": "LittlerootTown_BrendansHouse_2F",
-  "layout": "LAYOUT_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
-  "music": "MUS_LITTLEROOT",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "id": "MAP_TINYBUD_TOWN_MAYS_HOUSE_2F",
+  "name": "TinybudTown_MaysHouse_2F",
+  "layout": "LAYOUT_TINYBUD_TOWN_MAYS_HOUSE_2F",
+  "music": "MUS_TINYBUD",
+  "region_map_section": "MAPSEC_TINYBUD_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -17,7 +17,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 0,
-      "y": 0,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -29,9 +29,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_1",
-      "x": 0,
-      "y": 1,
-      "elevation": 0,
+      "x": 1,
+      "y": 6,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -42,9 +42,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_2",
-      "x": 0,
-      "y": 2,
-      "elevation": 3,
+      "x": 2,
+      "y": 6,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -55,8 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_3",
-      "x": 0,
-      "y": 3,
+      "x": 3,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -68,9 +68,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_4",
-      "x": 0,
-      "y": 4,
-      "elevation": 0,
+      "x": 4,
+      "y": 6,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -81,9 +81,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_5",
-      "x": 0,
-      "y": 5,
-      "elevation": 4,
+      "x": 5,
+      "y": 6,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -94,9 +94,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_6",
-      "x": 1,
-      "y": 0,
-      "elevation": 0,
+      "x": 0,
+      "y": 7,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -108,8 +108,8 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_7",
       "x": 1,
-      "y": 1,
-      "elevation": 0,
+      "y": 7,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -120,8 +120,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_8",
-      "x": 1,
-      "y": 2,
+      "x": 2,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -133,8 +133,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_9",
-      "x": 1,
-      "y": 3,
+      "x": 3,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -146,8 +146,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_A",
-      "x": 1,
-      "y": 4,
+      "x": 4,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -159,9 +159,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_B",
-      "x": 1,
-      "y": 5,
-      "elevation": 0,
+      "x": 5,
+      "y": 7,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -173,10 +173,10 @@
   ],
   "warp_events": [
     {
-      "x": 9,
-      "y": 2,
+      "x": 1,
+      "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
+      "dest_map": "MAP_TINYBUD_TOWN_MAYS_HOUSE_1F",
       "dest_warp_id": "2"
     }
   ],
@@ -186,35 +186,11 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 0,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC"
-    },
-    {
-      "type": "sign",
-      "x": 1,
-      "y": 6,
+      "x": 8,
+      "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "PlayersHouse_2F_EventScript_Notebook"
-    },
-    {
-      "type": "sign",
-      "x": 11,
-      "y": 2,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_BrendansHouse_2F_EventScript_WallClock"
-    },
-    {
-      "type": "sign",
-      "x": 4,
-      "y": 8,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "PlayersHouse_2F_EventScript_GameCube"
+      "script": "TinybudTown_MaysHouse_2F_EventScript_PC"
     }
   ]
 }

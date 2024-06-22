@@ -1,7 +1,7 @@
 {
   "group_order": [
     "gMapGroup_TownsAndRoutes",
-    "gMapGroup_IndoorLittleroot",
+    "gMapGroup_IndoorTinybud",
     "gMapGroup_IndoorOldale",
     "gMapGroup_IndoorDewford",
     "gMapGroup_IndoorLavaridge",
@@ -45,7 +45,7 @@
     "MossdeepCity",
     "SootopolisCity",
     "EverGrandeCity",
-    "LittlerootTown",
+    "TinybudTown",
     "OldaleTown",
     "DewfordTown",
     "LavaridgeTown",
@@ -94,12 +94,12 @@
     "Underwater_Route105",
     "Underwater_Route125"
   ],
-  "gMapGroup_IndoorLittleroot": [
-    "LittlerootTown_BrendansHouse_1F",
-    "LittlerootTown_BrendansHouse_2F",
-    "LittlerootTown_MaysHouse_1F",
-    "LittlerootTown_MaysHouse_2F",
-    "LittlerootTown_ProfessorBirchsLab"
+  "gMapGroup_IndoorTinybud": [
+    "TinybudTown_BrendansHouse_1F",
+    "TinybudTown_BrendansHouse_2F",
+    "TinybudTown_MaysHouse_1F",
+    "TinybudTown_MaysHouse_2F",
+    "TinybudTown_ProfessorBirchsLab"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",

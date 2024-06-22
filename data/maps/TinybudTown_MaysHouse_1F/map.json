@@ -1,9 +1,9 @@
 {
-  "id": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
-  "name": "LittlerootTown_MaysHouse_1F",
-  "layout": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
-  "music": "MUS_LITTLEROOT",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "id": "MAP_TINYBUD_TOWN_MAYS_HOUSE_1F",
+  "name": "TinybudTown_MaysHouse_1F",
+  "layout": "LAYOUT_TINYBUD_TOWN_MAYS_HOUSE_1F",
+  "music": "MUS_TINYBUD",
+  "region_map_section": "MAPSEC_TINYBUD_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PlayersHouse_1F_EventScript_Mom",
-      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MOM"
+      "flag": "FLAG_HIDE_TINYBUD_TOWN_MAYS_HOUSE_MOM"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RIVAL_MAY_NORMAL",
@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MAY"
+      "flag": "FLAG_HIDE_TINYBUD_TOWN_MAYS_HOUSE_MAY"
     }
   ],
   "warp_events": [
@@ -46,21 +46,21 @@
       "x": 1,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN",
+      "dest_map": "MAP_TINYBUD_TOWN",
       "dest_warp_id": "0"
     },
     {
       "x": 2,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN",
+      "dest_map": "MAP_TINYBUD_TOWN",
       "dest_warp_id": "0"
     },
     {
       "x": 2,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
+      "dest_map": "MAP_TINYBUD_TOWN_MAYS_HOUSE_2F",
       "dest_warp_id": "0"
     }
   ],
@@ -70,9 +70,9 @@
       "x": 2,
       "y": 8,
       "elevation": 0,
-      "var": "VAR_LITTLEROOT_INTRO_STATE",
+      "var": "VAR_INTRO_STATE",
       "var_value": "4",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_GoSeeRoom"
+      "script": "TinybudTown_MaysHouse_1F_EventScript_GoSeeRoom"
     }
   ],
   "bg_events": [

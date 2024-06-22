@@ -280,7 +280,7 @@
 
 // Music
 #define START_MUS                   350
-#define MUS_LITTLEROOT_TEST         350 // MUS_TETSUJI          // Unused, likely a test track.
+#define MUS_TINYBUD_TEST         350 // MUS_TETSUJI          // Unused, likely a test track.
 #define MUS_GSC_ROUTE38             351 // MUS_FIELD13          // Unused, likely a test track.
 #define MUS_CAUGHT                  352 // MUS_KACHI22
 #define MUS_VICTORY_WILD            353 // MUS_KACHI2
@@ -335,7 +335,7 @@
 #define MUS_ROUTE119                402 // MUS_GRANROAD         // Also used in Routes 129, 130, 131, 132, 133, 134 and 118's east half.
 #define MUS_CYCLING                 403 // MUS_CYCLING
 #define MUS_POKE_MART               404 // MUS_FRIENDLY         // Also used in Lilycove's Department Store.
-#define MUS_LITTLEROOT              405 // MUS_MISHIRO
+#define MUS_TINYBUD              405 // MUS_MISHIRO
 #define MUS_MT_CHIMNEY              406 // MUS_TOZAN            // Also used in Desert Underpass, Mirage Tower, Seafloor Cavern and Sky Pillar.
 #define MUS_ENCOUNTER_FEMALE        407 // MUS_GIRLEYE
 #define MUS_LILYCOVE                408 // MUS_MINAMO           // Also used in Pacifidlog Town and the Diving Treasure Hunter's house.

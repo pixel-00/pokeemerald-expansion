@@ -5,10 +5,10 @@ raw `
 .set LOCALID_MOM_2F, 14
 
 PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet::
-	setvar VAR_LITTLEROOT_INTRO_STATE, 2
+	setvar VAR_INTRO_STATE, 2
 	return
 
-LittlerootTown_BrendansHouse_2F_EventScript_WallClock::
+TinybudTown_BrendansHouse_2F_EventScript_WallClock::
 	lockall
 	setvar VAR_0x8004, MALE
 	goto PlayersHouse_2F_EventScript_WallClock
@@ -20,7 +20,7 @@ PlayersHouse_2F_EventScript_WallClock::
 	msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
 	call PlayersHouse_2F_EventScript_SetWallClock
 	delay 30
-	setvar VAR_LITTLEROOT_INTRO_STATE, 3
+	setvar VAR_INTRO_STATE, 3
 	setflag FLAG_SET_WALL_CLOCK
 	releaseall
 	end
@@ -67,7 +67,7 @@ PlayersHouse_2F_Movement_MomExitsFemale:
 	step_end
 
 PlayersHouse_1F_EventScript_SetWatchedBroadcast::
-	setvar VAR_LITTLEROOT_INTRO_STATE, 7
+	setvar VAR_INTRO_STATE, 7
 	releaseall
 	end
 
@@ -228,13 +228,14 @@ PlayersHouse_1F_Movement_MomReturnToSeatFemale:
 PlayersHouse_1F_EventScript_Mom::
 	lock
 	faceplayer
-	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 3, PlayersHouse_1F_EventScript_MomBeforeStarter
-	goto_if_eq VAR_LITTLEROOT_HOUSES_STATE_MAY, 4, PlayersHouse_1F_EventScript_DontPushYourselfTooHard
-	goto_if_eq VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 4, PlayersHouse_1F_EventScript_DontPushYourselfTooHard
+	call_if_eq VAR_INTRO_STATE, 3, PlayersHouse_1F_EventScript_MomBeforeStarter
+	call_if_eq VAR_INTRO_STATE, 4, PlayersHouse_1F_EventScript_MomAreYouMeetingDad
+	goto_if_eq VAR_TINYBUD_HOUSES_STATE_MAY, 4, PlayersHouse_1F_EventScript_DontPushYourselfTooHard
+	goto_if_eq VAR_TINYBUD_HOUSES_STATE_BRENDAN, 4, PlayersHouse_1F_EventScript_DontPushYourselfTooHard
 	goto_if_set FLAG_HAS_MATCH_CALL, PlayersHouse_1F_EventScript_TryRegisterMom
 	goto_if_set FLAG_RESCUED_BIRCH, PlayersHouse_1F_EventScript_MomHealsParty
 	goto_if_eq VAR_TEMP_1, 1, PlayersHouse_1F_EventScript_SeeYouHoney
-	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 7, PlayersHouse_1F_EventScript_DidYouMeetProfBirch
+	goto_if_eq VAR_INTRO_STATE, 7, PlayersHouse_1F_EventScript_DidYouMeetProfBirch
 	release
 	end
 
@@ -382,8 +383,8 @@ PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV::
 	copyvar VAR_ROAMER_POKEMON, VAR_RESULT
 	msgbox PlayersHouse_1F_Text_StillUnknownPokemon, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 4
-	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 4
+	setvar VAR_TINYBUD_HOUSES_STATE_MAY, 4
+	setvar VAR_TINYBUD_HOUSES_STATE_BRENDAN, 4
 	releaseall
 	end
 
@@ -587,6 +588,14 @@ script PlayersHouse_1F_EventScript_MomBeforeStarter {
     applymovement(LOCALID_MOM, PlayersHouse_1F_Movement_MomFaceRight)
     waitmovement(0)
     return
+}
+
+script PlayersHouse_1F_EventScript_MomAreYouMeetingDad {
+	msgbox(format("MOM: Are you going to head to Route 12 to meet DAD?"))
+	closemessage
+	applymovement(LOCALID_MOM, PlayersHouse_1F_Movement_MomFaceRight)
+	waitmovement(0)
+	return
 }
 
 movement PlayersHouse_1F_Movement_MomFaceRight {
