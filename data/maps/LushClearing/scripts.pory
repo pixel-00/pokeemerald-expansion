@@ -21,7 +21,7 @@ Route101_EventScript_Youngster::
 	end
 
 Route101_EventScript_Boy::
-	msgbox Route101_Text_WildPokemonInTallGrass, MSGBOX_NPC
+	msgbox Route101_Text_WantToSeeCave, MSGBOX_NPC
 	end
 
 Route101_EventScript_RouteSign::
@@ -49,16 +49,14 @@ Route101_Text_TakeTiredPokemonToPokeCenter:
 	.string "There's a POKéMON CENTER in OLDALE\n"
 	.string "TOWN right close by.$"
 
-Route101_Text_WildPokemonInTallGrass:
-	.string "Wild POKéMON will jump out at you in\n"
-	.string "tall grass.\p"
-	.string "If you want to catch POKéMON, you have\n"
-	.string "to go into the tall grass and search.$"
-
 Route101_Text_RouteSign:
 	.string "LUSH CLEARING\n"
 	.string "{UP_ARROW} CHILLED GROTTO$"
 `
+
+text Route101_Text_WantToSeeCave {
+    format("I want to see what's inside that cave up there, but the trees are blocking the way.")
+}
 
 script LushClearing_EventScript_TriggerGetStarterMoveUp1 {
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)

@@ -45,7 +45,7 @@ Route101_EventScript_Youngster::
 # 23 "data/maps/LushClearing/scripts.pory"
 Route101_EventScript_Boy::
 # 24 "data/maps/LushClearing/scripts.pory"
-	msgbox Route101_Text_WildPokemonInTallGrass, MSGBOX_NPC
+	msgbox Route101_Text_WantToSeeCave, MSGBOX_NPC
 # 25 "data/maps/LushClearing/scripts.pory"
 	end
 # 26 "data/maps/LushClearing/scripts.pory"
@@ -101,252 +101,240 @@ Route101_Text_TakeTiredPokemonToPokeCenter:
 # 51 "data/maps/LushClearing/scripts.pory"
 
 # 52 "data/maps/LushClearing/scripts.pory"
-Route101_Text_WildPokemonInTallGrass:
-# 53 "data/maps/LushClearing/scripts.pory"
-	.string "Wild POKéMON will jump out at you in\n"
-# 54 "data/maps/LushClearing/scripts.pory"
-	.string "tall grass.\p"
-# 55 "data/maps/LushClearing/scripts.pory"
-	.string "If you want to catch POKéMON, you have\n"
-# 56 "data/maps/LushClearing/scripts.pory"
-	.string "to go into the tall grass and search.$"
-# 57 "data/maps/LushClearing/scripts.pory"
-
-# 58 "data/maps/LushClearing/scripts.pory"
 Route101_Text_RouteSign:
-# 59 "data/maps/LushClearing/scripts.pory"
+# 53 "data/maps/LushClearing/scripts.pory"
 	.string "LUSH CLEARING\n"
-# 60 "data/maps/LushClearing/scripts.pory"
+# 54 "data/maps/LushClearing/scripts.pory"
 	.string "{UP_ARROW} CHILLED GROTTO$"
 
 LushClearing_EventScript_TriggerGetStarterMoveUp1::
-# 64 "data/maps/LushClearing/scripts.pory"
+# 62 "data/maps/LushClearing/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	return
 
 
 LushClearing_EventScript_TriggerGetStarterMoveUp2::
-# 68 "data/maps/LushClearing/scripts.pory"
+# 66 "data/maps/LushClearing/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp2
 	return
 
 
 LushClearing_EventScript_TriggerGetStarter2::
-# 72 "data/maps/LushClearing/scripts.pory"
+# 70 "data/maps/LushClearing/scripts.pory"
 	lockall
-# 73 "data/maps/LushClearing/scripts.pory"
+# 71 "data/maps/LushClearing/scripts.pory"
 	msgbox LushClearing_EventScript_TriggerGetStarter2_Text_0
-# 74 "data/maps/LushClearing/scripts.pory"
+# 72 "data/maps/LushClearing/scripts.pory"
 	closemessage
-# 75 "data/maps/LushClearing/scripts.pory"
+# 73 "data/maps/LushClearing/scripts.pory"
 	applymovement LOCALID_DAD, LushClearing_Movement_DadApproachPlayer
-# 76 "data/maps/LushClearing/scripts.pory"
+# 74 "data/maps/LushClearing/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, LushClearing_Movement_TriggerGetStarter2
-# 77 "data/maps/LushClearing/scripts.pory"
+# 75 "data/maps/LushClearing/scripts.pory"
 	waitmovement 0
-# 78 "data/maps/LushClearing/scripts.pory"
+# 76 "data/maps/LushClearing/scripts.pory"
 	goto LushClearing_EventScript_TriggerGetStarter
 	return
 
 
 LushClearing_EventScript_TriggerGetStarter1::
-# 82 "data/maps/LushClearing/scripts.pory"
+# 80 "data/maps/LushClearing/scripts.pory"
 	lockall
-# 83 "data/maps/LushClearing/scripts.pory"
+# 81 "data/maps/LushClearing/scripts.pory"
 	msgbox LushClearing_EventScript_TriggerGetStarter2_Text_0
-# 84 "data/maps/LushClearing/scripts.pory"
+# 82 "data/maps/LushClearing/scripts.pory"
 	closemessage
-# 85 "data/maps/LushClearing/scripts.pory"
+# 83 "data/maps/LushClearing/scripts.pory"
 	applymovement LOCALID_DAD, LushClearing_Movement_DadApproachPlayer
-# 86 "data/maps/LushClearing/scripts.pory"
+# 84 "data/maps/LushClearing/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, LushClearing_Movement_TriggerGetStarter1
-# 87 "data/maps/LushClearing/scripts.pory"
+# 85 "data/maps/LushClearing/scripts.pory"
 	waitmovement 0
-# 88 "data/maps/LushClearing/scripts.pory"
+# 86 "data/maps/LushClearing/scripts.pory"
 	goto LushClearing_EventScript_TriggerGetStarter
 	return
 
 
-# 91 "data/maps/LushClearing/scripts.pory"
+# 89 "data/maps/LushClearing/scripts.pory"
 LushClearing_Movement_TriggerGetStarter2:
-# 92 "data/maps/LushClearing/scripts.pory"
+# 90 "data/maps/LushClearing/scripts.pory"
 	walk_left
-# 92 "data/maps/LushClearing/scripts.pory"
+# 90 "data/maps/LushClearing/scripts.pory"
 	walk_left
-# 93 "data/maps/LushClearing/scripts.pory"
+# 91 "data/maps/LushClearing/scripts.pory"
 	walk_up
-# 93 "data/maps/LushClearing/scripts.pory"
+# 91 "data/maps/LushClearing/scripts.pory"
 	walk_up
-# 94 "data/maps/LushClearing/scripts.pory"
+# 92 "data/maps/LushClearing/scripts.pory"
 	walk_left
 	step_end
 
-# 97 "data/maps/LushClearing/scripts.pory"
+# 95 "data/maps/LushClearing/scripts.pory"
 LushClearing_Movement_TriggerGetStarter1:
-# 98 "data/maps/LushClearing/scripts.pory"
+# 96 "data/maps/LushClearing/scripts.pory"
 	walk_left
-# 98 "data/maps/LushClearing/scripts.pory"
+# 96 "data/maps/LushClearing/scripts.pory"
 	walk_left
-# 99 "data/maps/LushClearing/scripts.pory"
+# 97 "data/maps/LushClearing/scripts.pory"
 	walk_up
-# 100 "data/maps/LushClearing/scripts.pory"
+# 98 "data/maps/LushClearing/scripts.pory"
 	walk_left
 	step_end
 
-# 103 "data/maps/LushClearing/scripts.pory"
+# 101 "data/maps/LushClearing/scripts.pory"
 LushClearing_Movement_DadApproachPlayer:
-# 104 "data/maps/LushClearing/scripts.pory"
+# 102 "data/maps/LushClearing/scripts.pory"
 	walk_fast_down
-# 104 "data/maps/LushClearing/scripts.pory"
+# 102 "data/maps/LushClearing/scripts.pory"
 	walk_fast_down
-# 104 "data/maps/LushClearing/scripts.pory"
+# 102 "data/maps/LushClearing/scripts.pory"
 	walk_fast_down
-# 105 "data/maps/LushClearing/scripts.pory"
+# 103 "data/maps/LushClearing/scripts.pory"
 	walk_down
-# 105 "data/maps/LushClearing/scripts.pory"
+# 103 "data/maps/LushClearing/scripts.pory"
 	walk_down
-# 106 "data/maps/LushClearing/scripts.pory"
+# 104 "data/maps/LushClearing/scripts.pory"
 	walk_right
 	step_end
 
 LushClearing_EventScript_TriggerGetStarter::
-# 110 "data/maps/LushClearing/scripts.pory"
+# 108 "data/maps/LushClearing/scripts.pory"
 	msgbox LushClearing_EventScript_TriggerGetStarter_Text_0
-# 111 "data/maps/LushClearing/scripts.pory"
+# 109 "data/maps/LushClearing/scripts.pory"
 	closemessage
-# 112 "data/maps/LushClearing/scripts.pory"
+# 110 "data/maps/LushClearing/scripts.pory"
 	applymovement LOCALID_DAD, Common_Movement_FaceDown
-# 113 "data/maps/LushClearing/scripts.pory"
+# 111 "data/maps/LushClearing/scripts.pory"
 	waitmovement 0
+# 112 "data/maps/LushClearing/scripts.pory"
+	delay 20
+# 113 "data/maps/LushClearing/scripts.pory"
+	addobject LOCALID_BAG
 # 114 "data/maps/LushClearing/scripts.pory"
 	delay 20
 # 115 "data/maps/LushClearing/scripts.pory"
-	addobject LOCALID_BAG
-# 116 "data/maps/LushClearing/scripts.pory"
-	delay 20
-# 117 "data/maps/LushClearing/scripts.pory"
 	applymovement LOCALID_DAD, Common_Movement_FaceRight
-# 118 "data/maps/LushClearing/scripts.pory"
+# 116 "data/maps/LushClearing/scripts.pory"
 	waitmovement 0
-# 119 "data/maps/LushClearing/scripts.pory"
+# 117 "data/maps/LushClearing/scripts.pory"
 	msgbox LushClearing_EventScript_TriggerGetStarter_Text_1
-# 120 "data/maps/LushClearing/scripts.pory"
+# 118 "data/maps/LushClearing/scripts.pory"
 	setvar VAR_INTRO_STATE, 5
-# 121 "data/maps/LushClearing/scripts.pory"
+# 119 "data/maps/LushClearing/scripts.pory"
 	releaseall
 	end
 
 
 LushClearing_EventScript_PreventLeavingNorth::
-# 126 "data/maps/LushClearing/scripts.pory"
+# 124 "data/maps/LushClearing/scripts.pory"
 	lockall
-# 127 "data/maps/LushClearing/scripts.pory"
+# 125 "data/maps/LushClearing/scripts.pory"
 	msgbox LushClearing_EventScript_PreventLeavingNorth_Text_0
-# 128 "data/maps/LushClearing/scripts.pory"
+# 126 "data/maps/LushClearing/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-# 129 "data/maps/LushClearing/scripts.pory"
+# 127 "data/maps/LushClearing/scripts.pory"
 	waitmovement 0
-# 130 "data/maps/LushClearing/scripts.pory"
+# 128 "data/maps/LushClearing/scripts.pory"
 	releaseall
 	end
 
 
 LushClearing_EventScript_PreventLeavingEast::
-# 135 "data/maps/LushClearing/scripts.pory"
+# 133 "data/maps/LushClearing/scripts.pory"
 	lockall
-# 136 "data/maps/LushClearing/scripts.pory"
+# 134 "data/maps/LushClearing/scripts.pory"
 	msgbox LushClearing_EventScript_PreventLeavingNorth_Text_0
-# 137 "data/maps/LushClearing/scripts.pory"
+# 135 "data/maps/LushClearing/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
-# 138 "data/maps/LushClearing/scripts.pory"
+# 136 "data/maps/LushClearing/scripts.pory"
 	waitmovement 0
-# 139 "data/maps/LushClearing/scripts.pory"
+# 137 "data/maps/LushClearing/scripts.pory"
 	releaseall
 	end
 
 
 LushClearing_EventScript_PreventLeavingSouth::
-# 144 "data/maps/LushClearing/scripts.pory"
+# 142 "data/maps/LushClearing/scripts.pory"
 	lockall
-# 145 "data/maps/LushClearing/scripts.pory"
+# 143 "data/maps/LushClearing/scripts.pory"
 	msgbox LushClearing_EventScript_PreventLeavingNorth_Text_0
-# 146 "data/maps/LushClearing/scripts.pory"
+# 144 "data/maps/LushClearing/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-# 147 "data/maps/LushClearing/scripts.pory"
+# 145 "data/maps/LushClearing/scripts.pory"
 	waitmovement 0
-# 148 "data/maps/LushClearing/scripts.pory"
+# 146 "data/maps/LushClearing/scripts.pory"
 	releaseall
 	end
 
 
 LushClearing_EventScript_Dad::
-# 153 "data/maps/LushClearing/scripts.pory"
+# 151 "data/maps/LushClearing/scripts.pory"
 	compare VAR_INTRO_STATE, 5
 	goto_if_eq LushClearing_EventScript_Dad_2
-# 158 "data/maps/LushClearing/scripts.pory"
+# 156 "data/maps/LushClearing/scripts.pory"
 	compare VAR_INTRO_STATE, 6
 	goto_if_eq LushClearing_EventScript_Dad_3
-# 163 "data/maps/LushClearing/scripts.pory"
+# 161 "data/maps/LushClearing/scripts.pory"
 	releaseall
 	end
 
 LushClearing_EventScript_Dad_2:
-# 154 "data/maps/LushClearing/scripts.pory"
+# 152 "data/maps/LushClearing/scripts.pory"
 	msgbox LushClearing_EventScript_Dad_Text_0, MSGBOX_NPC
-# 155 "data/maps/LushClearing/scripts.pory"
+# 153 "data/maps/LushClearing/scripts.pory"
 	closemessage
 	end
 
 LushClearing_EventScript_Dad_3:
-# 159 "data/maps/LushClearing/scripts.pory"
+# 157 "data/maps/LushClearing/scripts.pory"
 	msgbox LushClearing_EventScript_Dad_Text_1, MSGBOX_NPC
-# 160 "data/maps/LushClearing/scripts.pory"
+# 158 "data/maps/LushClearing/scripts.pory"
 	closemessage
 	end
 
 
 LushClearing_EventScript_DadDefeated::
-# 176 "data/maps/LushClearing/scripts.pory"
+# 174 "data/maps/LushClearing/scripts.pory"
 	msgbox LushClearing_EventScript_DadDefeated_Text_0
-# 177 "data/maps/LushClearing/scripts.pory"
+# 175 "data/maps/LushClearing/scripts.pory"
 	closemessage
-# 178 "data/maps/LushClearing/scripts.pory"
+# 176 "data/maps/LushClearing/scripts.pory"
 	special HealPlayerParty
-# 179 "data/maps/LushClearing/scripts.pory"
+# 177 "data/maps/LushClearing/scripts.pory"
 	setflag FLAG_HIDE_STARTERS_BAG
-# 180 "data/maps/LushClearing/scripts.pory"
+# 178 "data/maps/LushClearing/scripts.pory"
 	setflag FLAG_HIDE_LUSH_CLEARING_DAD
-# 181 "data/maps/LushClearing/scripts.pory"
+# 179 "data/maps/LushClearing/scripts.pory"
 	setvar VAR_INTRO_STATE, 6
-# 182 "data/maps/LushClearing/scripts.pory"
+# 180 "data/maps/LushClearing/scripts.pory"
 	releaseall
 	end
 
 
 LushClearing_OnLoad::
-# 187 "data/maps/LushClearing/scripts.pory"
+# 185 "data/maps/LushClearing/scripts.pory"
 	compare VAR_INTRO_STATE, 6
 	goto_if_ge LushClearing_OnLoad_1
 	return
 
 LushClearing_OnLoad_1:
-# 188 "data/maps/LushClearing/scripts.pory"
+# 186 "data/maps/LushClearing/scripts.pory"
 	clearflag FLAG_HIDE_ROUTE_101_BOY
 	return
 
 
 LushClearing_EventScript_TriggerGetStarter2_Text_0:
-# 73 "data/maps/LushClearing/scripts.pory"
+# 71 "data/maps/LushClearing/scripts.pory"
 	.string "{PLAYER}!$"
 
 LushClearing_EventScript_TriggerGetStarter_Text_0:
-# 110 "data/maps/LushClearing/scripts.pory"
+# 108 "data/maps/LushClearing/scripts.pory"
 	.string "DAD: There you are.\p"
 	.string "You must be wondering why I asked you\n"
 	.string "to come out here.$"
 
 LushClearing_EventScript_TriggerGetStarter_Text_1:
-# 119 "data/maps/LushClearing/scripts.pory"
+# 117 "data/maps/LushClearing/scripts.pory"
 	.string "DAD: Inside this bag are three rare\n"
 	.string "Pokémon that I recieved from a good\l"
 	.string "friend of mine.\p"
@@ -358,24 +346,24 @@ LushClearing_EventScript_TriggerGetStarter_Text_1:
 	.string "Go ahead, pick one!$"
 
 LushClearing_EventScript_PreventLeavingNorth_Text_0:
-# 127 "data/maps/LushClearing/scripts.pory"
+# 125 "data/maps/LushClearing/scripts.pory"
 	.string "DAD: Huh? Don't you want to meet your\n"
 	.string "first POKéMON?$"
 
 LushClearing_EventScript_Dad_Text_0:
-# 154 "data/maps/LushClearing/scripts.pory"
+# 152 "data/maps/LushClearing/scripts.pory"
 	.string "Go ahead, {PLAYER}.\n"
 	.string "Pick whichever one you want.$"
 
 LushClearing_EventScript_Dad_Text_1:
-# 159 "data/maps/LushClearing/scripts.pory"
+# 157 "data/maps/LushClearing/scripts.pory"
 	.string "The nearest gym lies east of here in\n"
 	.string "Newhope City.\p"
 	.string "Make sure you tell Mom before you head\n"
 	.string "off.$"
 
 LushClearing_EventScript_DadDefeated_Text_0:
-# 176 "data/maps/LushClearing/scripts.pory"
+# 174 "data/maps/LushClearing/scripts.pory"
 	.string "Now that you have a Pokémon, the world\n"
 	.string "is your oyster!\p"
 	.string "You should try taking on the eight gyms\n"
@@ -386,12 +374,18 @@ LushClearing_EventScript_DadDefeated_Text_0:
 	.string "Make sure you tell Mom before you head\n"
 	.string "off.$"
 
+Route101_Text_WantToSeeCave::
+# 57 "data/maps/LushClearing/scripts.pory"
+	.string "I want to see what's inside that cave\n"
+	.string "up there, but the trees are blocking\l"
+	.string "the way.$"
+
 LushClearing_Text_BeforeDadBattle::
-# 167 "data/maps/LushClearing/scripts.pory"
+# 165 "data/maps/LushClearing/scripts.pory"
 	.string "A fine choice! Now I will show you what\n"
 	.string "the life of a POKéMON trainer is all\l"
 	.string "about!$"
 
 LushClearing_Text_DadDefeated::
-# 171 "data/maps/LushClearing/scripts.pory"
+# 169 "data/maps/LushClearing/scripts.pory"
 	.string "Amazing! You're a natural!$"
