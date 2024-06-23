@@ -469,7 +469,7 @@ PlayersHouse_1F_EventScript_Mom::
 # 235 "data/scripts/players_house.pory"
 	goto_if_set FLAG_HAS_MATCH_CALL, PlayersHouse_1F_EventScript_TryRegisterMom
 # 236 "data/scripts/players_house.pory"
-	goto_if_set FLAG_RESCUED_BIRCH, PlayersHouse_1F_EventScript_MomHealsParty
+	goto_if_set FLAG_HIDE_STARTERS_BAG, PlayersHouse_1F_EventScript_MomHealsParty
 # 237 "data/scripts/players_house.pory"
 	goto_if_eq VAR_TEMP_1, 1, PlayersHouse_1F_EventScript_SeeYouHoney
 # 238 "data/scripts/players_house.pory"
@@ -1202,5 +1202,5 @@ PlayersHouse_1F_EventScript_MomBeforeStarter_Text_0:
 
 PlayersHouse_1F_EventScript_MomAreYouMeetingDad_Text_0:
 # 594 "data/scripts/players_house.pory"
-	.string "MOM: Are you going to head to Route 12\n"
-	.string "to meet DAD?$"
+	.string "MOM: Are you going to head to LUSH\n"
+	.string "CLEARING to meet DAD?$"

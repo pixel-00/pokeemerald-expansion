@@ -981,7 +981,7 @@ PlayersHouse_1F_EventScript_GoMeetDad_Text_0:
 # 475 "data/maps/TinybudTown_BrendansHouse_1F/scripts.pory"
 	.string "MOM: By the way {PLAYER}, DAD wanted\n"
 	.string "me to tell you to meet him over\l"
-	.string "on Route 12.\p"
+	.string "at the LUSH CLEARING.\p"
 	.string "Why don't you head over there now, hon?$"
 
 PlayersHouse_1F_Text_GoodMorningClock::

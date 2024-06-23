@@ -472,7 +472,7 @@ movement PlayersHouse_1F_Movement_GoMeetDadRightReturn {
 }
 
 script PlayersHouse_1F_EventScript_GoMeetDad {
-	msgbox(format("MOM: By the way {PLAYER}, DAD wanted me to tell you to meet him over\l on Route 12.\p Why don't you head over there now, hon?"))
+	msgbox(format("MOM: By the way {PLAYER}, DAD wanted me to tell you to meet him over\l at the LUSH CLEARING.\p Why don't you head over there now, hon?"))
 	closemessage
 	setvar(VAR_INTRO_STATE, 4)
 	return

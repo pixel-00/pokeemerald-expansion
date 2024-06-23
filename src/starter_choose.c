@@ -112,9 +112,9 @@ static const u8 sStarterLabelCoords[STARTER_MON_COUNT][2] =
 
 static const u16 sStarterMon[STARTER_MON_COUNT] =
 {
-    SPECIES_TREECKO,
-    SPECIES_TORCHIC,
-    SPECIES_MUDKIP,
+    SPECIES_CHIKORITA,
+    SPECIES_CYNDAQUIL,
+    SPECIES_TOTODILE,
 };
 
 static const struct BgTemplate sBgTemplates[3] =
@@ -535,6 +535,13 @@ static void Task_AskConfirmStarter(u8 taskId)
     gTasks[taskId].func = Task_HandleConfirmStarterInput;
 }
 
+static void Task_ExitUi(u8 taskId) {
+  if (!gPaletteFade.active) {
+    DestroyTask(taskId);
+    SetMainCallback2(gMain.savedCallback);
+  }
+}
+
 static void Task_HandleConfirmStarterInput(u8 taskId)
 {
     u8 spriteId;
@@ -545,7 +552,8 @@ static void Task_HandleConfirmStarterInput(u8 taskId)
         // Return the starter choice and exit.
         gSpecialVar_Result = gTasks[taskId].tStarterSelection;
         ResetAllPicSprites();
-        SetMainCallback2(gMain.savedCallback);
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+        gTasks[taskId].func = Task_ExitUi;
         break;
     case 1:  // NO
     case MENU_B_PRESSED:

@@ -71,7 +71,7 @@ Route103_EventScript_StartMayBattleTorchic::
 	end
 
 Route103_EventScript_StartMayBattleMudkip::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_MUDKIP, Route103_Text_MayDefeated
+	msgbox Route103_Text_MayDefeated, MSGBOX_DEFAULT
 	goto Route103_EventScript_AfterMayBattle
 	end
 

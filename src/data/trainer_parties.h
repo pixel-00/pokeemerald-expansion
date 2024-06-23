@@ -6541,10 +6541,11 @@ static const struct TrainerMon sParty_BrendanRoute119Torchic[] = {
     }
 };
 
-static const struct TrainerMon sParty_MayRoute103Mudkip[] = {
+static const struct TrainerMon sParty_Dad1[] = {
     {
     .lvl = 5,
-    .species = SPECIES_TREECKO,
+    .species = SPECIES_GIBLE,
+    .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK}
     }
 };
 

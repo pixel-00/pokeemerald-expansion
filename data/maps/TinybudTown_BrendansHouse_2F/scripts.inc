@@ -137,26 +137,30 @@ TinybudTown_BrendansHouse_2F_OnFrame_0::
 # 71 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
 	setflag FLAG_HIDE_TINYBUD_TOWN_MAYS_HOUSE_MOM
 # 72 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
-	setvar VAR_TINYBUD_HOUSES_STATE_BRENDAN, 1
+	setflag FLAG_HIDE_ROUTE_101_BOY
 # 73 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
-	setdynamicwarp MAP_TINYBUD_TOWN, 3, 10
+	setflag FLAG_HIDE_STARTERS_BAG
 # 74 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
-	setflag FLAG_SYS_B_DASH
+	setvar VAR_TINYBUD_HOUSES_STATE_BRENDAN, 1
 # 75 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
+	setdynamicwarp MAP_TINYBUD_TOWN, 3, 10
+# 76 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
+	setflag FLAG_SYS_B_DASH
+# 77 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
 	releaseall
 	end
 
 
 PlayersHouse_2F_EventScript_TogepiDoll::
-# 80 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
-	lockall
-# 81 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
-	msgbox PlayersHouse_2F_EventScript_TogepiDoll_Text_0
 # 82 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
+	lockall
+# 83 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
+	msgbox PlayersHouse_2F_EventScript_TogepiDoll_Text_0
+# 84 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
 	releaseall
 	end
 
 
 PlayersHouse_2F_EventScript_TogepiDoll_Text_0:
-# 81 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
+# 83 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
 	.string "It's a cute Togepi plush.$"

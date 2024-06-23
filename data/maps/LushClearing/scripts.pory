@@ -1,0 +1,190 @@
+raw `
+.set LOCALID_DAD, 3
+.set LOCALID_BAG, 2
+
+LushClearing_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LushClearing_OnFrame
+    map_script MAP_SCRIPT_ON_LOAD, LushClearing_OnLoad
+	.byte 0
+
+LushClearing_OnFrame:
+	map_script_2 VAR_LUSH_CLEARING_STATE, 0, LushClearing_EventScript_HideMapNamePopup
+	.2byte 0
+
+LushClearing_EventScript_HideMapNamePopup::
+	setflag FLAG_HIDE_MAP_NAME_POPUP
+	setvar VAR_LUSH_CLEARING_STATE, 1
+	end
+
+Route101_EventScript_Youngster::
+	msgbox Route101_Text_TakeTiredPokemonToPokeCenter, MSGBOX_NPC
+	end
+
+Route101_EventScript_Boy::
+	msgbox Route101_Text_WildPokemonInTallGrass, MSGBOX_NPC
+	end
+
+Route101_EventScript_RouteSign::
+	msgbox Route101_Text_RouteSign, MSGBOX_SIGN
+	end
+
+Route101_EventScript_BirchsBag::
+	lock
+    faceplayer
+	setflag FLAG_SYS_POKEMON_GET
+	fadescreen FADE_TO_BLACK
+    setobjectxy LOCALID_DAD, 10, 24
+    applymovement LOCALID_DAD, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+    removeobject LOCALID_BAG
+    waitmovement 0
+	special ChooseStarter
+    waitstate
+    trainerbattle_single TRAINER_DAD_1, LushClearing_Text_BeforeDadBattle, LushClearing_Text_DadDefeated, LushClearing_EventScript_DadDefeated, NO_MUSIC
+	end
+
+Route101_Text_TakeTiredPokemonToPokeCenter:
+	.string "If POKéMON get tired, take them to\n"
+	.string "a POKéMON CENTER.\p"
+	.string "There's a POKéMON CENTER in OLDALE\n"
+	.string "TOWN right close by.$"
+
+Route101_Text_WildPokemonInTallGrass:
+	.string "Wild POKéMON will jump out at you in\n"
+	.string "tall grass.\p"
+	.string "If you want to catch POKéMON, you have\n"
+	.string "to go into the tall grass and search.$"
+
+Route101_Text_RouteSign:
+	.string "LUSH CLEARING\n"
+	.string "{UP_ARROW} CHILLED GROTTO$"
+`
+
+script LushClearing_EventScript_TriggerGetStarterMoveUp1 {
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+}
+
+script LushClearing_EventScript_TriggerGetStarterMoveUp2 {
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp2)
+}
+
+script LushClearing_EventScript_TriggerGetStarter2 {
+    lockall
+    msgbox("{PLAYER}!")
+    closemessage
+    applymovement(LOCALID_DAD, LushClearing_Movement_DadApproachPlayer)
+    applymovement(OBJ_EVENT_ID_PLAYER, LushClearing_Movement_TriggerGetStarter2)
+    waitmovement(0)
+    goto(LushClearing_EventScript_TriggerGetStarter)
+}
+
+script LushClearing_EventScript_TriggerGetStarter1 {
+    lockall
+    msgbox("{PLAYER}!")
+    closemessage
+    applymovement(LOCALID_DAD, LushClearing_Movement_DadApproachPlayer)
+    applymovement(OBJ_EVENT_ID_PLAYER, LushClearing_Movement_TriggerGetStarter1)
+    waitmovement(0)
+    goto(LushClearing_EventScript_TriggerGetStarter)
+}
+
+movement LushClearing_Movement_TriggerGetStarter2 {
+    walk_left * 2
+    walk_up * 2
+    walk_left
+}
+
+movement LushClearing_Movement_TriggerGetStarter1 {
+    walk_left * 2
+    walk_up
+    walk_left
+}
+
+movement LushClearing_Movement_DadApproachPlayer {
+    walk_fast_down * 3
+    walk_down * 2
+    walk_right
+}
+
+script LushClearing_EventScript_TriggerGetStarter {
+    msgbox(format("DAD: There you are.\p You must be wondering why I asked you to come out here."))
+    closemessage
+    applymovement(LOCALID_DAD, Common_Movement_FaceDown)
+    waitmovement(0)
+    delay(20)
+    addobject(LOCALID_BAG)
+    delay(20)
+    applymovement(LOCALID_DAD, Common_Movement_FaceRight)
+    waitmovement(0)
+    msgbox(format("DAD: Inside this bag are three rare Pokémon that I recieved from a good friend of mine.\p I'd like to give one of them to you, {PLAYER}!\p I was about your age when I recieved my first Pokémon, so I think it's about time you met your own Pokémon partner.\p Go ahead, pick one!"))
+    setvar(VAR_INTRO_STATE, 5)
+    releaseall
+    end
+}
+
+script LushClearing_EventScript_PreventLeavingNorth {
+    lockall
+    msgbox(format("DAD: Huh? Don't you want to meet your first POKéMON?"))
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+script LushClearing_EventScript_PreventLeavingEast {
+    lockall
+    msgbox(format("DAD: Huh? Don't you want to meet your first POKéMON?"))
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+script LushClearing_EventScript_PreventLeavingSouth {
+    lockall
+    msgbox(format("DAD: Huh? Don't you want to meet your first POKéMON?"))
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+script LushClearing_EventScript_Dad {
+    if (var(VAR_INTRO_STATE) == 5) {
+        msgbox(format("Go ahead, {PLAYER}.\n Pick whichever one you want."), MSGBOX_NPC)
+        closemessage
+        end
+    }
+    elif (var(VAR_INTRO_STATE) == 6) {
+        msgbox(format("The nearest gym lies east of here in Newhope City.\p Make sure you tell Mom before you head off."), MSGBOX_NPC)
+        closemessage
+        end
+    }
+    releaseall
+    end
+}
+
+text LushClearing_Text_BeforeDadBattle {
+    format("A fine choice! Now I will show you what the life of a POKéMON trainer is all about!")
+}
+
+text LushClearing_Text_DadDefeated {
+    format("Amazing! You're a natural!")
+}
+
+script LushClearing_EventScript_DadDefeated {
+    msgbox(format("Now that you have a Pokémon, the world is your oyster!\p You should try taking on the eight gyms across Tanso. Who knows? You may even become the champion!\p The nearest gym lies east of here in Newhope City.\p Make sure you tell Mom before you head off."))
+    closemessage
+    special(HealPlayerParty)
+    setflag(FLAG_HIDE_STARTERS_BAG)
+    setflag(FLAG_HIDE_LUSH_CLEARING_DAD)
+    setvar(VAR_INTRO_STATE, 6)
+    releaseall
+    end
+}
+
+script LushClearing_OnLoad {
+    if (var(VAR_INTRO_STATE) >= 6) {
+        clearflag(FLAG_HIDE_ROUTE_101_BOY)
+    }
+}

@@ -69,6 +69,8 @@ script TinybudTown_BrendansHouse_2F_OnFrame_0 {
     setrespawn(HEAL_LOCATION_TINYBUD_TOWN_BRENDANS_HOUSE_2F)
 	setvar(VAR_INTRO_STATE, 1)
 	setflag(FLAG_HIDE_TINYBUD_TOWN_MAYS_HOUSE_MOM)
+	setflag(FLAG_HIDE_ROUTE_101_BOY)
+	setflag(FLAG_HIDE_STARTERS_BAG)
 	setvar(VAR_TINYBUD_HOUSES_STATE_BRENDAN, 1)
 	setdynamicwarp(MAP_TINYBUD_TOWN, 3, 10)
     setflag(FLAG_SYS_B_DASH)
