@@ -247,7 +247,6 @@ static bool8 TryStartInteractionScript(struct MapPosition *position, u16 metatil
 
     // Don't play interaction sound for certain scripts.
     if (script != TinybudTown_BrendansHouse_2F_EventScript_CheckPlayersPC
-     && script != TinybudTown_MaysHouse_2F_EventScript_PC
      && script != SecretBase_EventScript_PC
      && script != SecretBase_EventScript_RecordMixingPC
      && script != SecretBase_EventScript_DollInteract

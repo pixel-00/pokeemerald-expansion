@@ -265,125 +265,198 @@ TinybudTown_EventScript_TownSign::
 # 133 "data/maps/TinybudTown/scripts.pory"
 
 # 134 "data/maps/TinybudTown/scripts.pory"
-TinybudTown_EventScript_BirchsLabSign::
-# 135 "data/maps/TinybudTown/scripts.pory"
-	msgbox TinybudTown_Text_ProfBirchsLab, MSGBOX_SIGN
-# 136 "data/maps/TinybudTown/scripts.pory"
-	end
-# 137 "data/maps/TinybudTown/scripts.pory"
-
-# 138 "data/maps/TinybudTown/scripts.pory"
 TinybudTown_EventScript_PlayersHouseSign::
-# 139 "data/maps/TinybudTown/scripts.pory"
+# 135 "data/maps/TinybudTown/scripts.pory"
 	lockall
-# 140 "data/maps/TinybudTown/scripts.pory"
+# 136 "data/maps/TinybudTown/scripts.pory"
 	msgbox TinybudTown_Text_PlayersHouse, MSGBOX_DEFAULT
-# 141 "data/maps/TinybudTown/scripts.pory"
+# 137 "data/maps/TinybudTown/scripts.pory"
 	releaseall
-# 142 "data/maps/TinybudTown/scripts.pory"
+# 138 "data/maps/TinybudTown/scripts.pory"
 	end
+# 139 "data/maps/TinybudTown/scripts.pory"
+
+# 140 "data/maps/TinybudTown/scripts.pory"
+TinybudTown_Text_CanUsePCToStoreItems:
+# 141 "data/maps/TinybudTown/scripts.pory"
+	.string "If you use a PC, you can store items\n"
+# 142 "data/maps/TinybudTown/scripts.pory"
+	.string "and POKéMON.\p"
 # 143 "data/maps/TinybudTown/scripts.pory"
-
+	.string "The power of science is staggering!$"
 # 144 "data/maps/TinybudTown/scripts.pory"
-TinybudTown_EventScript_BirchsHouseSignFemale::
-# 145 "data/maps/TinybudTown/scripts.pory"
-	msgbox TinybudTown_Text_ProfBirchsHouse, MSGBOX_DEFAULT
-# 146 "data/maps/TinybudTown/scripts.pory"
-	return
-# 147 "data/maps/TinybudTown/scripts.pory"
 
+# 145 "data/maps/TinybudTown/scripts.pory"
+TinybudTown_Text_BirchSpendsDaysInLab:
+# 146 "data/maps/TinybudTown/scripts.pory"
+	.string "PROF. BIRCH spends days in his LAB\n"
+# 147 "data/maps/TinybudTown/scripts.pory"
+	.string "studying, then he'll suddenly go out in\l"
 # 148 "data/maps/TinybudTown/scripts.pory"
-TinybudTown_EventScript_BirchsHouseSignMale::
+	.string "the wild to do more research…\p"
 # 149 "data/maps/TinybudTown/scripts.pory"
-	msgbox TinybudTown_Text_ProfBirchsHouse, MSGBOX_DEFAULT
+	.string "When does PROF. BIRCH spend time\n"
 # 150 "data/maps/TinybudTown/scripts.pory"
-	return
+	.string "at home?$"
 # 151 "data/maps/TinybudTown/scripts.pory"
 
 # 152 "data/maps/TinybudTown/scripts.pory"
-TinybudTown_Text_CanUsePCToStoreItems:
-# 153 "data/maps/TinybudTown/scripts.pory"
-	.string "If you use a PC, you can store items\n"
-# 154 "data/maps/TinybudTown/scripts.pory"
-	.string "and POKéMON.\p"
-# 155 "data/maps/TinybudTown/scripts.pory"
-	.string "The power of science is staggering!$"
-# 156 "data/maps/TinybudTown/scripts.pory"
-
-# 157 "data/maps/TinybudTown/scripts.pory"
-TinybudTown_Text_BirchSpendsDaysInLab:
-# 158 "data/maps/TinybudTown/scripts.pory"
-	.string "PROF. BIRCH spends days in his LAB\n"
-# 159 "data/maps/TinybudTown/scripts.pory"
-	.string "studying, then he'll suddenly go out in\l"
-# 160 "data/maps/TinybudTown/scripts.pory"
-	.string "the wild to do more research…\p"
-# 161 "data/maps/TinybudTown/scripts.pory"
-	.string "When does PROF. BIRCH spend time\n"
-# 162 "data/maps/TinybudTown/scripts.pory"
-	.string "at home?$"
-# 163 "data/maps/TinybudTown/scripts.pory"
-
-# 164 "data/maps/TinybudTown/scripts.pory"
 TinybudTown_Text_TownSign:
-# 165 "data/maps/TinybudTown/scripts.pory"
+# 153 "data/maps/TinybudTown/scripts.pory"
 	.string "TINYBUD TOWN\n"
-# 166 "data/maps/TinybudTown/scripts.pory"
-	.string "“A town that can't be shaded any hue.”$"
-# 167 "data/maps/TinybudTown/scripts.pory"
+# 154 "data/maps/TinybudTown/scripts.pory"
+	.string "“A town of budding greatness.”\p"
+# 155 "data/maps/TinybudTown/scripts.pory"
+	.string "{LEFT_ARROW} LUSH CLEARING\n"
+# 156 "data/maps/TinybudTown/scripts.pory"
+	.string "{RIGHT_ARROW} ROUTE 1$"
+# 157 "data/maps/TinybudTown/scripts.pory"
 
-# 168 "data/maps/TinybudTown/scripts.pory"
-TinybudTown_Text_ProfBirchsLab:
-# 169 "data/maps/TinybudTown/scripts.pory"
-	.string "PROF. BIRCH'S POKéMON LAB$"
-# 170 "data/maps/TinybudTown/scripts.pory"
-
-# 171 "data/maps/TinybudTown/scripts.pory"
+# 158 "data/maps/TinybudTown/scripts.pory"
 TinybudTown_Text_PlayersHouse:
-# 172 "data/maps/TinybudTown/scripts.pory"
+# 159 "data/maps/TinybudTown/scripts.pory"
 	.string "{PLAYER}'s HOUSE$"
-# 173 "data/maps/TinybudTown/scripts.pory"
-
-# 174 "data/maps/TinybudTown/scripts.pory"
-TinybudTown_Text_ProfBirchsHouse:
-# 175 "data/maps/TinybudTown/scripts.pory"
-	.string "PROF. BIRCH'S HOUSE$"
 
 TinybudTown_EventScript_Girl::
-# 179 "data/maps/TinybudTown/scripts.pory"
+# 163 "data/maps/TinybudTown/scripts.pory"
 	lock
-# 180 "data/maps/TinybudTown/scripts.pory"
+# 164 "data/maps/TinybudTown/scripts.pory"
 	faceplayer
-# 181 "data/maps/TinybudTown/scripts.pory"
+# 165 "data/maps/TinybudTown/scripts.pory"
 	msgbox TinybudTown_EventScript_Girl_Text_0
-# 182 "data/maps/TinybudTown/scripts.pory"
+# 166 "data/maps/TinybudTown/scripts.pory"
 	release
 	end
 
 
-TinybudTown_EventScript_Zigzagoon::
-# 187 "data/maps/TinybudTown/scripts.pory"
+TinybudTown_EventScript_Budew::
+# 171 "data/maps/TinybudTown/scripts.pory"
 	lock
-# 188 "data/maps/TinybudTown/scripts.pory"
+# 172 "data/maps/TinybudTown/scripts.pory"
 	faceplayer
-# 189 "data/maps/TinybudTown/scripts.pory"
-	waitse
-# 190 "data/maps/TinybudTown/scripts.pory"
-	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
-# 191 "data/maps/TinybudTown/scripts.pory"
-	msgbox TinybudTown_EventScript_Zigzagoon_Text_0
-# 192 "data/maps/TinybudTown/scripts.pory"
+# 173 "data/maps/TinybudTown/scripts.pory"
+	playmoncry SPECIES_BUDEW, CRY_MODE_NORMAL
+# 174 "data/maps/TinybudTown/scripts.pory"
+	msgbox TinybudTown_EventScript_Budew_Text_0, MSGBOX_DEFAULT
+# 175 "data/maps/TinybudTown/scripts.pory"
 	waitmoncry
+# 176 "data/maps/TinybudTown/scripts.pory"
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+# 177 "data/maps/TinybudTown/scripts.pory"
+	compare VAR_RESULT, DIR_NORTH
+	goto_if_eq TinybudTown_EventScript_Budew_2
+# 185 "data/maps/TinybudTown/scripts.pory"
+	compare VAR_RESULT, DIR_EAST
+	goto_if_eq TinybudTown_EventScript_Budew_3
 # 193 "data/maps/TinybudTown/scripts.pory"
+	compare VAR_RESULT, DIR_SOUTH
+	goto_if_eq TinybudTown_EventScript_Budew_4
+# 201 "data/maps/TinybudTown/scripts.pory"
+	compare VAR_RESULT, DIR_WEST
+	goto_if_eq TinybudTown_EventScript_Budew_5
+TinybudTown_EventScript_Budew_1:
+# 209 "data/maps/TinybudTown/scripts.pory"
 	release
 	end
 
+TinybudTown_EventScript_Budew_2:
+# 178 "data/maps/TinybudTown/scripts.pory"
+	applymovement 4, TinybudTown_Movement_BudewHopN
+# 179 "data/maps/TinybudTown/scripts.pory"
+	playse SE_LEDGE
+# 180 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
+# 181 "data/maps/TinybudTown/scripts.pory"
+	applymovement 4, TinybudTown_Movement_BudewHopN
+# 182 "data/maps/TinybudTown/scripts.pory"
+	playse SE_LEDGE
+# 183 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
+	goto TinybudTown_EventScript_Budew_1
+
+TinybudTown_EventScript_Budew_3:
+# 186 "data/maps/TinybudTown/scripts.pory"
+	applymovement 4, TinybudTown_Movement_BudewHopE
+# 187 "data/maps/TinybudTown/scripts.pory"
+	playse SE_LEDGE
+# 188 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
+# 189 "data/maps/TinybudTown/scripts.pory"
+	applymovement 4, TinybudTown_Movement_BudewHopE
+# 190 "data/maps/TinybudTown/scripts.pory"
+	playse SE_LEDGE
+# 191 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
+	goto TinybudTown_EventScript_Budew_1
+
+TinybudTown_EventScript_Budew_4:
+# 194 "data/maps/TinybudTown/scripts.pory"
+	applymovement 4, TinybudTown_Movement_BudewHopS
+# 195 "data/maps/TinybudTown/scripts.pory"
+	playse SE_LEDGE
+# 196 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
+# 197 "data/maps/TinybudTown/scripts.pory"
+	applymovement 4, TinybudTown_Movement_BudewHopS
+# 198 "data/maps/TinybudTown/scripts.pory"
+	playse SE_LEDGE
+# 199 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
+	goto TinybudTown_EventScript_Budew_1
+
+TinybudTown_EventScript_Budew_5:
+# 202 "data/maps/TinybudTown/scripts.pory"
+	applymovement 4, TinybudTown_Movement_BudewHopW
+# 203 "data/maps/TinybudTown/scripts.pory"
+	playse SE_LEDGE
+# 204 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
+# 205 "data/maps/TinybudTown/scripts.pory"
+	applymovement 4, TinybudTown_Movement_BudewHopW
+# 206 "data/maps/TinybudTown/scripts.pory"
+	playse SE_LEDGE
+# 207 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
+	goto TinybudTown_EventScript_Budew_1
+
+
+# 213 "data/maps/TinybudTown/scripts.pory"
+TinybudTown_Movement_BudewHopN:
+# 214 "data/maps/TinybudTown/scripts.pory"
+	disable_jump_landing_ground_effect
+# 215 "data/maps/TinybudTown/scripts.pory"
+	jump_in_place_down
+	step_end
+
+# 218 "data/maps/TinybudTown/scripts.pory"
+TinybudTown_Movement_BudewHopE:
+# 219 "data/maps/TinybudTown/scripts.pory"
+	disable_jump_landing_ground_effect
+# 220 "data/maps/TinybudTown/scripts.pory"
+	jump_in_place_left
+	step_end
+
+# 223 "data/maps/TinybudTown/scripts.pory"
+TinybudTown_Movement_BudewHopS:
+# 224 "data/maps/TinybudTown/scripts.pory"
+	disable_jump_landing_ground_effect
+# 225 "data/maps/TinybudTown/scripts.pory"
+	jump_in_place_up
+	step_end
+
+# 228 "data/maps/TinybudTown/scripts.pory"
+TinybudTown_Movement_BudewHopW:
+# 229 "data/maps/TinybudTown/scripts.pory"
+	disable_jump_landing_ground_effect
+# 230 "data/maps/TinybudTown/scripts.pory"
+	jump_in_place_right
+	step_end
 
 TinybudTown_EventScript_Girl_Text_0:
-# 181 "data/maps/TinybudTown/scripts.pory"
-	.string "My brother caught this ZIGZAGOON for\n"
-	.string "me!$"
+# 165 "data/maps/TinybudTown/scripts.pory"
+	.string "Budew is the town's mascot!\p"
+	.string "Isn't he a cutie?$"
 
-TinybudTown_EventScript_Zigzagoon_Text_0:
-# 191 "data/maps/TinybudTown/scripts.pory"
-	.string "ZIGZAGOON is full of energy!$"
+TinybudTown_EventScript_Budew_Text_0:
+# 174 "data/maps/TinybudTown/scripts.pory"
+	.string "Dew dew!$"

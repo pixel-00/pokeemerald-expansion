@@ -326,7 +326,7 @@ const struct RematchTrainer gRematchTable[REMATCH_TABLE_ENTRIES] =
     [REMATCH_HALEY] = REMATCH(TRAINER_HALEY_1, TRAINER_HALEY_2, TRAINER_HALEY_3, TRAINER_HALEY_4, TRAINER_HALEY_5, ROUTE104),
     [REMATCH_JAMES] = REMATCH(TRAINER_JAMES_1, TRAINER_JAMES_2, TRAINER_JAMES_3, TRAINER_JAMES_4, TRAINER_JAMES_5, PETALBURG_WOODS),
     [REMATCH_TRENT] = REMATCH(TRAINER_TRENT_1, TRAINER_TRENT_2, TRAINER_TRENT_3, TRAINER_TRENT_4, TRAINER_TRENT_5, ROUTE112),
-    [REMATCH_SAWYER] = REMATCH(TRAINER_SAWYER_1, TRAINER_SAWYER_2, TRAINER_SAWYER_3, TRAINER_SAWYER_4, TRAINER_SAWYER_5, MT_CHIMNEY),
+    [REMATCH_SAWYER] = REMATCH(TRAINER_NONE, TRAINER_SAWYER_2, TRAINER_SAWYER_3, TRAINER_SAWYER_4, TRAINER_SAWYER_5, MT_CHIMNEY),
     [REMATCH_KIRA_AND_DAN] = REMATCH(TRAINER_KIRA_AND_DAN_1, TRAINER_KIRA_AND_DAN_2, TRAINER_KIRA_AND_DAN_3, TRAINER_KIRA_AND_DAN_4, TRAINER_KIRA_AND_DAN_5, ABANDONED_SHIP_ROOMS2_1F),
     [REMATCH_WALLY_VR] = REMATCH(TRAINER_WALLY_VR_2, TRAINER_WALLY_VR_3, TRAINER_WALLY_VR_4, TRAINER_WALLY_VR_5, TRAINER_WALLY_VR_5, VICTORY_ROAD_1F),
     [REMATCH_ROXANNE] = REMATCH(TRAINER_ROXANNE_1, TRAINER_ROXANNE_2, TRAINER_ROXANNE_3, TRAINER_ROXANNE_4, TRAINER_ROXANNE_5, RUSTBORO_CITY),
@@ -1186,6 +1186,10 @@ const u8 *BattleSetup_ConfigureTrainerBattle(const u8 *data)
         TrainerBattleLoadArgs(sContinueScriptDoubleBattleParams, data);
         SetMapVarsToTrainer();
         return EventScript_TryDoDoubleTrainerBattle;
+    case TRAINER_BATTLE_INTRO:
+        TrainerBattleLoadArgs(sContinueScriptBattleParams, data);
+        SetMapVarsToTrainer();
+        return EventScript_TryDoNormalTrainerBattle;
 #if FREE_MATCH_CALL == FALSE
     case TRAINER_BATTLE_REMATCH_DOUBLE:
         TrainerBattleLoadArgs(sDoubleBattleParams, data);
@@ -1328,7 +1332,14 @@ void BattleSetup_StartTrainerBattle(void)
     if (gNoOfApproachingTrainers == 2)
         gBattleTypeFlags = (BATTLE_TYPE_DOUBLE | BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_TRAINER);
     else
-        gBattleTypeFlags = (BATTLE_TYPE_TRAINER);
+    {
+        if (sTrainerBattleMode == TRAINER_BATTLE_INTRO) {
+            gBattleTypeFlags = (BATTLE_TYPE_INTRO | BATTLE_TYPE_TRAINER);
+        }
+        else
+            gBattleTypeFlags = (BATTLE_TYPE_TRAINER);
+    }
+
 
     if (InBattlePyramid())
     {
@@ -1423,12 +1434,23 @@ static void CB2_EndTrainerBattle(void)
         DowngradeBadPoison();
         SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
     }
-    else if (IsPlayerDefeated(gBattleOutcome) == TRUE)
+    else if (IsPlayerDefeated(gBattleOutcome) == TRUE && sTrainerBattleMode != TRAINER_BATTLE_INTRO)
     {
         if (InBattlePyramid() || InTrainerHillChallenge() || (!NoAliveMonsForPlayer()))
             SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
         else
             SetMainCallback2(CB2_WhiteOut);
+    }
+    else if (sTrainerBattleMode == TRAINER_BATTLE_INTRO)
+    {
+        HealPlayerParty();
+        SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+        DowngradeBadPoison();
+        if (!InBattlePyramid() && !InTrainerHillChallenge())
+        {
+            RegisterTrainerInMatchCall();
+            SetBattledTrainersFlags();
+        }
     }
     else
     {
@@ -1544,7 +1566,8 @@ void PlayTrainerEncounterMusic(void)
         trainerId = gTrainerBattleOpponent_B;
 
     if (sTrainerBattleMode != TRAINER_BATTLE_CONTINUE_SCRIPT_NO_MUSIC
-        && sTrainerBattleMode != TRAINER_BATTLE_CONTINUE_SCRIPT_DOUBLE_NO_MUSIC)
+        && sTrainerBattleMode != TRAINER_BATTLE_CONTINUE_SCRIPT_DOUBLE_NO_MUSIC
+        && sTrainerBattleMode != TRAINER_BATTLE_INTRO)
     {
         switch (GetTrainerEncounterMusicId(trainerId))
         {

@@ -84,7 +84,7 @@ script PlayersHouse_1F_EventScript_MomBeforeStarter {
 }
 
 script PlayersHouse_1F_EventScript_MomAreYouMeetingDad {
-	msgbox(format("MOM: Are you going to head to the Lush Clearing to meet Dad?"))
+	msgbox(format("MOM: Are you going to head to the LUSH CLEARING to meet DAD?"))
 	closemessage
 	applymovement(LOCALID_MOM, Common_Movement_FaceRight)
 	waitmovement(0)
@@ -92,18 +92,18 @@ script PlayersHouse_1F_EventScript_MomAreYouMeetingDad {
 }
 
 script PlayersHouse_1F_EventScript_MomSendoff {
-	msgbox(format("Mom: What is it, hon?\p … … … … … … … … … … … … … … … …\p … … … … … … … … … … … … … … … …\p Mom: This is incredible! Let me see your Pokémon.\p How precious! Did you give it a nickname?"), MSGBOX_YESNO)
+	msgbox(format("Mom: What is it, hon?\p… … … … … … … … … … … … … … … …\p… … … … … … … … … … … … … … … …\pMom: This is incredible! Let me see your POKéMON.\pHow precious! Did you give it a nickname?"), MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
 		setvar(VAR_0x8004, 0)
 		call(Common_EventScript_NameReceivedPartyMon)
 	}
-	msgbox(format("You know, I used to be a trainer back in my day. Take this, it's sure to be a help on your journey."))
+	msgbox(format("You know, I used to be a trainer back in my day.\pTake this, it's sure to be a help on your journey."))
 	closemessage
 	giveitem(ITEM_EXP_SHARE, 1)
-	msgbox(format("If you let a Pokémon hold that item, it will gain experience even if it doesn't participate in battle!\p You should give these to your Pokémon too."))
+	msgbox(format("If you let a POKéMON hold that item, it will gain experience even if it doesn't participate in battle!\pYou should give these to your POKéMON too."))
 	closemessage
 	giveitem(ITEM_ORAN_BERRY, 10)
-	msgbox(format("Those will heal your Pokémon up in a pinch.\p Don't work yourself too hard, {PLAYER}, and come home from time to time. Good luck on your adventure!"))
+	msgbox(format("Those will heal up your POKéMON in a pinch.\pDon't work yourself too hard, {PLAYER}, and come home from time to time. Good luck on your adventure!"))
 	setvar(VAR_INTRO_STATE, 7)
 	releaseall
 	end

@@ -29,19 +29,20 @@ Route101_EventScript_RouteSign::
 	end
 
 Route101_EventScript_BirchsBag::
-	lock
+	lockall
     faceplayer
 	setflag FLAG_SYS_POKEMON_GET
 	fadescreen FADE_TO_BLACK
+    removeobject LOCALID_BAG
     setobjectxy LOCALID_DAD, 10, 24
     applymovement LOCALID_DAD, Common_Movement_FaceDown
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-    removeobject LOCALID_BAG
+    waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
     waitmovement 0
 	special ChooseStarter
     waitstate
-    trainerbattle_single TRAINER_DAD_1, LushClearing_Text_BeforeDadBattle, LushClearing_Text_DadDefeated, LushClearing_EventScript_DadDefeated, NO_MUSIC
-	end
+	trainerbattle TRAINER_BATTLE_INTRO, TRAINER_DAD_1, 0, LushClearing_Text_BeforeDadBattle, LushClearing_Text_DadDefeated, LushClearing_EventScript_DadDefeated
+    end
 
 Route101_Text_TakeTiredPokemonToPokeCenter:
 	.string "If POKéMON get tired, take them to\n"
@@ -105,7 +106,7 @@ movement LushClearing_Movement_DadApproachPlayer {
 }
 
 script LushClearing_EventScript_TriggerGetStarter {
-    msgbox(format("DAD: There you are.\p You must be wondering why I asked you to come out here."))
+    msgbox(format("DAD: There you are, {PLAYER}.\pYou must be wondering why I asked you to come out here."))
     closemessage
     applymovement(LOCALID_DAD, Common_Movement_FaceDown)
     waitmovement(0)
@@ -114,7 +115,7 @@ script LushClearing_EventScript_TriggerGetStarter {
     delay(20)
     applymovement(LOCALID_DAD, Common_Movement_FaceRight)
     waitmovement(0)
-    msgbox(format("DAD: Inside this bag are three rare Pokémon that I recieved from a good friend of mine.\p I'd like to give one of them to you, {PLAYER}!\p I was about your age when I recieved my first Pokémon, so I think it's about time you met your own Pokémon partner.\p Go ahead, pick one!"))
+    msgbox(format("DAD: Inside this bag are three rare POKéMON that I recieved from a good friend of mine.\pI'd like to give one of them to you, {PLAYER}!\pI was about your age when I recieved my first POKéMON, so I think it's about time you met your own POKéMON partner.\pGo ahead, pick one!"))
     setvar(VAR_INTRO_STATE, 5)
     releaseall
     end
@@ -122,7 +123,7 @@ script LushClearing_EventScript_TriggerGetStarter {
 
 script LushClearing_EventScript_PreventLeavingNorth {
     lockall
-    msgbox(format("DAD: Huh? Don't you want to meet your first POKéMON?"))
+    msgbox(format("DAD: Huh?\pDon't you want to meet your first POKéMON?"))
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
     waitmovement(0)
     releaseall
@@ -131,7 +132,7 @@ script LushClearing_EventScript_PreventLeavingNorth {
 
 script LushClearing_EventScript_PreventLeavingEast {
     lockall
-    msgbox(format("DAD: Huh? Don't you want to meet your first POKéMON?"))
+    msgbox(format("DAD: Huh?\pDon't you want to meet your first POKéMON?"))
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
     waitmovement(0)
     releaseall
@@ -140,7 +141,7 @@ script LushClearing_EventScript_PreventLeavingEast {
 
 script LushClearing_EventScript_PreventLeavingSouth {
     lockall
-    msgbox(format("DAD: Huh? Don't you want to meet your first POKéMON?"))
+    msgbox(format("DAD: Huh?\pDon't you want to meet your first POKéMON?"))
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
     waitmovement(0)
     releaseall
@@ -149,12 +150,12 @@ script LushClearing_EventScript_PreventLeavingSouth {
 
 script LushClearing_EventScript_Dad {
     if (var(VAR_INTRO_STATE) == 5) {
-        msgbox(format("Go ahead, {PLAYER}.\n Pick whichever one you want."), MSGBOX_NPC)
+        msgbox(format("Go ahead, {PLAYER}.\nPick whichever one you want."), MSGBOX_NPC)
         closemessage
         end
     }
     elif (var(VAR_INTRO_STATE) == 6) {
-        msgbox(format("The nearest gym lies east of here in Newhope City.\p Make sure you tell Mom before you head off."), MSGBOX_NPC)
+        msgbox(format("The nearest gym lies to the east in NEWHOPE CITY.\pMake sure you tell MOM before you head off."), MSGBOX_NPC)
         closemessage
         end
     }
@@ -163,15 +164,19 @@ script LushClearing_EventScript_Dad {
 }
 
 text LushClearing_Text_BeforeDadBattle {
-    format("A fine choice! Now I will show you what the life of a POKéMON trainer is all about!")
+    format("A fine choice!\pNow I will show you what the life of a POKéMON TRAINER is all about!")
 }
 
 text LushClearing_Text_DadDefeated {
     format("Amazing! You're a natural!")
 }
 
+text LushClearing_Text_LoseToDad {
+    format("No hard feelings, {PLAYER}, I am a seasoned TRAINER, after all.\pStill, I see great potential in you.")
+}
+
 script LushClearing_EventScript_DadDefeated {
-    msgbox(format("Now that you have a Pokémon, the world is your oyster!\p You should try taking on the eight gyms across Tanso. Who knows? You may even become the champion!\p The nearest gym lies east of here in Newhope City.\p Make sure you tell Mom before you head off."))
+    msgbox(format("DAD: Now that you have a POKéMON, the world is your oyster!\pYou should try taking on the eight gyms across TANSO. Who knows? You may even become the CHAMPION!\pThe nearest gym lies to the east in NEWHOPE CITY.\pMake sure you tell MOM before you head off."))
     closemessage
     special(HealPlayerParty)
     setflag(FLAG_HIDE_STARTERS_BAG)

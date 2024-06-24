@@ -131,23 +131,11 @@ TinybudTown_EventScript_TownSign::
 	msgbox TinybudTown_Text_TownSign, MSGBOX_SIGN
 	end
 
-TinybudTown_EventScript_BirchsLabSign::
-	msgbox TinybudTown_Text_ProfBirchsLab, MSGBOX_SIGN
-	end
-
 TinybudTown_EventScript_PlayersHouseSign::
 	lockall
 	msgbox TinybudTown_Text_PlayersHouse, MSGBOX_DEFAULT
 	releaseall
 	end
-
-TinybudTown_EventScript_BirchsHouseSignFemale::
-	msgbox TinybudTown_Text_ProfBirchsHouse, MSGBOX_DEFAULT
-	return
-
-TinybudTown_EventScript_BirchsHouseSignMale::
-	msgbox TinybudTown_Text_ProfBirchsHouse, MSGBOX_DEFAULT
-	return
 
 TinybudTown_Text_CanUsePCToStoreItems:
 	.string "If you use a PC, you can store items\n"
@@ -163,33 +151,81 @@ TinybudTown_Text_BirchSpendsDaysInLab:
 
 TinybudTown_Text_TownSign:
 	.string "TINYBUD TOWN\n"
-	.string "“A town that can't be shaded any hue.”$"
-
-TinybudTown_Text_ProfBirchsLab:
-	.string "PROF. BIRCH'S POKéMON LAB$"
+	.string "“A town of budding greatness.”\p"
+	.string "{LEFT_ARROW} LUSH CLEARING\n"
+	.string "{RIGHT_ARROW} ROUTE 1$"
 
 TinybudTown_Text_PlayersHouse:
 	.string "{PLAYER}'s HOUSE$"
-
-TinybudTown_Text_ProfBirchsHouse:
-	.string "PROF. BIRCH'S HOUSE$"
 `
 
 script TinybudTown_EventScript_Girl {
 	lock
 	faceplayer
-	msgbox(format("My brother caught this ZIGZAGOON for me!"))
+	msgbox(format("Budew is the town's mascot!\pIsn't he a cutie?"))
 	release
 	end
 }
 
-script TinybudTown_EventScript_Zigzagoon {
+script TinybudTown_EventScript_Budew {
 	lock
 	faceplayer
-	waitse
-	playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_NORMAL)
-	msgbox("ZIGZAGOON is full of energy!")
+	playmoncry(SPECIES_BUDEW, CRY_MODE_NORMAL)
+	msgbox("Dew dew!", MSGBOX_DEFAULT)
 	waitmoncry
+	specialvar(VAR_RESULT, GetPlayerFacingDirection)
+	if (var(VAR_RESULT) == DIR_NORTH) {
+		applymovement(4, TinybudTown_Movement_BudewHopN)
+		playse(SE_LEDGE)
+		waitmovement(0)
+		applymovement(4, TinybudTown_Movement_BudewHopN)
+		playse(SE_LEDGE)
+		waitmovement(0)
+	}
+	elif (var(VAR_RESULT) == DIR_EAST) {
+		applymovement(4, TinybudTown_Movement_BudewHopE)
+		playse(SE_LEDGE)
+		waitmovement(0)
+		applymovement(4, TinybudTown_Movement_BudewHopE)
+		playse(SE_LEDGE)
+		waitmovement(0)
+	}
+	elif (var(VAR_RESULT) == DIR_SOUTH) {
+		applymovement(4, TinybudTown_Movement_BudewHopS)
+		playse(SE_LEDGE)
+		waitmovement(0)
+		applymovement(4, TinybudTown_Movement_BudewHopS)
+		playse(SE_LEDGE)
+		waitmovement(0)
+	}
+	elif (var(VAR_RESULT) == DIR_WEST) {
+		applymovement(4, TinybudTown_Movement_BudewHopW)
+		playse(SE_LEDGE)
+		waitmovement(0)
+		applymovement(4, TinybudTown_Movement_BudewHopW)
+		playse(SE_LEDGE)
+		waitmovement(0)
+	}
 	release
 	end
+}
+
+movement TinybudTown_Movement_BudewHopN {
+	disable_jump_landing_ground_effect
+	jump_in_place_down
+}
+
+movement TinybudTown_Movement_BudewHopE {
+	disable_jump_landing_ground_effect
+	jump_in_place_left
+}
+
+movement TinybudTown_Movement_BudewHopS {
+	disable_jump_landing_ground_effect
+	jump_in_place_up
+}
+
+movement TinybudTown_Movement_BudewHopW {
+	disable_jump_landing_ground_effect
+	jump_in_place_right
 }

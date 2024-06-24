@@ -60,16 +60,16 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_1",
-      "x": 17,
+      "graphics_id": "OBJ_EVENT_GFX_BUDEW",
+      "x": 16,
       "y": 9,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_LEFT_DOWN_RIGHT_UP",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TinybudTown_EventScript_Zigzagoon",
+      "script": "TinybudTown_EventScript_Budew",
       "flag": "0"
     }
   ],
@@ -79,7 +79,7 @@
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_TINYBUD_TOWN_MAYS_HOUSE_1F",
-      "dest_warp_id": "1"
+      "dest_warp_id": "0"
     },
     {
       "x": 9,
@@ -92,7 +92,7 @@
       "x": 17,
       "y": 17,
       "elevation": 0,
-      "dest_map": "MAP_TINYBUD_TOWN_PROFESSOR_BIRCHS_LAB",
+      "dest_map": "MAP_TINYBUD_TOWN_MAYS_HOUSE_2F",
       "dest_warp_id": "0"
     }
   ],
@@ -107,14 +107,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "TinybudTown_EventScript_TownSign"
-    },
-    {
-      "type": "sign",
-      "x": 18,
-      "y": 17,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "TinybudTown_EventScript_BirchsLabSign"
     },
     {
       "type": "sign",

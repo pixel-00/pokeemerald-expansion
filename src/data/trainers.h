@@ -12,16 +12,16 @@ const struct Trainer gTrainers[] = {
         .party = NULL,
     },
 
-    [TRAINER_SAWYER_1] =
+    [TRAINER_SHINYHUNTER_1] =
     {
-        .trainerClass = TRAINER_CLASS_HIKER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_HIKER,
-        .trainerName = _("SAWYER"),
+        .trainerClass = TRAINER_CLASS_SHINY_HUNTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL,
+        .trainerPic = TRAINER_PIC_NINJA_BOY,
+        .trainerName = _("GAVIN"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Sawyer1),
+        .party = TRAINER_PARTY(sParty_ShinyHunter1),
     },
 
     [TRAINER_GRUNT_AQUA_HIDEOUT_1] =

@@ -77,7 +77,7 @@
 #define OBJ_EVENT_GFX_SPENSER                     73
 #define OBJ_EVENT_GFX_NOLAND                      74
 #define OBJ_EVENT_GFX_LUCY                        75
-#define OBJ_EVENT_GFX_UNUSED_NATU_DOLL            76
+#define OBJ_EVENT_GFX_BUNEARY                     76
 #define OBJ_EVENT_GFX_UNUSED_MAGNEMITE_DOLL       77
 #define OBJ_EVENT_GFX_UNUSED_SQUIRTLE_DOLL        78
 #define OBJ_EVENT_GFX_UNUSED_WOOPER_DOLL          79
@@ -165,7 +165,7 @@
 #define OBJ_EVENT_GFX_AZURILL_DOLL               161
 #define OBJ_EVENT_GFX_SKITTY_DOLL                162
 #define OBJ_EVENT_GFX_SWABLU_DOLL                163
-#define OBJ_EVENT_GFX_GULPIN_DOLL                164
+#define OBJ_EVENT_GFX_BUDEW                      164
 #define OBJ_EVENT_GFX_LOTAD_DOLL                 165
 #define OBJ_EVENT_GFX_SEEDOT_DOLL                166
 #define OBJ_EVENT_GFX_PIKA_CUSHION               167

@@ -86,6 +86,7 @@ static const u8 sText_PlayerWhiteout2[] = _("{B_PLAYER_NAME} panicked and lost Â
 #else
 static const u8 sText_PlayerWhiteout2[] = _("{B_PLAYER_NAME} whited out!{PAUSE_UNTIL_PRESS}");
 #endif
+static const u8 sText_LostIntroBattle[] = _("No hard feelings, {B_PLAYER_NAME},\nI am a seasoned TRAINER, after all.\pStill, I see great potential in you.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_PreventsEscape[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} prevents\nescape with {B_SCR_ACTIVE_ABILITY}!\p");
 static const u8 sText_CantEscape2[] = _("Can't escape!\p");
 static const u8 sText_AttackerCantEscape[] = _("{B_ATK_NAME_WITH_PREFIX} can't escape!");
@@ -1543,6 +1544,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ITEMWASUSEDUP - BATTLESTRINGS_TABLE_START] = sText_ItemWasUsedUp,
     [STRINGID_ATTACKERLOSTITSTYPE - BATTLESTRINGS_TABLE_START] = sText_AttackerLostItsType,
     [STRINGID_CLOAKEDINAHARSHLIGHT - BATTLESTRINGS_TABLE_START] = sText_PkmnIsCloakedInAHarshLight,
+    [STRINGID_LOSEINTROBATTLE - BATTLESTRINGS_TABLE_START] = sText_LostIntroBattle,
 };
 
 const u16 gTrainerUsedItemStringIds[] =

@@ -98,7 +98,6 @@ const u32 *const gDecorIconTable[][2] =
     [DECOR_AZURILL_DOLL]    = {NULL, NULL},
     [DECOR_SKITTY_DOLL]     = {NULL, NULL},
     [DECOR_SWABLU_DOLL]     = {NULL, NULL},
-    [DECOR_GULPIN_DOLL]     = {NULL, NULL},
     [DECOR_LOTAD_DOLL]      = {NULL, NULL},
     [DECOR_SEEDOT_DOLL]     = {NULL, NULL},
     [DECOR_PIKA_CUSHION]    = {NULL, NULL},

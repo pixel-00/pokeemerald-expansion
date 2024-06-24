@@ -408,14 +408,14 @@ PlayersHouse_1F_EventScript_GoMeetDad::
 PlayersHouse_1F_EventScript_TV_Text_0:
 # 102 "data/maps/TinybudTown_BrendansHouse_1F/scripts.pory"
 	.string "It's a documentary about the life of\n"
-	.string "Cynthia, the current Champion of the\l"
-	.string "Sinnoh region.\l"
+	.string "CYNTHIA, the current CHAMPION of the\l"
+	.string "SINNOH region.\l"
 	.string "… … … … … … … … … … … … … … … …\p"
 	.string "Better get going!$"
 
 PlayersHouse_1F_EventScript_MomsKirlia_Text_0:
 # 112 "data/maps/TinybudTown_BrendansHouse_1F/scripts.pory"
-	.string "Kirlia looks at you curiously.$"
+	.string "KIRLIA looks at you curiously.$"
 
 PlayersHouse_1F_EventScript_GoMeetDad_Text_0:
 # 195 "data/maps/TinybudTown_BrendansHouse_1F/scripts.pory"
@@ -426,15 +426,16 @@ PlayersHouse_1F_EventScript_GoMeetDad_Text_0:
 
 PlayersHouse_1F_Text_GoodMorningClock::
 # 92 "data/maps/TinybudTown_BrendansHouse_1F/scripts.pory"
-	.string "MOM: Good morning, {PLAYER}!\n"
-	.string "Are you all rested up?\p"
+	.string "MOM: Good morning, {PLAYER}!Are you\n"
+	.string "all rested up?\p"
 	.string "Would you mind setting the clock\n"
 	.string "upstairs? You know how I am with these\l"
 	.string "things.$"
 
 PlayersHouse_1F_Text_RunningShoesManual::
 # 96 "data/maps/TinybudTown_BrendansHouse_1F/scripts.pory"
-	.string "This book is titled ‘Principles of\n"
-	.string "Mathematical Analysis’ by Walter Rudin.\p"
+	.string "This book is titled ‘PRINCIPLES OF\n"
+	.string "MATHEMATICAL ANALYSIS’ by WALTER\l"
+	.string "RUDIN.\p"
 	.string "… … … … … … … … … … … … … … … …\p"
 	.string "Looks tough!$"

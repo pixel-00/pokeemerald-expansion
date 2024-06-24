@@ -780,7 +780,7 @@
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE_ASLEEP              0x2DD
 #define FLAG_UNUSED_0x2DE                                           0x2DE // Unused Flag
 #define FLAG_UNUSED_0x2DF                                           0x2DF // Unused Flag
-#define FLAG_HIDE_TINYBUD_TOWN_MAYS_HOUSE_RIVAL_SIBLING          0x2E0
+#define FLAG_TALKED_TO_SHINYHUNTER_BROTHER                          0x2E0
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE             0x2E1
 #define FLAG_HIDE_ROUTE_104_MR_BRINEY                               0x2E2
 #define FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY                           0x2E3

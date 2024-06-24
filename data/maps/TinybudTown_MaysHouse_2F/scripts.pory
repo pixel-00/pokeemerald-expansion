@@ -1,0 +1,61 @@
+mapscripts TinybudTown_MaysHouse_2F_MapScripts {}
+
+script TinybudTown_House2_EventScript_Man {
+    lockall
+    faceplayer
+    checkitem(ITEM_SHINY_CHARM, 1)
+    if (!flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox(format("Hello, {PLAYER}.\pHm? You don't have any POKéMON…\pCome back once you do."), MSGBOX_NPC)
+        end
+    }
+    elif (!defeated(TRAINER_SHINYHUNTER_1)) {
+        msgbox(format("My little brother likes to search for SHINY POKéMON. If you can beat him, I will let you in on his secret method for finding SHINY POKéMON in the wild."), MSGBOX_NPC)
+        setflag(FLAG_TALKED_TO_SHINYHUNTER_BROTHER)
+        end
+    }
+    elif (var(VAR_RESULT) == FALSE) {
+        if (flag(FLAG_TALKED_TO_SHINYHUNTER_BROTHER)) {
+            msgbox(format("Hm? So you managed to defeat my brother!\pHis secret to success is… he uses a SHINY CHARM. For some reason, SHINY POKéMON are attracted to it.\pHere, have one!"), MSGBOX_NPC)
+        }
+        else {
+            msgbox(format("My little brother likes to search for SHINY POKéMON. If you can beat him, I will let you in on his secret method for finding SHINY POKéMON in the wild.\p… … … … …\pHm? So you managed to defeat my brother!\pHis secret to success is… he uses a SHINY CHARM. For some reason, SHINY POKéMON are attracted to it.\pHere, have one!"), MSGBOX_NPC)
+        }
+        giveitem(ITEM_SHINY_CHARM,1)
+        msgbox(format("Don't be shy, we have plenty. In fact, I have an even more powerful item, the SHINY AMULET. But you must prove your dedication before I give it to you…\pIf you can beat all five of my brother's SHINY HUNTER friends, it's yours. They live all across TANSO, so you'll have to work hard for it. Good luck!"), MSGBOX_NPC)
+    }
+    else {
+        msgbox(format("If you can defeat all five of my brother's SHINY HUNTER friends, I'll give you a SHINY AMULET, which will attract even more SHINY POKéMON. Good luck!"), MSGBOX_NPC)
+    }
+    releaseall
+    end
+}
+
+script TinybudTown_House2_EventScript_Boy {
+    lockall
+    faceplayer
+    if (!flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox(format("{PLAYER}! Will you battle with me?\p… … … …\pAww, you don't have any POKéMON?"), MSGBOX_NPC)
+    }
+    elif (!defeated(TRAINER_SHINYHUNTER_1)) {
+        msgbox(format("{PLAYER}! Will you battle with me?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            trainerbattle_single(TRAINER_SHINYHUNTER_1, TinybudTown_Text_ShinyHunterIntroText, TinybudTown_Text_ShinyHunterDefeatedText)
+        }
+        elif (var(VAR_RESULT) == NO) {
+            msgbox(format("Aww… alright then."), MSGBOX_NPC)
+        }
+    }
+    else {
+        msgbox(format("Aren't SHINY POKéMON just so cool?"), MSGBOX_NPC)
+    }
+    releaseall
+    end
+}
+
+text TinybudTown_Text_ShinyHunterIntroText {
+    format("Alright! Now I can finally show off my awesome SHINY POKéMON!")
+}
+
+text TinybudTown_Text_ShinyHunterDefeatedText {
+    format("Weren't my POKéMON awesome?\NNow I need to focus on making them super strong!")
+}

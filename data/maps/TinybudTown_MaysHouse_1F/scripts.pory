@@ -1,0 +1,25 @@
+mapscripts TinybudTown_MaysHouse_1F_MapScripts {}
+
+script TinybudTown_House1_EventScript_OldLady {
+    msgbox(format("{PLAYER}, be careful if you leave TINYBUD.\pI've been hearing stories of a new group causing trouble across TANSO."), MSGBOX_NPC)
+}
+
+script TinybudTown_House1_EventScript_Girl {
+    if (var(VAR_INTRO_STATE) < 6) {
+        msgbox(format("{PLAYER}, {PLAYER}!\pIs it true that you're gonna get your own POKéMON?"), MSGBOX_NPC)
+    }
+    else {
+        msgbox(format("{PLAYER}, {PLAYER}!\pIs it true that you got your own POKéMON?"), MSGBOX_NPC)
+    }
+}
+
+script TinybudTown_House1_EventScript_Buneary {
+	lock
+	faceplayer
+	playmoncry(SPECIES_BUNEARY, CRY_MODE_NORMAL)
+	msgbox("BUNEARY: Gyaaaah!")
+    waitmoncry
+    closemessage
+    release
+    end
+}

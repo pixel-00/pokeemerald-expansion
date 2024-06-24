@@ -209,8 +209,8 @@ PlayersHouse_1F_EventScript_MomBeforeStarter_Text_0:
 
 PlayersHouse_1F_EventScript_MomAreYouMeetingDad_Text_0:
 # 87 "data/scripts/players_house.pory"
-	.string "MOM: Are you going to head to the Lush\n"
-	.string "Clearing to meet Dad?$"
+	.string "MOM: Are you going to head to the LUSH\n"
+	.string "CLEARING to meet DAD?$"
 
 PlayersHouse_1F_EventScript_MomSendoff_Text_0:
 # 95 "data/scripts/players_house.pory"
@@ -218,27 +218,28 @@ PlayersHouse_1F_EventScript_MomSendoff_Text_0:
 	.string "… … … … … … … … … … … … … … … …\p"
 	.string "… … … … … … … … … … … … … … … …\p"
 	.string "Mom: This is incredible! Let me see your\n"
-	.string "Pokémon.\p"
+	.string "POKéMON.\p"
 	.string "How precious! Did you give it a\n"
 	.string "nickname?$"
 
 PlayersHouse_1F_EventScript_MomSendoff_Text_1:
 # 100 "data/scripts/players_house.pory"
 	.string "You know, I used to be a trainer back in\n"
-	.string "my day. Take this, it's sure to be a help\l"
-	.string "on your journey.$"
+	.string "my day.\p"
+	.string "Take this, it's sure to be a help on your\n"
+	.string "journey.$"
 
 PlayersHouse_1F_EventScript_MomSendoff_Text_2:
 # 103 "data/scripts/players_house.pory"
-	.string "If you let a Pokémon hold that item, it\n"
+	.string "If you let a POKéMON hold that item, it\n"
 	.string "will gain experience even if it doesn't\l"
 	.string "participate in battle!\p"
-	.string "You should give these to your Pokémon\n"
+	.string "You should give these to your POKéMON\n"
 	.string "too.$"
 
 PlayersHouse_1F_EventScript_MomSendoff_Text_3:
 # 106 "data/scripts/players_house.pory"
-	.string "Those will heal your Pokémon up in a\n"
+	.string "Those will heal up your POKéMON in a\n"
 	.string "pinch.\p"
 	.string "Don't work yourself too hard,\n"
 	.string "{PLAYER}, and come home from time to\l"

@@ -5546,6 +5546,7 @@ BattleScript_LocalBattleLost::
 	jumpifbattletype BATTLE_TYPE_FRONTIER, BattleScript_LocalBattleLostPrintTrainersWinText
 	jumpifbattletype BATTLE_TYPE_TRAINER_HILL, BattleScript_LocalBattleLostPrintTrainersWinText
 	jumpifbattletype BATTLE_TYPE_EREADER_TRAINER, BattleScript_LocalBattleLostEnd
+	jumpifbattletype BATTLE_TYPE_INTRO, BattleScript_LostIntroBattle
 	jumpifhalfword CMP_EQUAL, gTrainerBattleOpponent_A, TRAINER_SECRET_BASE, BattleScript_LocalBattleLostEnd
 BattleScript_LocalBattleLostPrintWhiteOut::
 .if B_WHITEOUT_MONEY >= GEN_4
@@ -5571,6 +5572,13 @@ BattleScript_LocalBattleLostEnd::
 BattleScript_LocalBattleLostEnd::
 	end2
 .endif
+BattleScript_LostIntroBattle::
+	printstring STRINGID_PLAYERLOSTTOENEMYTRAINER
+	trainerslidein BS_ATTACKER
+	waitstate
+	printstring STRINGID_LOSEINTROBATTLE
+	waitmessage B_WAIT_TIME_LONG
+	end2
 
 BattleScript_CheckDomeDrew::
 	jumpifbyte CMP_EQUAL, gBattleOutcome, B_OUTCOME_DREW, BattleScript_LocalBattleLostEnd_

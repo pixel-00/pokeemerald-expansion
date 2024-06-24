@@ -1,8 +1,22 @@
-static const struct TrainerMon sParty_Sawyer1[] = {
+static const struct TrainerMon sParty_ShinyHunter1[] = {
     {
-    .lvl = 21,
-    .species = SPECIES_GEODUDE,
-    }
+    .lvl = 3,
+    .species = SPECIES_YANMA,
+    .isShiny = TRUE,
+    .moves = {MOVE_QUICK_ATTACK}
+    },
+    {
+    .lvl = 3,
+    .species = SPECIES_SANDYGAST,
+    .isShiny = TRUE,
+    },
+    {
+    .lvl = 3,
+    .species = SPECIES_SHINX,
+    .isShiny = TRUE,
+    .ability = ABILITY_INTIMIDATE,
+    .moves = {MOVE_TACKLE, MOVE_LEER, MOVE_THUNDER_WAVE}
+    },
 };
 
 static const struct TrainerMon sParty_GruntAquaHideout1[] = {
@@ -3210,6 +3224,7 @@ static const struct TrainerMon sParty_Roxanne1[] = {
     .lvl = 12,
     .species = SPECIES_GEODUDE,
     .heldItem = ITEM_NONE,
+    .ability = ABILITY_ELECTRIC_SURGE,
     .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_ROCK_THROW, MOVE_ROCK_TOMB}
     },
     {

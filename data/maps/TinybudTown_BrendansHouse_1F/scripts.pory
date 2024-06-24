@@ -90,16 +90,16 @@ movement TinybudTown_BrendansHouse_1F_Movement_FaceUp {
 }
 
 text PlayersHouse_1F_Text_GoodMorningClock {
-    format("MOM: Good morning, {PLAYER}!\n Are you all rested up?\p Would you mind setting the clock upstairs? You know how I am with these things.")
+    format("MOM: Good morning, {PLAYER}!Are you all rested up?\pWould you mind setting the clock upstairs? You know how I am with these things.")
 }
 
 text PlayersHouse_1F_Text_RunningShoesManual {
-    format("This book is titled ‘Principles of Mathematical Analysis’ by Walter Rudin.\p … … … … … … … … … … … … … … … …\p Looks tough!")
+    format("This book is titled ‘PRINCIPLES OF MATHEMATICAL ANALYSIS’ by WALTER RUDIN.\p… … … … … … … … … … … … … … … …\pLooks tough!")
 }
 
 script PlayersHouse_1F_EventScript_TV {
     lockall
-    msgbox(format("It's a documentary about the life of Cynthia, the current Champion of the Sinnoh region.\l … … … … … … … … … … … … … … … …\p Better get going!"))
+    msgbox(format("It's a documentary about the life of CYNTHIA, the current CHAMPION of the SINNOH region.\N… … … … … … … … … … … … … … … …\pBetter get going!"))
     releaseall
     end
 }
@@ -109,7 +109,7 @@ script PlayersHouse_1F_EventScript_MomsKirlia {
 	faceplayer
 	waitse
 	playmoncry(SPECIES_KIRLIA, CRY_MODE_NORMAL)
-	msgbox("Kirlia looks at you curiously.")
+	msgbox("KIRLIA looks at you curiously.")
 	waitmoncry
 	release
 	end
@@ -192,7 +192,7 @@ movement PlayersHouse_1F_Movement_GoMeetDadRightReturn {
 }
 
 script PlayersHouse_1F_EventScript_GoMeetDad {
-	msgbox(format("MOM: By the way {PLAYER}, DAD wanted me to tell you to meet him over\l at the LUSH CLEARING.\p Why don't you head over there now, hon?"))
+	msgbox(format("MOM: By the way {PLAYER}, DAD wanted me to tell you to meet him over\lat the LUSH CLEARING.\pWhy don't you head over there now, hon?"))
 	closemessage
 	setvar(VAR_INTRO_STATE, 4)
 	return
