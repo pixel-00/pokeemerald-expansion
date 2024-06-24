@@ -5,7 +5,7 @@
 #define OBJ_EVENT_GFX_BRENDAN_MACH_BIKE            1
 #define OBJ_EVENT_GFX_BRENDAN_SURFING              2
 #define OBJ_EVENT_GFX_BRENDAN_FIELD_MOVE           3
-#define OBJ_EVENT_GFX_QUINTY_PLUMP                 4
+#define OBJ_EVENT_GFX_GOLD_ITEM_BALL               4
 #define OBJ_EVENT_GFX_NINJA_BOY                    5
 #define OBJ_EVENT_GFX_TWIN                         6
 #define OBJ_EVENT_GFX_BOY_1                        7

@@ -123,10 +123,6 @@ TinybudTown_EventScript_FatMan::
 	msgbox TinybudTown_Text_CanUsePCToStoreItems, MSGBOX_NPC
 	end
 
-TinybudTown_EventScript_Boy::
-	msgbox TinybudTown_Text_BirchSpendsDaysInLab, MSGBOX_NPC
-	end
-
 TinybudTown_EventScript_TownSign::
 	msgbox TinybudTown_Text_TownSign, MSGBOX_SIGN
 	end
@@ -142,13 +138,6 @@ TinybudTown_Text_CanUsePCToStoreItems:
 	.string "and POKéMON.\p"
 	.string "The power of science is staggering!$"
 
-TinybudTown_Text_BirchSpendsDaysInLab:
-	.string "PROF. BIRCH spends days in his LAB\n"
-	.string "studying, then he'll suddenly go out in\l"
-	.string "the wild to do more research…\p"
-	.string "When does PROF. BIRCH spend time\n"
-	.string "at home?$"
-
 TinybudTown_Text_TownSign:
 	.string "TINYBUD TOWN\n"
 	.string "“A town of budding greatness.”\p"
@@ -158,11 +147,15 @@ TinybudTown_Text_TownSign:
 TinybudTown_Text_PlayersHouse:
 	.string "{PLAYER}'s HOUSE$"
 `
+script TinybudTown_EventScript_Boy {
+	msgbox(format("I need to head to NEWHOPE CITY to buy more POKé BALLS soon.\pThe path there is full of wild POKéMON though!"), MSGBOX_NPC)
+	end
+}
 
 script TinybudTown_EventScript_Girl {
 	lock
 	faceplayer
-	msgbox(format("Budew is the town's mascot!\pIsn't he a cutie?"))
+	msgbox(format("BUDEW is the town's mascot!\pIsn't he a cutie?"))
 	release
 	end
 }
@@ -171,7 +164,7 @@ script TinybudTown_EventScript_Budew {
 	lock
 	faceplayer
 	playmoncry(SPECIES_BUDEW, CRY_MODE_NORMAL)
-	msgbox("Dew dew!", MSGBOX_DEFAULT)
+	msgbox("BUDEW: Dew dew!", MSGBOX_DEFAULT)
 	waitmoncry
 	specialvar(VAR_RESULT, GetPlayerFacingDirection)
 	if (var(VAR_RESULT) == DIR_NORTH) {

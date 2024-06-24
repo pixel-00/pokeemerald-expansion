@@ -41,10 +41,6 @@ static const struct SpriteFrameImage sPicTable_BrendanFieldMove[] = {
     overworld_ascending_frames(gObjectEventPic_BrendanFieldMove, 4, 4),
 };
 
-static const struct SpriteFrameImage sPicTable_QuintyPlump[] = {
-    overworld_ascending_frames(gObjectEventPic_QuintyPlump, 4, 4),
-};
-
 static const struct SpriteFrameImage sPicTable_NinjaBoy[] = {
     overworld_ascending_frames(gObjectEventPic_NinjaBoy, 2, 2),
 };
@@ -284,6 +280,10 @@ static const struct SpriteFrameImage sPicTable_Nurse[] = {
 
 static const struct SpriteFrameImage sPicTable_ItemBall[] = {
     obj_frame_tiles(gObjectEventPic_ItemBall),
+};
+
+static const struct SpriteFrameImage sPicTable_GoldItemBall[] = {
+    obj_frame_tiles(gObjectEventPic_GoldItemBall),
 };
 
 static const struct SpriteFrameImage sPicTable_ProfBirch[] = {
