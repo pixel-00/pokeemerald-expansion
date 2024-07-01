@@ -17,6 +17,11 @@
       "map": "MAP_LUSH_CLEARING",
       "offset": -14,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE103",
+      "offset": 0,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -97,7 +102,96 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_INTRO_STATE",
+      "var_value": "4",
+      "script": "TinybudTown_EventScript_BlockExitBeforeStarter"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_INTRO_STATE",
+      "var_value": "4",
+      "script": "TinybudTown_EventScript_BlockExitBeforeStarter"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_INTRO_STATE",
+      "var_value": "4",
+      "script": "TinybudTown_EventScript_BlockExitBeforeStarter"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_INTRO_STATE",
+      "var_value": "4",
+      "script": "TinybudTown_EventScript_BlockExitBeforeStarter"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_INTRO_STATE",
+      "var_value": "4",
+      "script": "TinybudTown_EventScript_BlockExitBeforeStarter"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_INTRO_STATE",
+      "var_value": "6",
+      "script": "TinybudTown_EventScript_BlockExitBeforeTalkToMom"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_INTRO_STATE",
+      "var_value": "6",
+      "script": "TinybudTown_EventScript_BlockExitBeforeTalkToMom"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_INTRO_STATE",
+      "var_value": "6",
+      "script": "TinybudTown_EventScript_BlockExitBeforeTalkToMom"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_INTRO_STATE",
+      "var_value": "6",
+      "script": "TinybudTown_EventScript_BlockExitBeforeTalkToMom"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_INTRO_STATE",
+      "var_value": "6",
+      "script": "TinybudTown_EventScript_BlockExitBeforeTalkToMom"
+    }
   ],
   "bg_events": [
     {

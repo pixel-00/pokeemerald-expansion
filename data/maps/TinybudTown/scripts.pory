@@ -140,13 +140,32 @@ TinybudTown_Text_CanUsePCToStoreItems:
 
 TinybudTown_Text_TownSign:
 	.string "TINYBUD TOWN\n"
-	.string "“A town of budding greatness.”\p"
-	.string "{LEFT_ARROW} LUSH CLEARING\n"
-	.string "{RIGHT_ARROW} ROUTE 1$"
+	.string "“A town of budding greatness.”$"
 
 TinybudTown_Text_PlayersHouse:
 	.string "{PLAYER}'s HOUSE$"
 `
+
+script TinybudTown_EventScript_BlockExitBeforeStarter {
+	lock
+	msgbox(format("I should go meet DAD at the LUSH CLEARING."))
+	closemessage
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+	waitmovement(0)
+	release
+	end
+}
+
+script TinybudTown_EventScript_BlockExitBeforeTalkToMom {
+	lock
+	msgbox(format("I need to go tell MOM before I leave."))
+	closemessage
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+	waitmovement(0)
+	release
+	end
+}
+
 script TinybudTown_EventScript_Boy {
 	msgbox(format("I need to head to NEWHOPE CITY to buy more POKé BALLS soon.\pThe path there is full of wild POKéMON though!"), MSGBOX_NPC)
 	end

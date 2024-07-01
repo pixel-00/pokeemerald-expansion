@@ -390,9 +390,8 @@
 #define METATILE_Pacifidlog_SubmergedLogs_VerticalTop          0x25A
 
 // gTileset_Petalburg
-#define METATILE_Petalburg_Door_BirchsLab  0x249
-#define METATILE_Petalburg_Door_Oldale     0x287
-#define METATILE_Petalburg_Door_Tinybud    0x233
+#define METATILE_Petalburg_Door_Oldale   0x287
+#define METATILE_Petalburg_Door_Tinybud  0x233
 
 // gTileset_PetalburgGym
 #define METATILE_PetalburgGym_Door                0x224

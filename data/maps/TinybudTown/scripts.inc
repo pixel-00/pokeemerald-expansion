@@ -283,171 +283,208 @@ TinybudTown_Text_TownSign:
 # 142 "data/maps/TinybudTown/scripts.pory"
 	.string "TINYBUD TOWN\n"
 # 143 "data/maps/TinybudTown/scripts.pory"
-	.string "“A town of budding greatness.”\p"
+	.string "“A town of budding greatness.”$"
 # 144 "data/maps/TinybudTown/scripts.pory"
-	.string "{LEFT_ARROW} LUSH CLEARING\n"
-# 145 "data/maps/TinybudTown/scripts.pory"
-	.string "{RIGHT_ARROW} ROUTE 1$"
-# 146 "data/maps/TinybudTown/scripts.pory"
 
-# 147 "data/maps/TinybudTown/scripts.pory"
+# 145 "data/maps/TinybudTown/scripts.pory"
 TinybudTown_Text_PlayersHouse:
-# 148 "data/maps/TinybudTown/scripts.pory"
+# 146 "data/maps/TinybudTown/scripts.pory"
 	.string "{PLAYER}'s HOUSE$"
 
-TinybudTown_EventScript_Boy::
+TinybudTown_EventScript_BlockExitBeforeStarter::
+# 150 "data/maps/TinybudTown/scripts.pory"
+	lock
 # 151 "data/maps/TinybudTown/scripts.pory"
+	msgbox TinybudTown_EventScript_BlockExitBeforeStarter_Text_0
+# 152 "data/maps/TinybudTown/scripts.pory"
+	closemessage
+# 153 "data/maps/TinybudTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+# 154 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
+# 155 "data/maps/TinybudTown/scripts.pory"
+	release
+	end
+
+
+TinybudTown_EventScript_BlockExitBeforeTalkToMom::
+# 160 "data/maps/TinybudTown/scripts.pory"
+	lock
+# 161 "data/maps/TinybudTown/scripts.pory"
+	msgbox TinybudTown_EventScript_BlockExitBeforeTalkToMom_Text_0
+# 162 "data/maps/TinybudTown/scripts.pory"
+	closemessage
+# 163 "data/maps/TinybudTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+# 164 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
+# 165 "data/maps/TinybudTown/scripts.pory"
+	release
+	end
+
+
+TinybudTown_EventScript_Boy::
+# 170 "data/maps/TinybudTown/scripts.pory"
 	msgbox TinybudTown_EventScript_Boy_Text_0, MSGBOX_NPC
 	end
 
 
 TinybudTown_EventScript_Girl::
-# 156 "data/maps/TinybudTown/scripts.pory"
+# 175 "data/maps/TinybudTown/scripts.pory"
 	lock
-# 157 "data/maps/TinybudTown/scripts.pory"
+# 176 "data/maps/TinybudTown/scripts.pory"
 	faceplayer
-# 158 "data/maps/TinybudTown/scripts.pory"
+# 177 "data/maps/TinybudTown/scripts.pory"
 	msgbox TinybudTown_EventScript_Girl_Text_0
-# 159 "data/maps/TinybudTown/scripts.pory"
+# 178 "data/maps/TinybudTown/scripts.pory"
 	release
 	end
 
 
 TinybudTown_EventScript_Budew::
-# 164 "data/maps/TinybudTown/scripts.pory"
+# 183 "data/maps/TinybudTown/scripts.pory"
 	lock
-# 165 "data/maps/TinybudTown/scripts.pory"
+# 184 "data/maps/TinybudTown/scripts.pory"
 	faceplayer
-# 166 "data/maps/TinybudTown/scripts.pory"
+# 185 "data/maps/TinybudTown/scripts.pory"
 	playmoncry SPECIES_BUDEW, CRY_MODE_NORMAL
-# 167 "data/maps/TinybudTown/scripts.pory"
+# 186 "data/maps/TinybudTown/scripts.pory"
 	msgbox TinybudTown_EventScript_Budew_Text_0, MSGBOX_DEFAULT
-# 168 "data/maps/TinybudTown/scripts.pory"
+# 187 "data/maps/TinybudTown/scripts.pory"
 	waitmoncry
-# 169 "data/maps/TinybudTown/scripts.pory"
+# 188 "data/maps/TinybudTown/scripts.pory"
 	specialvar VAR_RESULT, GetPlayerFacingDirection
-# 170 "data/maps/TinybudTown/scripts.pory"
+# 189 "data/maps/TinybudTown/scripts.pory"
 	compare VAR_RESULT, DIR_NORTH
 	goto_if_eq TinybudTown_EventScript_Budew_2
-# 178 "data/maps/TinybudTown/scripts.pory"
+# 197 "data/maps/TinybudTown/scripts.pory"
 	compare VAR_RESULT, DIR_EAST
 	goto_if_eq TinybudTown_EventScript_Budew_3
-# 186 "data/maps/TinybudTown/scripts.pory"
+# 205 "data/maps/TinybudTown/scripts.pory"
 	compare VAR_RESULT, DIR_SOUTH
 	goto_if_eq TinybudTown_EventScript_Budew_4
-# 194 "data/maps/TinybudTown/scripts.pory"
+# 213 "data/maps/TinybudTown/scripts.pory"
 	compare VAR_RESULT, DIR_WEST
 	goto_if_eq TinybudTown_EventScript_Budew_5
 TinybudTown_EventScript_Budew_1:
-# 202 "data/maps/TinybudTown/scripts.pory"
+# 221 "data/maps/TinybudTown/scripts.pory"
 	release
 	end
 
 TinybudTown_EventScript_Budew_2:
-# 171 "data/maps/TinybudTown/scripts.pory"
-	applymovement 4, TinybudTown_Movement_BudewHopN
-# 172 "data/maps/TinybudTown/scripts.pory"
-	playse SE_LEDGE
-# 173 "data/maps/TinybudTown/scripts.pory"
-	waitmovement 0
-# 174 "data/maps/TinybudTown/scripts.pory"
-	applymovement 4, TinybudTown_Movement_BudewHopN
-# 175 "data/maps/TinybudTown/scripts.pory"
-	playse SE_LEDGE
-# 176 "data/maps/TinybudTown/scripts.pory"
-	waitmovement 0
-	goto TinybudTown_EventScript_Budew_1
-
-TinybudTown_EventScript_Budew_3:
-# 179 "data/maps/TinybudTown/scripts.pory"
-	applymovement 4, TinybudTown_Movement_BudewHopE
-# 180 "data/maps/TinybudTown/scripts.pory"
-	playse SE_LEDGE
-# 181 "data/maps/TinybudTown/scripts.pory"
-	waitmovement 0
-# 182 "data/maps/TinybudTown/scripts.pory"
-	applymovement 4, TinybudTown_Movement_BudewHopE
-# 183 "data/maps/TinybudTown/scripts.pory"
-	playse SE_LEDGE
-# 184 "data/maps/TinybudTown/scripts.pory"
-	waitmovement 0
-	goto TinybudTown_EventScript_Budew_1
-
-TinybudTown_EventScript_Budew_4:
-# 187 "data/maps/TinybudTown/scripts.pory"
-	applymovement 4, TinybudTown_Movement_BudewHopS
-# 188 "data/maps/TinybudTown/scripts.pory"
-	playse SE_LEDGE
-# 189 "data/maps/TinybudTown/scripts.pory"
-	waitmovement 0
 # 190 "data/maps/TinybudTown/scripts.pory"
-	applymovement 4, TinybudTown_Movement_BudewHopS
+	applymovement 4, TinybudTown_Movement_BudewHopN
 # 191 "data/maps/TinybudTown/scripts.pory"
 	playse SE_LEDGE
 # 192 "data/maps/TinybudTown/scripts.pory"
 	waitmovement 0
+# 193 "data/maps/TinybudTown/scripts.pory"
+	applymovement 4, TinybudTown_Movement_BudewHopN
+# 194 "data/maps/TinybudTown/scripts.pory"
+	playse SE_LEDGE
+# 195 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
 	goto TinybudTown_EventScript_Budew_1
 
-TinybudTown_EventScript_Budew_5:
-# 195 "data/maps/TinybudTown/scripts.pory"
-	applymovement 4, TinybudTown_Movement_BudewHopW
-# 196 "data/maps/TinybudTown/scripts.pory"
-	playse SE_LEDGE
-# 197 "data/maps/TinybudTown/scripts.pory"
-	waitmovement 0
+TinybudTown_EventScript_Budew_3:
 # 198 "data/maps/TinybudTown/scripts.pory"
-	applymovement 4, TinybudTown_Movement_BudewHopW
+	applymovement 4, TinybudTown_Movement_BudewHopE
 # 199 "data/maps/TinybudTown/scripts.pory"
 	playse SE_LEDGE
 # 200 "data/maps/TinybudTown/scripts.pory"
 	waitmovement 0
+# 201 "data/maps/TinybudTown/scripts.pory"
+	applymovement 4, TinybudTown_Movement_BudewHopE
+# 202 "data/maps/TinybudTown/scripts.pory"
+	playse SE_LEDGE
+# 203 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
+	goto TinybudTown_EventScript_Budew_1
+
+TinybudTown_EventScript_Budew_4:
+# 206 "data/maps/TinybudTown/scripts.pory"
+	applymovement 4, TinybudTown_Movement_BudewHopS
+# 207 "data/maps/TinybudTown/scripts.pory"
+	playse SE_LEDGE
+# 208 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
+# 209 "data/maps/TinybudTown/scripts.pory"
+	applymovement 4, TinybudTown_Movement_BudewHopS
+# 210 "data/maps/TinybudTown/scripts.pory"
+	playse SE_LEDGE
+# 211 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
+	goto TinybudTown_EventScript_Budew_1
+
+TinybudTown_EventScript_Budew_5:
+# 214 "data/maps/TinybudTown/scripts.pory"
+	applymovement 4, TinybudTown_Movement_BudewHopW
+# 215 "data/maps/TinybudTown/scripts.pory"
+	playse SE_LEDGE
+# 216 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
+# 217 "data/maps/TinybudTown/scripts.pory"
+	applymovement 4, TinybudTown_Movement_BudewHopW
+# 218 "data/maps/TinybudTown/scripts.pory"
+	playse SE_LEDGE
+# 219 "data/maps/TinybudTown/scripts.pory"
+	waitmovement 0
 	goto TinybudTown_EventScript_Budew_1
 
 
-# 206 "data/maps/TinybudTown/scripts.pory"
+# 225 "data/maps/TinybudTown/scripts.pory"
 TinybudTown_Movement_BudewHopN:
-# 207 "data/maps/TinybudTown/scripts.pory"
+# 226 "data/maps/TinybudTown/scripts.pory"
 	disable_jump_landing_ground_effect
-# 208 "data/maps/TinybudTown/scripts.pory"
+# 227 "data/maps/TinybudTown/scripts.pory"
 	jump_in_place_down
 	step_end
 
-# 211 "data/maps/TinybudTown/scripts.pory"
+# 230 "data/maps/TinybudTown/scripts.pory"
 TinybudTown_Movement_BudewHopE:
-# 212 "data/maps/TinybudTown/scripts.pory"
+# 231 "data/maps/TinybudTown/scripts.pory"
 	disable_jump_landing_ground_effect
-# 213 "data/maps/TinybudTown/scripts.pory"
+# 232 "data/maps/TinybudTown/scripts.pory"
 	jump_in_place_left
 	step_end
 
-# 216 "data/maps/TinybudTown/scripts.pory"
+# 235 "data/maps/TinybudTown/scripts.pory"
 TinybudTown_Movement_BudewHopS:
-# 217 "data/maps/TinybudTown/scripts.pory"
+# 236 "data/maps/TinybudTown/scripts.pory"
 	disable_jump_landing_ground_effect
-# 218 "data/maps/TinybudTown/scripts.pory"
+# 237 "data/maps/TinybudTown/scripts.pory"
 	jump_in_place_up
 	step_end
 
-# 221 "data/maps/TinybudTown/scripts.pory"
+# 240 "data/maps/TinybudTown/scripts.pory"
 TinybudTown_Movement_BudewHopW:
-# 222 "data/maps/TinybudTown/scripts.pory"
+# 241 "data/maps/TinybudTown/scripts.pory"
 	disable_jump_landing_ground_effect
-# 223 "data/maps/TinybudTown/scripts.pory"
+# 242 "data/maps/TinybudTown/scripts.pory"
 	jump_in_place_right
 	step_end
 
-TinybudTown_EventScript_Boy_Text_0:
+TinybudTown_EventScript_BlockExitBeforeStarter_Text_0:
 # 151 "data/maps/TinybudTown/scripts.pory"
+	.string "I should go meet DAD at the LUSH\n"
+	.string "CLEARING.$"
+
+TinybudTown_EventScript_BlockExitBeforeTalkToMom_Text_0:
+# 161 "data/maps/TinybudTown/scripts.pory"
+	.string "I need to go tell MOM before I leave.$"
+
+TinybudTown_EventScript_Boy_Text_0:
+# 170 "data/maps/TinybudTown/scripts.pory"
 	.string "I need to head to NEWHOPE CITY to buy\n"
 	.string "more POKé BALLS soon.\p"
 	.string "The path there is full of wild POKéMON\n"
 	.string "though!$"
 
 TinybudTown_EventScript_Girl_Text_0:
-# 158 "data/maps/TinybudTown/scripts.pory"
+# 177 "data/maps/TinybudTown/scripts.pory"
 	.string "BUDEW is the town's mascot!\p"
 	.string "Isn't he a cutie?$"
 
 TinybudTown_EventScript_Budew_Text_0:
-# 167 "data/maps/TinybudTown/scripts.pory"
+# 186 "data/maps/TinybudTown/scripts.pory"
 	.string "BUDEW: Dew dew!$"

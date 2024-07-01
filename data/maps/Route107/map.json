@@ -14,13 +14,13 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_DEWFORD_TOWN",
+      "map": "MAP_ROUTE103",
       "offset": 0,
-      "direction": "left"
+      "direction": "up"
     },
     {
-      "map": "MAP_ROUTE108",
-      "offset": 0,
+      "map": "MAP_OLDALE_TOWN",
+      "offset": -24,
       "direction": "right"
     }
   ],

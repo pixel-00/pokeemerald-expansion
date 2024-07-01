@@ -90,7 +90,7 @@ movement TinybudTown_BrendansHouse_1F_Movement_FaceUp {
 }
 
 text PlayersHouse_1F_Text_GoodMorningClock {
-    format("MOM: Good morning, {PLAYER}!Are you all rested up?\pWould you mind setting the clock upstairs? You know how I am with these things.")
+    format("MOM: Good morning, {PLAYER}! Are you all rested up?\pWould you mind setting the clock upstairs? You know how I am with these things.")
 }
 
 text PlayersHouse_1F_Text_RunningShoesManual {

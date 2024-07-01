@@ -203,8 +203,7 @@ bool8 MetatileBehavior_IsDeepSand(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsReflective(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_POND_WATER
-     || metatileBehavior == MB_PUDDLE
+    if (metatileBehavior == MB_PUDDLE
      || metatileBehavior == MB_UNUSED_SOOTOPOLIS_DEEP_WATER_2
      || metatileBehavior == MB_ICE
      || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER
@@ -715,8 +714,7 @@ bool8 MetatileBehavior_IsPlayerRoomPCOn(u8 metatileBehavior)
 
 bool8 MetatileBehavior_HasRipples(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_POND_WATER
-     || metatileBehavior == MB_PUDDLE
+    if (metatileBehavior == MB_PUDDLE
      || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER)
         return TRUE;
     else

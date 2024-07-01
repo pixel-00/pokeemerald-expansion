@@ -426,7 +426,7 @@ PlayersHouse_1F_EventScript_GoMeetDad_Text_0:
 
 PlayersHouse_1F_Text_GoodMorningClock::
 # 92 "data/maps/TinybudTown_BrendansHouse_1F/scripts.pory"
-	.string "MOM: Good morning, {PLAYER}!Are you\n"
+	.string "MOM: Good morning, {PLAYER}! Are you\n"
 	.string "all rested up?\p"
 	.string "Would you mind setting the clock\n"
 	.string "upstairs? You know how I am with these\l"

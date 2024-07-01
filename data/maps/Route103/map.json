@@ -16,12 +16,17 @@
     {
       "map": "MAP_OLDALE_TOWN",
       "offset": 0,
-      "direction": "down"
+      "direction": "right"
     },
     {
-      "map": "MAP_ROUTE110",
-      "offset": -60,
-      "direction": "right"
+      "map": "MAP_TINYBUD_TOWN",
+      "offset": 0,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE107",
+      "offset": 0,
+      "direction": "down"
     }
   ],
   "object_events": [

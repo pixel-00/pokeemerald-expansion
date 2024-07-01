@@ -3,6 +3,7 @@
 #include "data.h"
 #include "decompress.h"
 #include "event_data.h"
+#include "event_object_movement.h"
 #include "gpu_regs.h"
 #include "international_string_util.h"
 #include "main.h"
@@ -535,10 +536,22 @@ static void Task_AskConfirmStarter(u8 taskId)
     gTasks[taskId].func = Task_HandleConfirmStarterInput;
 }
 
+void SpawnStarterCamera() {
+    u8 obj = SpawnSpecialObjectEventParameterized(7,
+                                                  MOVEMENT_TYPE_FACE_DOWN,
+                                                  0x7F,
+                                                  gSaveBlock1Ptr->pos.x + 7,
+                                                  gSaveBlock1Ptr->pos.y + 7,
+                                                  3); // elevation
+    gObjectEvents[obj].invisible = TRUE;
+    CameraObjectSetFollowedSpriteId(gObjectEvents[obj].spriteId);
+};
+
 static void Task_ExitUi(u8 taskId) {
   if (!gPaletteFade.active) {
-    DestroyTask(taskId);
+    SpawnStarterCamera();
     SetMainCallback2(gMain.savedCallback);
+    DestroyTask(taskId);
   }
 }
 
