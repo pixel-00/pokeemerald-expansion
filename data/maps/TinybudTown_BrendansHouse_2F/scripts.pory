@@ -80,7 +80,17 @@ script TinybudTown_BrendansHouse_2F_OnFrame_0 {
 
 script PlayersHouse_2F_EventScript_TogepiDoll {
 	lockall
-	msgbox(format("It's a cute Togepi plush."))
+	msgbox(format("It's a cute Togepi plush."), MSGBOX_SIGN)
 	releaseall
+	end
+}
+
+script PlayersHouse_2F_EventScript_Bookcase1 {
+	msgbox(format("This book is titled ‘ABSTRACT ALGEBRA’ by DAVID S. DUMMIT and RICHARD M. FOOTE.\p… … … … … …\p“Corollary 3. Any finite integral domain is a field.\pProof. Let R be a finite integral domain and let {MATH_A} be a nonzero element of R.\pBy the cancellation law the map x {MAPSTO} {MATH_A}x\Nis an injective function. Since R is finite this map is also surjective.\NIn particular, there is some b in R such that {MATH_A}b = 1, i.e., {MATH_A} is a unit in R.\pSince {MATH_A} was an arbitrary nonzero element, R is a field.”"), MSGBOX_SIGN)
+	end
+}
+
+script PlayersHouse_2F_EventScript_Bookcase2 {
+	msgbox(format("This book is titled ‘PRINCIPLES OF MATHEMATICAL ANALYSIS’ by WALTER RUDIN.\p… … … … … …\pCHAPTER 4, EXERCISE 13: “Let E be a dense subset of a metric space X, and let {MATH_F} be a uniformly continuous real function defined on E.\pProve that {MATH_F} has a continuous\Nextension from E to X.”"), MSGBOX_SIGN)
 	end
 }

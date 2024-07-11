@@ -97,7 +97,7 @@ TinybudTown_OnTransition:
 # 49 "data/maps/TinybudTown/scripts.pory"
 	call_if_eq VAR_TINYBUD_HOUSES_STATE_BRENDAN, 4, TinybudTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
 # 50 "data/maps/TinybudTown/scripts.pory"
-	call_if_eq VAR_OLDALE_RIVAL_STATE, 1, TinybudTown_EventScript_MoveRivalFromOldale
+	call_if_eq VAR_GREENGLADE_RIVAL_STATE, 1, TinybudTown_EventScript_MoveRivalFromGreenglade
 # 51 "data/maps/TinybudTown/scripts.pory"
 	call_if_eq VAR_TINYBUD_RIVAL_STATE, 3, TinybudTown_EventScript_SetRivalLeftForRoute103
 # 52 "data/maps/TinybudTown/scripts.pory"
@@ -133,11 +133,11 @@ TinybudTown_EventScript_SetRivalLeftForRoute103::
 # 67 "data/maps/TinybudTown/scripts.pory"
 
 # 68 "data/maps/TinybudTown/scripts.pory"
-TinybudTown_EventScript_MoveRivalFromOldale::
+TinybudTown_EventScript_MoveRivalFromGreenglade::
 # 69 "data/maps/TinybudTown/scripts.pory"
-	setvar VAR_OLDALE_RIVAL_STATE, 2
+	setvar VAR_GREENGLADE_RIVAL_STATE, 2
 # 70 "data/maps/TinybudTown/scripts.pory"
-	setflag FLAG_HIDE_OLDALE_TOWN_RIVAL
+	setflag FLAG_HIDE_GREENGLADE_TOWN_RIVAL
 # 71 "data/maps/TinybudTown/scripts.pory"
 	return
 # 72 "data/maps/TinybudTown/scripts.pory"
@@ -475,8 +475,8 @@ TinybudTown_EventScript_BlockExitBeforeTalkToMom_Text_0:
 
 TinybudTown_EventScript_Boy_Text_0:
 # 170 "data/maps/TinybudTown/scripts.pory"
-	.string "I need to head to NEWHOPE CITY to buy\n"
-	.string "more POKé BALLS soon.\p"
+	.string "I need to head to GREENGLADE TOWN to\n"
+	.string "buy more POKé BALLS soon.\p"
 	.string "The path there is full of wild POKéMON\n"
 	.string "though!$"
 

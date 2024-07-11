@@ -16,7 +16,7 @@
 #define MAP_SOOTOPOLIS_CITY     (7 | (0 << 8))
 #define MAP_EVER_GRANDE_CITY    (8 | (0 << 8))
 #define MAP_TINYBUD_TOWN        (9 | (0 << 8))
-#define MAP_OLDALE_TOWN         (10 | (0 << 8))
+#define MAP_GREENGLADE_TOWN     (10 | (0 << 8))
 #define MAP_DEWFORD_TOWN        (11 | (0 << 8))
 #define MAP_LAVARIDGE_TOWN      (12 | (0 << 8))
 #define MAP_FALLARBOR_TOWN      (13 | (0 << 8))
@@ -71,12 +71,12 @@
 #define MAP_TINYBUD_TOWN_MAYS_HOUSE_2F        (3 | (1 << 8))
 #define MAP_TINYBUD_TOWN_PROFESSOR_BIRCHS_LAB (4 | (1 << 8))
 
-// gMapGroup_IndoorOldale
-#define MAP_OLDALE_TOWN_HOUSE1            (0 | (2 << 8))
-#define MAP_OLDALE_TOWN_HOUSE2            (1 | (2 << 8))
-#define MAP_OLDALE_TOWN_POKEMON_CENTER_1F (2 | (2 << 8))
-#define MAP_OLDALE_TOWN_POKEMON_CENTER_2F (3 | (2 << 8))
-#define MAP_OLDALE_TOWN_MART              (4 | (2 << 8))
+// gMapGroup_IndoorGreenglade
+#define MAP_GREENGLADE_TOWN_HOUSE1            (0 | (2 << 8))
+#define MAP_GREENGLADE_TOWN_HOUSE2            (1 | (2 << 8))
+#define MAP_GREENGLADE_TOWN_POKEMON_CENTER_1F (2 | (2 << 8))
+#define MAP_GREENGLADE_TOWN_POKEMON_CENTER_2F (3 | (2 << 8))
+#define MAP_GREENGLADE_TOWN_MART              (4 | (2 << 8))
 
 // gMapGroup_IndoorDewford
 #define MAP_DEWFORD_TOWN_HOUSE1            (0 | (3 << 8))

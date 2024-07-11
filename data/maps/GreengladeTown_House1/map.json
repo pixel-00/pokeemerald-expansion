@@ -1,9 +1,9 @@
 {
-  "id": "MAP_OLDALE_TOWN_HOUSE1",
-  "name": "OldaleTown_House1",
+  "id": "MAP_GREENGLADE_TOWN_HOUSE1",
+  "name": "GreengladeTown_House1",
   "layout": "LAYOUT_HOUSE1",
   "music": "MUS_OLDALE",
-  "region_map_section": "MAPSEC_OLDALE_TOWN",
+  "region_map_section": "MAPSEC_GREENGLADE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -24,7 +24,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_House1_EventScript_Woman",
+      "script": "GreengladeTown_House1_EventScript_Woman",
       "flag": "0"
     }
   ],
@@ -33,14 +33,14 @@
       "x": 3,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN",
+      "dest_map": "MAP_GREENGLADE_TOWN",
       "dest_warp_id": "0"
     },
     {
       "x": 4,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN",
+      "dest_map": "MAP_GREENGLADE_TOWN",
       "dest_warp_id": "0"
     }
   ],

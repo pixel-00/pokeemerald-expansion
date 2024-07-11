@@ -214,17 +214,17 @@ PlayersHouse_1F_EventScript_MomAreYouMeetingDad_Text_0:
 
 PlayersHouse_1F_EventScript_MomSendoff_Text_0:
 # 95 "data/scripts/players_house.pory"
-	.string "Mom: What is it, hon?\p"
+	.string "MOM: What is it, hon?\p"
 	.string "… … … … … … … … … … … … … … … …\p"
 	.string "… … … … … … … … … … … … … … … …\p"
-	.string "Mom: This is incredible! Let me see your\n"
+	.string "MOM: This is incredible! Let me see your\n"
 	.string "POKéMON.\p"
 	.string "How precious! Did you give it a\n"
 	.string "nickname?$"
 
 PlayersHouse_1F_EventScript_MomSendoff_Text_1:
 # 100 "data/scripts/players_house.pory"
-	.string "You know, I used to be a trainer back in\n"
+	.string "You know, I used to be a TRAINER back in\n"
 	.string "my day.\p"
 	.string "Take this, it's sure to be a help on your\n"
 	.string "journey.$"

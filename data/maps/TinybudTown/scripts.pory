@@ -47,7 +47,7 @@ TinybudTown_OnTransition:
 	call_if_eq VAR_TINYBUD_TOWN_STATE, 3, TinybudTown_EventScript_SetMomStandingInFrontOfDoorPos
 	call_if_eq VAR_TINYBUD_HOUSES_STATE_MAY, 4, TinybudTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
 	call_if_eq VAR_TINYBUD_HOUSES_STATE_BRENDAN, 4, TinybudTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
-	call_if_eq VAR_OLDALE_RIVAL_STATE, 1, TinybudTown_EventScript_MoveRivalFromOldale
+	call_if_eq VAR_GREENGLADE_RIVAL_STATE, 1, TinybudTown_EventScript_MoveRivalFromGreenglade
 	call_if_eq VAR_TINYBUD_RIVAL_STATE, 3, TinybudTown_EventScript_SetRivalLeftForRoute103
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, TinybudTown_EventScript_HideMapNamePopup
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, TinybudTown_EventScript_LeftLabAfterDexUpgrade
@@ -65,9 +65,9 @@ TinybudTown_EventScript_SetRivalLeftForRoute103::
 	setflag FLAG_RIVAL_LEFT_FOR_ROUTE103
 	return
 
-TinybudTown_EventScript_MoveRivalFromOldale::
-	setvar VAR_OLDALE_RIVAL_STATE, 2
-	setflag FLAG_HIDE_OLDALE_TOWN_RIVAL
+TinybudTown_EventScript_MoveRivalFromGreenglade::
+	setvar VAR_GREENGLADE_RIVAL_STATE, 2
+	setflag FLAG_HIDE_GREENGLADE_TOWN_RIVAL
 	return
 
 TinybudTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent::
@@ -167,7 +167,7 @@ script TinybudTown_EventScript_BlockExitBeforeTalkToMom {
 }
 
 script TinybudTown_EventScript_Boy {
-	msgbox(format("I need to head to NEWHOPE CITY to buy more POKé BALLS soon.\pThe path there is full of wild POKéMON though!"), MSGBOX_NPC)
+	msgbox(format("I need to head to GREENGLADE TOWN to buy more POKé BALLS soon.\pThe path there is full of wild POKéMON though!"), MSGBOX_NPC)
 	end
 }
 

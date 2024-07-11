@@ -14,8 +14,8 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_OLDALE_TOWN",
-      "offset": 0,
+      "map": "MAP_GREENGLADE_TOWN",
+      "offset": -22,
       "direction": "right"
     },
     {
@@ -25,15 +25,15 @@
     },
     {
       "map": "MAP_ROUTE107",
-      "offset": 0,
+      "offset": -5,
       "direction": "down"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 49,
-      "y": 12,
+      "x": 48,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -45,8 +45,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": 10,
-      "y": 3,
+      "x": 7,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -58,12 +58,12 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 59,
-      "y": 11,
+      "x": 49,
+      "y": 16,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route103_EventScript_Daisy",
@@ -71,10 +71,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
-      "x": 62,
-      "y": 12,
+      "x": 38,
+      "y": 10,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -84,8 +84,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
-      "x": 60,
-      "y": 12,
+      "x": 38,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -97,8 +97,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 50,
-      "y": 8,
+      "x": 49,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
       "movement_range_x": 0,
@@ -110,8 +110,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 58,
-      "y": 5,
+      "x": 37,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -123,8 +123,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 59,
-      "y": 5,
+      "x": 38,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -136,8 +136,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 60,
-      "y": 5,
+      "x": 39,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -149,8 +149,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",
-      "x": 20,
-      "y": 10,
+      "x": 29,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -162,8 +162,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
-      "x": 7,
-      "y": 3,
+      "x": 6,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -175,8 +175,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
-      "x": 56,
-      "y": 13,
+      "x": 50,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -188,8 +188,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 50,
-      "y": 5,
+      "x": 24,
+      "y": 20,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -215,7 +215,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 40,
-      "y": 4,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -227,8 +227,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 61,
-      "y": 5,
+      "x": 47,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -239,11 +239,11 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 60,
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+      "x": 35,
       "y": 9,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -253,10 +253,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 36,
-      "y": 6,
+      "x": 46,
+      "y": 3,
       "elevation": 1,
-      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -266,10 +266,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
-      "x": 36,
-      "y": 13,
+      "x": 45,
+      "y": 3,
       "elevation": 1,
-      "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -279,8 +279,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 59,
-      "y": 7,
+      "x": 43,
+      "y": 20,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -292,13 +292,7 @@
     }
   ],
   "warp_events": [
-    {
-      "x": 45,
-      "y": 6,
-      "elevation": 0,
-      "dest_map": "MAP_ALTERING_CAVE",
-      "dest_warp_id": "0"
-    }
+
   ],
   "coord_events": [
 
@@ -306,8 +300,16 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 11,
-      "y": 9,
+      "x": 7,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route103_EventScript_RouteSign"
+    },
+    {
+      "type": "sign",
+      "x": 48,
+      "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route103_EventScript_RouteSign"

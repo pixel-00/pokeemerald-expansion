@@ -2,7 +2,7 @@
   "group_order": [
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorTinybud",
-    "gMapGroup_IndoorOldale",
+    "gMapGroup_IndoorGreenglade",
     "gMapGroup_IndoorDewford",
     "gMapGroup_IndoorLavaridge",
     "gMapGroup_IndoorFallarbor",
@@ -46,7 +46,7 @@
     "SootopolisCity",
     "EverGrandeCity",
     "TinybudTown",
-    "OldaleTown",
+    "GreengladeTown",
     "DewfordTown",
     "LavaridgeTown",
     "FallarborTown",
@@ -101,12 +101,12 @@
     "TinybudTown_MaysHouse_2F",
     "TinybudTown_ProfessorBirchsLab"
   ],
-  "gMapGroup_IndoorOldale": [
-    "OldaleTown_House1",
-    "OldaleTown_House2",
-    "OldaleTown_PokemonCenter_1F",
-    "OldaleTown_PokemonCenter_2F",
-    "OldaleTown_Mart"
+  "gMapGroup_IndoorGreenglade": [
+    "GreengladeTown_House1",
+    "GreengladeTown_House2",
+    "GreengladeTown_PokemonCenter_1F",
+    "GreengladeTown_PokemonCenter_2F",
+    "GreengladeTown_Mart"
   ],
   "gMapGroup_IndoorDewford": [
     "DewfordTown_House1",

@@ -122,16 +122,16 @@
       "blockdata_filepath": "data/layouts/TinybudTown/map.bin"
     },
     {
-      "id": "LAYOUT_OLDALE_TOWN",
-      "name": "OldaleTown_Layout",
-      "width": 26,
-      "height": 45,
+      "id": "LAYOUT_GREENGLADE_TOWN",
+      "name": "GreengladeTown_Layout",
+      "width": 30,
+      "height": 48,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/OldaleTown/border.bin",
-      "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
+      "border_filepath": "data/layouts/GreengladeTown/border.bin",
+      "blockdata_filepath": "data/layouts/GreengladeTown/map.bin"
     },
     {
       "id": "LAYOUT_DEWFORD_TOWN",
@@ -220,7 +220,7 @@
     {
       "id": "LAYOUT_ROUTE103",
       "name": "Route103_Layout",
-      "width": 65,
+      "width": 56,
       "height": 26,
       "border_width": 2,
       "border_height": 2,
@@ -268,7 +268,7 @@
     {
       "id": "LAYOUT_ROUTE107",
       "name": "Route107_Layout",
-      "width": 60,
+      "width": 94,
       "height": 20,
       "border_width": 1,
       "border_height": 1,
@@ -2901,7 +2901,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "0",
+      "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/UnusedOutdoorArea/border.bin",
       "blockdata_filepath": "data/layouts/UnusedOutdoorArea/map.bin"
     },

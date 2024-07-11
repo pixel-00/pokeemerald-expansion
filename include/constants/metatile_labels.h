@@ -214,8 +214,8 @@
 #define METATILE_General_Door                  0x021
 #define METATILE_General_Door_Contest          0x1DB
 #define METATILE_General_Door_Gym              0x1CD
-#define METATILE_General_Door_PokeCenter       0x061
-#define METATILE_General_Door_PokeMart         0x041
+#define METATILE_General_Door_PokeCenter       0x02A
+#define METATILE_General_Door_PokeMart         0x051
 #define METATILE_General_Grass                 0x001
 #define METATILE_General_Grass_TreeLeft        0x1CE
 #define METATILE_General_Grass_TreeRight       0x1CF
@@ -390,8 +390,8 @@
 #define METATILE_Pacifidlog_SubmergedLogs_VerticalTop          0x25A
 
 // gTileset_Petalburg
-#define METATILE_Petalburg_Door_Oldale   0x287
-#define METATILE_Petalburg_Door_Tinybud  0x233
+#define METATILE_Petalburg_Door_Greenglade  0x287
+#define METATILE_Petalburg_Door_Tinybud     0x233
 
 // gTileset_PetalburgGym
 #define METATILE_PetalburgGym_Door                0x224

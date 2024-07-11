@@ -1,9 +1,9 @@
 {
-  "id": "MAP_OLDALE_TOWN",
-  "name": "OldaleTown",
-  "layout": "LAYOUT_OLDALE_TOWN",
+  "id": "MAP_GREENGLADE_TOWN",
+  "name": "GreengladeTown",
+  "layout": "LAYOUT_GREENGLADE_TOWN",
   "music": "MUS_OLDALE",
-  "region_map_section": "MAPSEC_OLDALE_TOWN",
+  "region_map_section": "MAPSEC_GREENGLADE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_TOWN",
@@ -15,179 +15,179 @@
   "connections": [
     {
       "map": "MAP_ROUTE102",
-      "offset": -23,
+      "offset": -26,
       "direction": "right"
     },
     {
       "map": "MAP_ROUTE103",
-      "offset": 0,
+      "offset": 22,
       "direction": "left"
     },
     {
       "map": "MAP_ROUTE107",
-      "offset": 24,
-      "direction": "left"
+      "offset": -61,
+      "direction": "down"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
-      "x": 16,
-      "y": 11,
+      "x": 25,
+      "y": 25,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_EventScript_Girl",
+      "script": "GreengladeTown_EventScript_Girl",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
-      "x": 13,
-      "y": 7,
+      "x": 11,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_EventScript_MartEmployee",
+      "script": "GreengladeTown_EventScript_MartEmployee",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MANIAC",
-      "x": 8,
-      "y": 9,
+      "x": 10,
+      "y": 33,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_EventScript_FootprintsMan",
+      "script": "GreengladeTown_EventScript_FootprintsMan",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": 11,
-      "y": 19,
+      "x": 17,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_EventScript_Rival",
-      "flag": "FLAG_HIDE_OLDALE_TOWN_RIVAL"
+      "script": "GreengladeTown_EventScript_Rival",
+      "flag": "FLAG_HIDE_GREENGLADE_TOWN_RIVAL"
     }
   ],
   "warp_events": [
     {
-      "x": 5,
-      "y": 7,
+      "x": 16,
+      "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN_HOUSE1",
+      "dest_map": "MAP_GREENGLADE_TOWN_HOUSE1",
       "dest_warp_id": "0"
     },
     {
-      "x": 15,
-      "y": 16,
+      "x": 16,
+      "y": 35,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN_HOUSE2",
+      "dest_map": "MAP_GREENGLADE_TOWN_HOUSE2",
       "dest_warp_id": "0"
     },
     {
-      "x": 6,
-      "y": 16,
+      "x": 18,
+      "y": 28,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN_POKEMON_CENTER_1F",
+      "dest_map": "MAP_GREENGLADE_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 14,
-      "y": 6,
+      "x": 8,
+      "y": 21,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN_MART",
+      "dest_map": "MAP_GREENGLADE_TOWN_MART",
       "dest_warp_id": "0"
     }
   ],
   "coord_events": [
     {
       "type": "trigger",
-      "x": 0,
-      "y": 10,
-      "elevation": 3,
-      "var": "VAR_OLDALE_TOWN_STATE",
-      "var_value": "0",
-      "script": "OldaleTown_EventScript_BlockedPath"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 19,
-      "elevation": 3,
-      "var": "VAR_OLDALE_RIVAL_STATE",
-      "var_value": "1",
-      "script": "OldaleTown_EventScript_RivalTrigger1"
-    },
-    {
-      "type": "trigger",
-      "x": 9,
-      "y": 19,
-      "elevation": 3,
-      "var": "VAR_OLDALE_RIVAL_STATE",
-      "var_value": "1",
-      "script": "OldaleTown_EventScript_RivalTrigger2"
-    },
-    {
-      "type": "trigger",
       "x": 10,
-      "y": 19,
+      "y": 34,
       "elevation": 3,
-      "var": "VAR_OLDALE_RIVAL_STATE",
+      "var": "VAR_GREENGLADE_TOWN_STATE",
+      "var_value": "0",
+      "script": "GreengladeTown_EventScript_BlockedPath"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 22,
+      "elevation": 3,
+      "var": "VAR_GREENGLADE_RIVAL_STATE",
       "var_value": "1",
-      "script": "OldaleTown_EventScript_RivalTrigger3"
+      "script": "GreengladeTown_EventScript_RivalTrigger1"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 22,
+      "elevation": 3,
+      "var": "VAR_GREENGLADE_RIVAL_STATE",
+      "var_value": "1",
+      "script": "GreengladeTown_EventScript_RivalTrigger2"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 22,
+      "elevation": 3,
+      "var": "VAR_GREENGLADE_RIVAL_STATE",
+      "var_value": "1",
+      "script": "GreengladeTown_EventScript_RivalTrigger3"
     }
   ],
   "bg_events": [
     {
       "type": "sign",
-      "x": 11,
-      "y": 9,
+      "x": 15,
+      "y": 28,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "OldaleTown_EventScript_TownSign"
+      "script": "GreengladeTown_EventScript_TownSign"
     },
     {
       "type": "sign",
-      "x": 7,
-      "y": 16,
+      "x": 19,
+      "y": 28,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
     },
     {
       "type": "sign",
-      "x": 15,
-      "y": 6,
+      "x": 9,
+      "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
     },
     {
       "type": "sign",
-      "x": 8,
-      "y": 16,
+      "x": 20,
+      "y": 28,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
     },
     {
       "type": "sign",
-      "x": 16,
-      "y": 6,
+      "x": 10,
+      "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"

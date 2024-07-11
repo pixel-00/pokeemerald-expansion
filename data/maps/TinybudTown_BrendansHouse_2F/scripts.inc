@@ -155,12 +155,55 @@ PlayersHouse_2F_EventScript_TogepiDoll::
 # 82 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
 	lockall
 # 83 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
-	msgbox PlayersHouse_2F_EventScript_TogepiDoll_Text_0
+	msgbox PlayersHouse_2F_EventScript_TogepiDoll_Text_0, MSGBOX_SIGN
 # 84 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
 	releaseall
+	end
+
+
+PlayersHouse_2F_EventScript_Bookcase1::
+# 89 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
+	msgbox PlayersHouse_2F_EventScript_Bookcase1_Text_0, MSGBOX_SIGN
+	end
+
+
+PlayersHouse_2F_EventScript_Bookcase2::
+# 94 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
+	msgbox PlayersHouse_2F_EventScript_Bookcase2_Text_0, MSGBOX_SIGN
 	end
 
 
 PlayersHouse_2F_EventScript_TogepiDoll_Text_0:
 # 83 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
 	.string "It's a cute Togepi plush.$"
+
+PlayersHouse_2F_EventScript_Bookcase1_Text_0:
+# 89 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
+	.string "This book is titled ‘ABSTRACT ALGEBRA’\n"
+	.string "by DAVID S. DUMMIT and RICHARD M.\l"
+	.string "FOOTE.\p"
+	.string "… … … … … …\p"
+	.string "“Corollary 3. Any finite integral domain\n"
+	.string "is a field.\p"
+	.string "Proof. Let R be a finite integral domain\n"
+	.string "and let {MATH_A} be a nonzero element of R.\p"
+	.string "By the cancellation law the map x {MAPSTO} {MATH_A}x\n"
+	.string "is an injective function. Since R is\l"
+	.string "finite this map is also surjective.\l"
+	.string "In particular, there is some b in R such\l"
+	.string "that {MATH_A}b = 1, i.e., {MATH_A} is a unit in R.\p"
+	.string "Since {MATH_A} was an arbitrary nonzero\n"
+	.string "element, R is a field.”$"
+
+PlayersHouse_2F_EventScript_Bookcase2_Text_0:
+# 94 "data/maps/TinybudTown_BrendansHouse_2F/scripts.pory"
+	.string "This book is titled ‘PRINCIPLES OF\n"
+	.string "MATHEMATICAL ANALYSIS’ by WALTER\l"
+	.string "RUDIN.\p"
+	.string "… … … … … …\p"
+	.string "CHAPTER 4, EXERCISE 13: “Let E be a\n"
+	.string "dense subset of a metric space X, and\l"
+	.string "let {MATH_F} be a uniformly continuous real\l"
+	.string "function defined on E.\p"
+	.string "Prove that {MATH_F} has a continuous\n"
+	.string "extension from E to X.”$"

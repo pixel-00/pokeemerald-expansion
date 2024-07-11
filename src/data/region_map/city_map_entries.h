@@ -6,9 +6,9 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .tilemap = gPokenavCityMap_Tinybud_0,
     },
     {
-        .mapSecId = MAPSEC_OLDALE_TOWN,
+        .mapSecId = MAPSEC_GREENGLADE_TOWN,
         .index = 0,
-        .tilemap = gPokenavCityMap_Oldale_0,
+        .tilemap = gPokenavCityMap_Greenglade_0,
     },
     {
         .mapSecId = MAPSEC_DEWFORD_TOWN,

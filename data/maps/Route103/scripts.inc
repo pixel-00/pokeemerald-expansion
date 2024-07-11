@@ -143,8 +143,8 @@ Route103_EventScript_RivalEnd::
 	setvar VAR_BIRCH_LAB_STATE, 4
 	clearflag FLAG_HIDE_TINYBUD_TOWN_BIRCHS_LAB_RIVAL
 	setflag FLAG_DEFEATED_RIVAL_ROUTE103
-	setvar VAR_OLDALE_RIVAL_STATE, 1
-	clearflag FLAG_HIDE_OLDALE_TOWN_RIVAL
+	setvar VAR_GREENGLADE_RIVAL_STATE, 1
+	clearflag FLAG_HIDE_GREENGLADE_TOWN_RIVAL
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall
@@ -194,7 +194,7 @@ Route103_EventScript_Boy::
 	end
 
 Route103_EventScript_Man::
-	msgbox Route103_Text_ShortcutToOldale, MSGBOX_NPC
+	msgbox Route103_Text_ShortcutToGreenglade, MSGBOX_NPC
 	end
 
 Route103_EventScript_RouteSign::
@@ -344,12 +344,13 @@ Route103_Text_ShouldHaveBroughtPotion:
 	.string "My POKéMON is staggeringly tired…\n"
 	.string "I should have brought a POTION…$"
 
-Route103_Text_ShortcutToOldale:
+Route103_Text_ShortcutToGreenglade:
 	.string "If you cross the sea from here,\n"
-	.string "it'll be a shortcut to OLDALE TOWN.\p"
+	.string "it'll be a shortcut to GREENGLADE TOWN.\p"
 	.string "Fufufu, that's useful, isn't it?$"
 
 Route103_Text_RouteSign:
-	.string "ROUTE 103\n"
-	.string "{DOWN_ARROW} OLDALE TOWN$"
+	.string "RIVERSIDE PATH\n"
+	.string "{LEFT_ARROW} TINYBUD TOWN\l"
+	.string "{RIGHT_ARROW} GREENGLADE TOWN$"
 

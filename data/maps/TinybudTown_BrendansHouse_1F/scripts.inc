@@ -434,8 +434,12 @@ PlayersHouse_1F_Text_GoodMorningClock::
 
 PlayersHouse_1F_Text_RunningShoesManual::
 # 96 "data/maps/TinybudTown_BrendansHouse_1F/scripts.pory"
-	.string "This book is titled ‘PRINCIPLES OF\n"
-	.string "MATHEMATICAL ANALYSIS’ by WALTER\l"
-	.string "RUDIN.\p"
-	.string "… … … … … … … … … … … … … … … …\p"
-	.string "Looks tough!$"
+	.string "This book is titled ‘MODEL THEORY: AN\n"
+	.string "INTRODUCTION’ by DAVID MARKER.\p"
+	.string "… … … … …\p"
+	.string "“Theorem 2.3.4 (Upward Loëwenheim-\n"
+	.string "Skolem Theorem)\p"
+	.string "Let M be an infinite L-structure and {KAPPA} be\n"
+	.string "an infinite cardinal {KAPPA} {GEQ} |M| + |L|.\p"
+	.string "Then, there is N, an L-structure of\n"
+	.string "cardinality {KAPPA} and j : M {FUNC_TO} N is elementary.”$"

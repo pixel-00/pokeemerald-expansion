@@ -25,14 +25,14 @@
 #define CHAR_ESZETT            0x15
 #define CHAR_a_GRAVE           0x16
 #define CHAR_a_ACUTE           0x17
-//#define CHAR_a_CIRCUMFLEX    0x18 // Is 0x68 instead
+#define CHAR_MATH_A            0x18
 #define CHAR_c_CEDILLA         0x19
 #define CHAR_e_GRAVE           0x1A
 #define CHAR_e_ACUTE           0x1B
 #define CHAR_e_CIRCUMFLEX      0x1C
 #define CHAR_e_DIAERESIS       0x1D
 #define CHAR_i_GRAVE           0x1E
-//#define CHAR_i_ACUTE         0x1F // Is 0x6F instead
+#define CHAR_MATH_F            0x1F
 #define CHAR_i_CIRCUMFLEX      0x20
 #define CHAR_i_DIAERESIS       0x21
 #define CHAR_o_GRAVE           0x22
@@ -48,7 +48,11 @@
 #define CHAR_SUPER_ER          0x2C
 #define CHAR_AMPERSAND         0x2D
 #define CHAR_PLUS              0x2E
-//
+#define CHAR_MAPSTO            0x2F
+#define CHAR_FUNC_TO           0x30
+#define CHAR_KAPPA             0x31
+#define CHAR_VBAR              0x32
+#define CHAR_GEQ               0x33
 #define CHAR_LV                0x34
 #define CHAR_EQUALS            0x35
 #define CHAR_SEMICOLON         0x36

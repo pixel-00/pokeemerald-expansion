@@ -15,19 +15,19 @@
   "connections": [
     {
       "map": "MAP_ROUTE103",
-      "offset": 0,
+      "offset": 5,
       "direction": "up"
     },
     {
-      "map": "MAP_OLDALE_TOWN",
-      "offset": -24,
-      "direction": "right"
+      "map": "MAP_GREENGLADE_TOWN",
+      "offset": 61,
+      "direction": "up"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
-      "x": 41,
+      "x": 45,
       "y": 10,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
@@ -40,7 +40,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
-      "x": 23,
+      "x": 27,
       "y": 11,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_RIGHT_DOWN_LEFT_UP",
@@ -53,8 +53,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 16,
-      "y": 7,
+      "x": 15,
+      "y": 12,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_UP",
       "movement_range_x": 0,
@@ -66,8 +66,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 50,
-      "y": 11,
+      "x": 51,
+      "y": 15,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_UP",
       "movement_range_x": 1,
@@ -79,8 +79,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 33,
-      "y": 4,
+      "x": 40,
+      "y": 8,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -92,8 +92,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TUBER_M_SWIMMING",
-      "x": 32,
-      "y": 4,
+      "x": 39,
+      "y": 8,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -105,8 +105,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
-      "x": 50,
-      "y": 5,
+      "x": 51,
+      "y": 8,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 1,
@@ -118,7 +118,13 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 23,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_ALTERING_CAVE",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 

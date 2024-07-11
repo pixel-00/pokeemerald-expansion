@@ -15,9 +15,9 @@ Route102_EventScript_LittleBoy::
 # 8 "data/maps/Route102/scripts.pory"
 
 # 9 "data/maps/Route102/scripts.pory"
-Route102_EventScript_RouteSignOldale::
+Route102_EventScript_RouteSignGreenglade::
 # 10 "data/maps/Route102/scripts.pory"
-	msgbox Route102_Text_RouteSignOldale, MSGBOX_SIGN
+	msgbox Route102_Text_RouteSignGreenglade, MSGBOX_SIGN
 # 11 "data/maps/Route102/scripts.pory"
 	end
 # 12 "data/maps/Route102/scripts.pory"
@@ -205,11 +205,11 @@ Route102_Text_CatchWholeBunchOfPokemon:
 # 103 "data/maps/Route102/scripts.pory"
 
 # 104 "data/maps/Route102/scripts.pory"
-Route102_Text_RouteSignOldale:
+Route102_Text_RouteSignGreenglade:
 # 105 "data/maps/Route102/scripts.pory"
 	.string "ROUTE 102\n"
 # 106 "data/maps/Route102/scripts.pory"
-	.string "{RIGHT_ARROW} OLDALE TOWN$"
+	.string "{RIGHT_ARROW} GREENGLADE TOWN$"
 # 107 "data/maps/Route102/scripts.pory"
 
 # 108 "data/maps/Route102/scripts.pory"

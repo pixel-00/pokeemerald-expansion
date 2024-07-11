@@ -94,7 +94,7 @@ text PlayersHouse_1F_Text_GoodMorningClock {
 }
 
 text PlayersHouse_1F_Text_RunningShoesManual {
-    format("This book is titled ‘PRINCIPLES OF MATHEMATICAL ANALYSIS’ by WALTER RUDIN.\p… … … … … … … … … … … … … … … …\pLooks tough!")
+    format("This book is titled ‘MODEL THEORY: AN INTRODUCTION’ by DAVID MARKER.\p… … … … …\p“Theorem 2.3.4 (Upward Loëwenheim-\NSkolem Theorem)\pLet M be an infinite L-structure and {KAPPA} be an infinite cardinal {KAPPA} {GEQ} |M| + |L|.\pThen, there is N, an L-structure of cardinality {KAPPA} and j : M {FUNC_TO} N is elementary.”")
 }
 
 script PlayersHouse_1F_EventScript_TV {

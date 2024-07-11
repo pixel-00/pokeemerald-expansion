@@ -19,8 +19,8 @@
       "direction": "right"
     },
     {
-      "map": "MAP_OLDALE_TOWN",
-      "offset": 23,
+      "map": "MAP_GREENGLADE_TOWN",
+      "offset": 26,
       "direction": "left"
     }
   ],
@@ -297,7 +297,15 @@
       "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Route102_EventScript_RouteSignOldale"
+      "script": "Route102_EventScript_RouteSignGreenglade"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 31,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route102_EventScript_RouteSignPetalburg"
     }
   ]
 }
