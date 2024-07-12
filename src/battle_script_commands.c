@@ -1611,6 +1611,9 @@ u32 GetTotalAccuracy(u32 battlerAtk, u32 battlerDef, u32 move, u32 atkAbility, u
     case ABILITY_COMPOUND_EYES:
         calc = (calc * 130) / 100; // 1.3 compound eyes boost
         break;
+    case ABILITY_KEEN_EYE:
+        calc = (calc * 120) / 100; // 1.2 keen eye boost
+        break;
     case ABILITY_VICTORY_STAR:
         calc = (calc * 110) / 100; // 1.1 victory star boost
         break;
@@ -8671,14 +8674,6 @@ u32 IsFlowerVeilProtected(u32 battler)
         return 0;
 }
 
-u32 IsLeafGuardProtected(u32 battler)
-{
-    if (IsBattlerWeatherAffected(battler, B_WEATHER_SUN))
-        return GetBattlerAbility(battler) == ABILITY_LEAF_GUARD;
-    else
-        return 0;
-}
-
 bool32 IsShieldsDownProtected(u32 battler)
 {
     return (GetBattlerAbility(battler) == ABILITY_SHIELDS_DOWN
@@ -8688,7 +8683,6 @@ bool32 IsShieldsDownProtected(u32 battler)
 u32 IsAbilityStatusProtected(u32 battler)
 {
     return IsFlowerVeilProtected(battler)
-        || IsLeafGuardProtected(battler)
         || IsShieldsDownProtected(battler);
 }
 
@@ -10567,20 +10561,6 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr = cmd->jumpInstr;
         else
             gBattlescriptCurrInstr = cmd->nextInstr;
-        return;
-    }
-    case VARIOUS_JUMP_IF_LEAF_GUARD_PROTECTED:
-    {
-        VARIOUS_ARGS(const u8 *jumpInstr);
-        if (IsLeafGuardProtected(battler))
-        {
-            gBattlerAbility = battler;
-            gBattlescriptCurrInstr = cmd->jumpInstr;
-        }
-        else
-        {
-            gBattlescriptCurrInstr = cmd->nextInstr;
-        }
         return;
     }
     case VARIOUS_SET_ATTACKER_STICKY_WEB_USER:

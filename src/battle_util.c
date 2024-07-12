@@ -2760,8 +2760,7 @@ u8 DoBattlerEndTurnEffects(void)
                 gStatuses3[battler] -= STATUS3_YAWN_TURN(1);
                 if (!(gStatuses3[battler] & STATUS3_YAWN) && !(gBattleMons[battler].status1 & STATUS1_ANY)
                  && battlerAbility != ABILITY_VITAL_SPIRIT
-                 && battlerAbility != ABILITY_INSOMNIA && !UproarWakeUpCheck(battler)
-                 && !IsLeafGuardProtected(battler))
+                 && battlerAbility != ABILITY_INSOMNIA && !UproarWakeUpCheck(battler))
                 {
                     CancelMultiTurnMoves(battler);
                     gEffectBattler = battler;
@@ -9887,6 +9886,10 @@ static inline uq4_12_t GetDefenderAbilitiesModifier(u32 move, u32 moveType, u32 
     case ABILITY_SHADOW_SHIELD:
         if (BATTLER_MAX_HP(battlerDef))
             return UQ_4_12(0.5);
+        break;
+    case ABILITY_LEAF_GUARD:
+        if (typeEffectivenessModifier >= UQ_4_12(2.0))
+            return UQ_4_12(0.6);
         break;
     case ABILITY_FILTER:
     case ABILITY_SOLID_ROCK:

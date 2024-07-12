@@ -173,7 +173,7 @@
 #define CONNECTION_EMERGE   6
 
 #define SLOW_MOVEMENT_ON_STAIRS         TRUE
-#define FOLLOW_ME_IMPLEMENTED           TRUE    //for stairs movement. see ObjectMovingOnRockStairs in src/field_player_avatar.c
+#define FOLLOW_ME_IMPLEMENTED           FALSE    //for stairs movement. see ObjectMovingOnRockStairs in src/field_player_avatar.c
 
 #if TESTING
 #include "config/test.h"

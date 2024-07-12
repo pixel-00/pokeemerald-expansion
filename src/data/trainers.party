@@ -6,18 +6,34 @@ Gender: Male
 Music: Male
 Double Battle: No
 
-=== TRAINER_SAWYER_1 ===
-Name: SAWYER
-Class: Hiker
-Pic: Hiker
+=== TRAINER_SHINYHUNTER_1 ===
+Name: GAVIN
+Class: Shiny Hunter
+Pic: Ninja Boy
 Gender: Male
-Music: Hiker
+Music: Girl
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Geodude
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Yanma
+Level: 3
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Shiny: Yes
+
+=== TRAINER_DAD_1 ===
+Name: DAD
+Class: Factory Head
+Pic: Factory Head Noland
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Yanma
+Level: 3
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Shiny: Yes
+
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_1 ===
 Name: GRUNT
@@ -4723,29 +4739,35 @@ Items: Potion / Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Geodude
-Level: 12
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+Bunnelby  
+Ability: Huge Power  
+Level: 15  
+EVs: 148 Atk / 168 Spe  
+Jolly Nature  
+- Body Slam  
+- Double Kick  
+- Bulldoze  
+- Quick Attack  
 
-Geodude
-Level: 12
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+Furret @ Sitrus Berry  
+Ability: Keen Eye  
+Level: 15  
+EVs: 32 HP / 124 Atk / 32 Def / 32 SpD / 92 Spe  
+Adamant Nature  
+- Body Slam  
+- Fire Punch  
+- Ice Punch  
+- Thunder Punch  
 
-Nosepass @ Oran Berry
-Level: 15
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Block
-- Harden
-- Tackle
-- Rock Tomb
+Audino @ Chesto Berry  
+Ability: Healer  
+Level: 16 
+EVs: 80 HP / 224 Atk / 40 Def / 40 SpD / 4 Spe  
+Impish Nature  
+- Body Slam  
+- Work Up  
+- Rest  
+- Reflect  
 
 === TRAINER_BRAWLY_1 ===
 Name: BRAWLY
@@ -9590,19 +9612,6 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Marshtomp
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-=== TRAINER_MAY_ROUTE_103_MUDKIP ===
-Name: MAY
-Class: Rival
-Pic: May
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
-
-Treecko
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_ROUTE_110_MUDKIP ===
 Name: MAY
