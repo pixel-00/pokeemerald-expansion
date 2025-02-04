@@ -1493,6 +1493,7 @@ bool32 ShouldSetSandstorm(u32 battler, u32 ability, u32 holdEffect)
       || ability == ABILITY_SAND_FORCE
       || ability == ABILITY_OVERCOAT
       || ability == ABILITY_MAGIC_GUARD
+      || ability == ABILITY_WIND_RIDER
       || holdEffect == HOLD_EFFECT_SAFETY_GOGGLES
       || IS_BATTLER_OF_TYPE(battler, TYPE_ROCK)
       || IS_BATTLER_OF_TYPE(battler, TYPE_STEEL)
@@ -2361,7 +2362,8 @@ static bool32 BattlerAffectedBySandstorm(u32 battlerId, u32 ability)
       && ability != ABILITY_SAND_VEIL
       && ability != ABILITY_SAND_FORCE
       && ability != ABILITY_SAND_RUSH
-      && ability != ABILITY_OVERCOAT)
+      && ability != ABILITY_OVERCOAT
+      && ability != ABILITY_WIND_RIDER)
         return TRUE;
     return FALSE;
 }

@@ -1,4 +1,7 @@
 raw `
+.set LOCALID_RIVAL, 10
+.set LOCALID_GRUNT, 11
+
 Route102_MapScripts::
 	.byte 0
 
@@ -102,14 +105,90 @@ Route102_Text_CatchWholeBunchOfPokemon:
 	.string "POKéMON!$"
 
 Route102_Text_RouteSignGreenglade:
-	.string "ROUTE 102\n"
-	.string "{RIGHT_ARROW} GREENGLADE TOWN$"
+	.string "NEWGLADE TRAIL\n"
+	.string "{LEFT_ARROW} GREENGLADE TOWN$"
+    .string "{UP_ARROW} NEWHOPE CITY$"
 
 Route102_Text_RouteSignPetalburg:
-	.string "GREENGLADE TRAIL\n"
+	.string "NEWGLADE TRAIL\n"
 	.string "{RIGHT_ARROW} NEWHOPE CITY\l"
 	.string "{LEFT_ARROW} GEMSTONE CAVE\l"
-	.string "{DOWN_ARROW} TINYBUD TOWN$"
+	.string "{DOWN_ARROW} GREENGLADE TOWN$"
 `
 
-script GreengladeTrail_EventScript_TriggerTeamIntro {}
+
+script NewgladeTrail_EventScript_TriggerTeamIntro {
+    lockall
+    playbgm(MUS_HELP, 0)
+    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+    switch (var(VAR_TEMP_1)) {
+        case 5:
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight4)
+        case 6:
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight3)
+        case 7:
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight2)
+        case 8:
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
+        case 9:
+            break
+        case 10:
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+        case 11:
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft2)
+        case 12:
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft3)
+        case 13:
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft4)
+        case 14:
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft5)
+        case 15:
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft6)
+        case 16:
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft7)
+    }
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER,Common_Movement_WalkUp3)
+    waitmovement(0)
+    msgbox(format("Hey, stop it!"))
+    applymovement(LOCALID_RIVAL, Common_Movement_FaceDown)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(LOCALID_RIVAL, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    msgbox(format("Please, you have to stop him! I don't have any POKéMON!"))
+    applymovement(LOCALID_GRUNT, NewgladeTrail_Movement_GruntToPlayer)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
+    waitmovement(0)
+    msgbox(format("You think you can handle me?"))
+    trainerbattle_no_intro(TRAINER_GRUNT_PETALBURG_WOODS, NewgladeTrail_Text_GruntLost)
+    msgbox(format("No, no, NO!\pI'll get you back for this, just you wait!"))
+    applymovement(LOCALID_GRUNT, NewgladeTrail_Movement_GruntRunAway1)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    waitmovement(0)
+    applymovement(LOCALID_GRUNT, NewgladeTrail_Movement_GruntRunAway2)
+    waitmovement(0)
+    setflag(FLAG_HIDE_NEWGLADE_TRAIL_GRUNT)
+    setvar(VAR_NEWGLADE_TRAIL_STATE, 1)
+    releaseall
+    end
+}
+
+text NewgladeTrail_Text_GruntLost {
+    format("Wh-what?!\nWho do you think you are?\lThis isn't the last you'll hear of TEAM LIMIT!")
+}
+movement NewgladeTrail_Movement_GruntToPlayer {
+    walk_left
+    walk_down * 3
+    face_right
+}
+
+movement NewgladeTrail_Movement_GruntRunAway1 {
+    walk_fast_up * 4
+}
+
+movement NewgladeTrail_Movement_GruntRunAway2 {
+    walk_fast_right * 9
+}

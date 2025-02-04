@@ -61,14 +61,14 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .tilemap = gPokenavCityMap_Mauville_1,
     },
     {
-        .mapSecId = MAPSEC_RUSTBORO_CITY,
+        .mapSecId = MAPSEC_NEWHOPE_CITY,
         .index = 0,
-        .tilemap = gPokenavCityMap_Rustboro_0,
+        .tilemap = gPokenavCityMap_Newhope_0,
     },
     {
-        .mapSecId = MAPSEC_RUSTBORO_CITY,
+        .mapSecId = MAPSEC_NEWHOPE_CITY,
         .index = 1,
-        .tilemap = gPokenavCityMap_Rustboro_1,
+        .tilemap = gPokenavCityMap_Newhope_1,
     },
     {
         .mapSecId = MAPSEC_FORTREE_CITY,

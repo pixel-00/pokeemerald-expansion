@@ -34,7 +34,7 @@ Route104_EventScript_HideWhiteHerbFlorist::
 
 Route104_EventScript_TrySetRivalPos::
 	goto_if_ge VAR_BOARD_BRINEY_BOAT_STATE, 1, Route104_EventScript_DontSetRivalPos
-	goto_if_set FLAG_MET_RIVAL_RUSTBORO, Route104_EventScript_DontSetRivalPos
+	goto_if_set FLAG_MET_RIVAL_NEWHOPE, Route104_EventScript_DontSetRivalPos
 	goto_if_unset FLAG_REGISTER_RIVAL_POKENAV, Route104_EventScript_DontSetRivalPos
 	setobjectxyperm LOCALID_RIVAL, 17, 52
 	return
@@ -51,8 +51,8 @@ Route104_EventScript_Rival::
 
 Route104_EventScript_RivalTrigger::
 	lockall
-	setflag FLAG_HIDE_RUSTBORO_CITY_RIVAL
-	setvar VAR_RUSTBORO_CITY_STATE, 8
+	setflag FLAG_HIDE_NEWHOPE_CITY_RIVAL
+	setvar VAR_NEWHOPE_CITY_STATE, 8
 	setvar VAR_ROUTE104_STATE, 2
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -65,7 +65,7 @@ Route104_EventScript_RivalTrigger::
 	waitmovement 0
 	delay 20
 	setvar VAR_0x8008, 0
-	call RustboroCity_EventScript_PlayRivalMusic
+	call NewhopeCity_EventScript_PlayRivalMusic
 	playse SE_PIN
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -73,7 +73,7 @@ Route104_EventScript_RivalTrigger::
 	waitmovement 0
 	goto Route104_EventScript_RivalEncounter
 
-@ Unused, shares script with Rustboro encounter instead
+@ Unused, shares script with Newhope encounter instead
 Route104_EventScript_PlayRivalMusic::
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, Route104_EventScript_PlayMayMusic
@@ -163,19 +163,19 @@ Route104_EventScript_RestoreMusic::
 	return
 
 Route104_EventScript_BattleMayTreecko::
-	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_TREECKO, Route104_Text_MayDefeat
+	trainerbattle_no_intro TRAINER_MAY_NEWHOPE_TREECKO, Route104_Text_MayDefeat
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_MayDefeated
 	end
 
 Route104_EventScript_BattleMayTorchic::
-	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_TORCHIC, Route104_Text_MayDefeat
+	trainerbattle_no_intro TRAINER_MAY_NEWHOPE_TORCHIC, Route104_Text_MayDefeat
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_MayDefeated
 	end
 
 Route104_EventScript_BattleMayMudkip::
-	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_MUDKIP, Route104_Text_MayDefeat
+	trainerbattle_no_intro TRAINER_MAY_NEWHOPE_MUDKIP, Route104_Text_MayDefeat
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_MayDefeated
 	end
@@ -230,19 +230,19 @@ Route104_EventScript_BrendanDefeated::
 	end
 
 Route104_EventScript_BattleBrendanTreecko::
-	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_TREECKO, Route104_Text_BrendanDefeat
+	trainerbattle_no_intro TRAINER_BRENDAN_NEWHOPE_TREECKO, Route104_Text_BrendanDefeat
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_BrendanDefeated
 	end
 
 Route104_EventScript_BattleBrendanTorchic::
-	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_TORCHIC, Route104_Text_BrendanDefeat
+	trainerbattle_no_intro TRAINER_BRENDAN_NEWHOPE_TORCHIC, Route104_Text_BrendanDefeat
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_BrendanDefeated
 	end
 
 Route104_EventScript_BattleBrendanMudkip::
-	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_MUDKIP, Route104_Text_BrendanDefeat
+	trainerbattle_no_intro TRAINER_BRENDAN_NEWHOPE_MUDKIP, Route104_Text_BrendanDefeat
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_BrendanDefeated
 	end
@@ -306,8 +306,8 @@ Route104_EventScript_RouteSignPetalburg::
 	msgbox Route104_Text_RouteSignPetalburg, MSGBOX_SIGN
 	end
 
-Route104_EventScript_RouteSignRustboro::
-	msgbox Route104_Text_RouteSignRustboro, MSGBOX_SIGN
+Route104_EventScript_RouteSignNewhope::
+	msgbox Route104_Text_RouteSignNewhope, MSGBOX_SIGN
 	end
 
 Route104_EventScript_FlowerShopSign::
@@ -1063,9 +1063,9 @@ Route104_Text_RouteSignPetalburg:
 	.string "ROUTE 1O4\n"
 	.string "{RIGHT_ARROW} PETALBURG CITY$"
 
-Route104_Text_RouteSignRustboro:
+Route104_Text_RouteSignNewhope:
 	.string "ROUTE 1O4\n"
-	.string "{UP_ARROW} RUSTBORO CITY$"
+	.string "{UP_ARROW} NEWHOPE CITY$"
 
 Route104_Text_PrettyPetalFlowShop:
 	.string "PRETTY PETAL FLOWER SHOP$"

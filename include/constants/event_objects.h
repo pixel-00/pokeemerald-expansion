@@ -274,12 +274,8 @@
 #define OBJ_EVENT_GFX_SPECIES_BITS 11
 #define OBJ_EVENT_GFX_SPECIES_MASK ((1 << OBJ_EVENT_GFX_SPECIES_BITS) - 1)
 
-#define OBJ_EVENT_GFX_MON(species) (OBJ_EVENT_GFX_MON_BASE + (species))
-#define OBJ_EVENT_GFX_SHINY_MON(species) (OBJ_EVENT_GFX_MON((species)) + SPECIES_SHINY_TAG)
-
 // Used to call a specific species' follower graphics. Useful for static encounters.
-#define OBJ_EVENT_GFX_SPECIES(name) (OBJ_EVENT_GFX_MON(SPECIES_##name))
-#define OBJ_EVENT_GFX_SHINY_SPECIES(name) (OBJ_EVENT_GFX_SHINY_MON(SPECIES_##name))
+#define OBJ_EVENT_GFX_SPECIES(name) (OBJ_EVENT_GFX_MON_BASE + SPECIES_##name)
 
 #define OW_SPECIES(x) (((x)->graphicsId & OBJ_EVENT_GFX_SPECIES_MASK) - OBJ_EVENT_GFX_MON_BASE)
 #define OW_FORM(x) ((x)->graphicsId >> OBJ_EVENT_GFX_SPECIES_BITS)
@@ -332,7 +328,7 @@
 #define LOCALID_PETALBURG_MART_CLERK 1
 #define LOCALID_SLATEPORT_MART_CLERK 1
 #define LOCALID_MAUVILLE_MART_CLERK 1
-#define LOCALID_RUSTBORO_MART_CLERK 1
+#define LOCALID_NEWHOPE_MART_CLERK 1
 #define LOCALID_FORTREE_MART_CLERK 1
 #define LOCALID_MOSSDEEP_MART_CLERK 1
 #define LOCALID_SOOTOPOLIS_MART_CLERK 1
@@ -376,7 +372,8 @@
 #define OBJ_EVENT_PAL_TAG_LUGIA                   0x1121
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
-#define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
+#define OBJ_EVENT_PAL_TAG_WARPSTAR                0x1124
+#define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1125
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

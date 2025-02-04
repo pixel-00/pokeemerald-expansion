@@ -65,7 +65,7 @@ Route116_EventScript_GiveRepeatBall::
 	call_if_eq VAR_FACING, DIR_WEST, Route116_EventScript_DevonEmployeeExit
 	call_if_eq VAR_FACING, DIR_EAST, Route116_EventScript_DevonEmployeeExitEast
 	removeobject VAR_LAST_TALKED
-	clearflag FLAG_HIDE_RUSTBORO_CITY_DEVON_CORP_3F_EMPLOYEE
+	clearflag FLAG_HIDE_NEWHOPE_CITY_DEVON_CORP_3F_EMPLOYEE
 	setflag FLAG_RECEIVED_REPEAT_BALL
 	release
 	end
@@ -114,8 +114,8 @@ Route116_Movement_DevonEmployeeExitEast:
 	walk_left
 	step_end
 
-Route116_EventScript_RouteSignRustboro::
-	msgbox Route116_Text_RouteSignRustboro, MSGBOX_SIGN
+Route116_EventScript_RouteSignNewhope::
+	msgbox Route116_Text_RouteSignNewhope, MSGBOX_SIGN
 	end
 
 Route116_EventScript_RusturfTunnelSign::
@@ -403,7 +403,7 @@ Route116_Text_ThankYouTokenOfAppreciation:
 
 Route116_Text_NewBallAvailableAtMart:
 	.string "Our new POKé BALL will be available\n"
-	.string "at the POKéMON MART in RUSTBORO.\p"
+	.string "at the POKéMON MART in NEWHOPE.\p"
 	.string "Please do try it out!\n"
 	.string "Thank you and bye-bye!$"
 
@@ -442,13 +442,13 @@ Route116_Text_NotWhatImLookingFor:
 	.string "These are BLACKGLASSES.\l"
 	.string "They're not what I'm looking for…$"
 
-Route116_Text_RouteSignRustboro:
+Route116_Text_RouteSignNewhope:
 	.string "ROUTE 116\n"
-	.string "{LEFT_ARROW} RUSTBORO CITY$"
+	.string "{LEFT_ARROW} NEWHOPE CITY$"
 
 Route116_Text_RusturfTunnelSign:
 	.string "RUSTURF TUNNEL\n"
-	.string "“Linking RUSTBORO and VERDANTURF\p"
+	.string "“Linking NEWHOPE and VERDANTURF\p"
 	.string "“The tunnel project has been\n"
 	.string "canceled.”$"
 

@@ -82,7 +82,7 @@ SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt4::
 	end
 
 SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt5::
-	msgbox SlateportCity_OceanicMuseum_1F_Text_RustboroBungled, MSGBOX_NPC
+	msgbox SlateportCity_OceanicMuseum_1F_Text_NewhopeBungled, MSGBOX_NPC
 	end
 
 SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt6::
@@ -259,9 +259,9 @@ SlateportCity_OceanicMuseum_1F_Text_CanLearnForNefariousDeeds:
 	.string "What I learn here, I can put to use on\n"
 	.string "nefarious deeds…$"
 
-SlateportCity_OceanicMuseum_1F_Text_RustboroBungled:
+SlateportCity_OceanicMuseum_1F_Text_NewhopeBungled:
 	.string "If our goons didn't bungle things\n"
-	.string "in RUSTBORO, we wouldn't be here!$"
+	.string "in NEWHOPE, we wouldn't be here!$"
 
 SlateportCity_OceanicMuseum_1F_Text_DidntHaveMoney:
 	.string "I didn't have ¥50, so it took a long\n"

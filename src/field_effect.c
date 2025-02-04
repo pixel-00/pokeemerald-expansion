@@ -3141,7 +3141,7 @@ u8 FldEff_NPCFlyOut(void)
     u8 spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_BIRD], 0x78, 0, 1);
     struct Sprite *sprite = &gSprites[spriteId];
 
-    sprite->oam.paletteNum = LoadPlayerObjectEventPalette(gSaveBlock2Ptr->playerGender);
+    sprite->oam.paletteNum = LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_WARPSTAR);
     sprite->oam.priority = 1;
     sprite->callback = SpriteCB_NPCFlyOut;
     sprite->data[1] = gFieldEffectArguments[0];
@@ -3240,6 +3240,7 @@ static void FlyOutFieldEffect_BirdLeaveBall(struct Task *task)
             SetSurfBlob_DontSyncAnim(objectEvent->fieldEffectSpriteId, FALSE);
         }
         task->tBirdSpriteId = CreateFlyBirdSprite(); // Does "leave ball" animation by default
+        PlaySE(SE_M_FLY);
         task->tState++;
     }
 }
@@ -3261,7 +3262,6 @@ static void FlyOutFieldEffect_BirdSwoopDown(struct Task *task)
     if ((task->tTimer == 0 || (--task->tTimer) == 0) && ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
         task->tState++;
-        PlaySE(SE_M_FLY);
         StartFlyBirdSwoopDown(task->tBirdSpriteId);
     }
 }
@@ -3322,7 +3322,7 @@ static u8 CreateFlyBirdSprite(void)
     struct Sprite *sprite;
     spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_BIRD], 0xff, 0xb4, 0x1);
     sprite = &gSprites[spriteId];
-    sprite->oam.paletteNum = LoadPlayerObjectEventPalette(gSaveBlock2Ptr->playerGender);
+    sprite->oam.paletteNum = LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_WARPSTAR);
     sprite->oam.priority = 1;
     sprite->callback = SpriteCB_FlyBirdLeaveBall;
     return spriteId;

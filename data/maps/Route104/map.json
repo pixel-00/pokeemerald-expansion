@@ -560,7 +560,7 @@
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Route104_EventScript_RouteSignRustboro"
+      "script": "Route104_EventScript_RouteSignNewhope"
     },
     {
       "type": "sign",

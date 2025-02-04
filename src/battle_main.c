@@ -4259,7 +4259,8 @@ static void HandleTurnActionSelectionState(void)
                                             | BATTLE_TYPE_RECORDED_LINK))
                                             && !gTestRunnerEnabled)
                                             // Or if currently held by Sky Drop
-                                            || gStatuses3[battler] & STATUS3_SKY_DROPPED)
+                                            || gStatuses3[battler] & STATUS3_SKY_DROPPED
+                                            || FlagGet(FLAG_DISABLE_BAG))
                     {
                         RecordedBattle_ClearBattlerAction(battler, 1);
                         gSelectionBattleScripts[battler] = BattleScript_ActionSelectionItemsCantBeUsed;

@@ -128,4 +128,5 @@ voicegroup128::
 	voice_directsound 60, 0, DirectSoundWaveData_unknown_15, 255, 0, 255, 165
 	voice_directsound 60, 0, DirectSoundWaveData_unknown_16, 255, 0, 255, 165
 	voice_directsound 60, 0, DirectSoundWaveData_unknown_17, 255, 0, 255, 165
+	voice_directsound 60, 0, DirectSoundWaveData_warpstar, 255, 255, 255, 127
 

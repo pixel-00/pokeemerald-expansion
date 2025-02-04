@@ -8864,6 +8864,7 @@ static const u16 sSentretTeachableLearnset[] = {
 };
 
 static const u16 sFurretTeachableLearnset[] = {
+    MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BRICK_BREAK,

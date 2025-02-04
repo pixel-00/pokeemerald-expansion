@@ -43,7 +43,7 @@ VerdanturfTown_EventScript_Boy::
 	end
 
 VerdanturfTown_EventScript_BoyTunnelOpen::
-	msgbox VerdanturfTown_Text_EasyToGetToRustboroNow, MSGBOX_DEFAULT
+	msgbox VerdanturfTown_Text_EasyToGetToNewhopeNow, MSGBOX_DEFAULT
 	release
 	end
 
@@ -99,13 +99,13 @@ VerdanturfTown_Text_GuyTryingToBustThroughCave:
 	.string "bust up boulders so he can bust out\l"
 	.string "through to the other side.\p"
 	.string "It'd be great if we could go through…\n"
-	.string "It'll make it easy to visit RUSTBORO.$"
+	.string "It'll make it easy to visit NEWHOPE.$"
 
-VerdanturfTown_Text_EasyToGetToRustboroNow:
+VerdanturfTown_Text_EasyToGetToNewhopeNow:
 	.string "That cave next to the POKéMON MART\n"
 	.string "is now a tunnel to the other side.\p"
 	.string "It's great--it's easy to go shop for\n"
-	.string "new DEVON products in RUSTBORO now.$"
+	.string "new DEVON products in NEWHOPE now.$"
 
 VerdanturfTown_Text_TownSign:
 	.string "VERDANTURF TOWN\p"
@@ -121,7 +121,7 @@ VerdanturfTown_Text_BattleTentSign:
 
 VerdanturfTown_Text_RusturfTunnelSign:
 	.string "RUSTURF TUNNEL\n"
-	.string "“Linking RUSTBORO and VERDANTURF\p"
+	.string "“Linking NEWHOPE and VERDANTURF\p"
 	.string "“The tunnel project has been\n"
 	.string "canceled.”$"
 

@@ -340,7 +340,7 @@ RusturfTunnel_EventScript_Grunt::
 	removeobject LOCALID_PEEKO
 	clearflag FLAG_DEVON_GOODS_STOLEN
 	setflag FLAG_RECOVERED_DEVON_GOODS
-	setvar VAR_RUSTBORO_CITY_STATE, 4
+	setvar VAR_NEWHOPE_CITY_STATE, 4
 	setvar VAR_BRINEY_HOUSE_STATE, 1
 	setflag FLAG_HIDE_ROUTE_116_MR_BRINEY
 	release
@@ -479,14 +479,14 @@ RusturfTunnel_Text_WhyCantTheyKeepDigging:
 	.string "Is the bedrock too hard?\p"
 	.string "My beloved awaits me in VERDANTURF\n"
 	.string "TOWN just beyond here…\p"
-	.string "If RUSTBORO and VERDANTURF were\n"
+	.string "If NEWHOPE and VERDANTURF were\n"
 	.string "joined by this tunnel, I could visit\l"
 	.string "her every day…\p"
 	.string "But this…\n"
 	.string "What am I to do?$"
 
 RusturfTunnel_Text_ToGetToVerdanturf:
-	.string "To get from RUSTBORO to VERDANTURF,\n"
+	.string "To get from NEWHOPE to VERDANTURF,\n"
 	.string "you need to go to DEWFORD, then pass\l"
 	.string "through SLATEPORT and MAUVILLE…$"
 

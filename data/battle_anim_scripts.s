@@ -20581,19 +20581,19 @@ Move_TEETER_DANCE::
 
 Move_MUD_SPORT::
 	loadspritegfx ANIM_TAG_MUD_SAND
-	createvisualtask AnimTask_Splash, 2, ANIM_ATTACKER, 6
+	createvisualtask AnimTask_Splash, 2, ANIM_ATTACKER, 3
 	delay 24
 	createsprite gMudsportMudSpriteTemplate, ANIM_TARGET, 2, 0, -4, -16
 	createsprite gMudsportMudSpriteTemplate, ANIM_TARGET, 2, 0, 4, -12
-	playsewithpan SE_M_DIG, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER
 	delay 32
 	createsprite gMudsportMudSpriteTemplate, ANIM_TARGET, 2, 0, -3, -12
 	createsprite gMudsportMudSpriteTemplate, ANIM_TARGET, 2, 0, 5, -14
-	playsewithpan SE_M_DIG, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER
 	delay 32
 	createsprite gMudsportMudSpriteTemplate, ANIM_TARGET, 2, 0, -5, -18
 	createsprite gMudsportMudSpriteTemplate, ANIM_TARGET, 2, 0, 3, -14
-	playsewithpan SE_M_DIG, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER
 	delay 16
 	createsprite gMudsportMudSpriteTemplate, ANIM_TARGET, 2, 1, 220, 60
 	waitplaysewithpan SE_M_BUBBLE2, 0, 15
@@ -21031,7 +21031,11 @@ Move_WATER_SPORT::
 	createvisualtask AnimTask_WaterSport, 5
 	delay 8
 	playsewithpan SE_M_SURF, SOUND_PAN_ATTACKER
-	delay 44
+	delay 14
+	createvisualtask AnimTask_Splash, 2, ANIM_ATTACKER, 4
+	delay 8
+	loopsewithpan SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER, 38, 4
+	delay 22
 	playsewithpan SE_M_SURF, SOUND_PAN_ATTACKER
 	delay 44
 	playsewithpan SE_M_SURF, SOUND_PAN_ATTACKER

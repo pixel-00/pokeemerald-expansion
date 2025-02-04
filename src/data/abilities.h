@@ -398,7 +398,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_KEEN_EYE] =
     {
         .name = _("Keen Eye"),
-        .description = COMPOUND_STRING("Buffs accuracy, negates loss."),
+        .description = COMPOUND_STRING("Buffs accuracy, stops loss."),
         .aiRating = 1,
         .breakable = TRUE,
     },
@@ -771,7 +771,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_LEAF_GUARD] =
     {
         .name = _("Leaf Guard"),
-        .description = COMPOUND_STRING("Protects vs supereffective."),
+        .description = COMPOUND_STRING("Weakens “supereffective”."),
         .aiRating = 2,
         .breakable = TRUE,
     },

@@ -20,15 +20,15 @@ const struct Tileset gTileset_Petalburg =
     .callback = InitTilesetAnim_Petalburg,
 };
 
-const struct Tileset gTileset_Rustboro =
+const struct Tileset gTileset_Newhope =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Rustboro,
-    .palettes = gTilesetPalettes_Rustboro,
-    .metatiles = gMetatiles_Rustboro,
-    .metatileAttributes = gMetatileAttributes_Rustboro,
-    .callback = InitTilesetAnim_Rustboro,
+    .tiles = gTilesetTiles_Newhope,
+    .palettes = gTilesetPalettes_Newhope,
+    .metatiles = gMetatiles_Newhope,
+    .metatileAttributes = gMetatileAttributes_Newhope,
+    .callback = InitTilesetAnim_Newhope,
 };
 
 const struct Tileset gTileset_Dewford =
@@ -537,14 +537,14 @@ const struct Tileset gTileset_MauvilleGameCorner =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_RustboroGym =
+const struct Tileset gTileset_NewhopeGym =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_RustboroGym,
-    .palettes = gTilesetPalettes_RustboroGym,
-    .metatiles = gMetatiles_RustboroGym,
-    .metatileAttributes = gMetatileAttributes_RustboroGym,
+    .tiles = gTilesetTiles_NewhopeGym,
+    .palettes = gTilesetPalettes_NewhopeGym,
+    .metatiles = gMetatiles_NewhopeGym,
+    .metatileAttributes = gMetatileAttributes_NewhopeGym,
     .callback = NULL,
 };
 

@@ -4741,18 +4741,19 @@ AI: Check Bad Move / Try To Faint / Check Viability
 
 Bunnelby  
 Ability: Huge Power  
-Level: 15  
-EVs: 148 Atk / 168 Spe  
+Level: 16  
+EVs: 124 Atk / 168 Spe  
 Jolly Nature  
-- Body Slam  
-- Double Kick  
-- Bulldoze  
-- Quick Attack  
+- Quick Attack
+- Double Kick
+- Bulldoze
+- Laser Focus
+ 
 
 Furret @ Sitrus Berry  
 Ability: Keen Eye  
-Level: 15  
-EVs: 32 HP / 124 Atk / 32 Def / 32 SpD / 92 Spe  
+Level: 16  
+EVs: 124 Atk / 52 SpD / 92 Spe  
 Adamant Nature  
 - Body Slam  
 - Fire Punch  
@@ -4761,9 +4762,9 @@ Adamant Nature
 
 Audino @ Chesto Berry  
 Ability: Healer  
-Level: 16 
-EVs: 80 HP / 224 Atk / 40 Def / 40 SpD / 4 Spe  
-Impish Nature  
+Level: 18
+EVs: 80 HP / 96 Atk / 40 Def / 40 SpD  
+Relaxed Nature  
 - Body Slam  
 - Work Up  
 - Rest  
@@ -10776,7 +10777,7 @@ Natu
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_BRENDAN_RUSTBORO_TREECKO ===
+=== TRAINER_BRENDAN_NEWHOPE_TREECKO ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -10793,7 +10794,7 @@ Torchic
 Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_BRENDAN_RUSTBORO_MUDKIP ===
+=== TRAINER_BRENDAN_NEWHOPE_MUDKIP ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -10900,7 +10901,7 @@ Loudred
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_BRENDAN_RUSTBORO_TORCHIC ===
+=== TRAINER_BRENDAN_NEWHOPE_TORCHIC ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -10917,7 +10918,7 @@ Mudkip
 Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_MAY_RUSTBORO_MUDKIP ===
+=== TRAINER_MAY_NEWHOPE_MUDKIP ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -14053,7 +14054,7 @@ Vigoroth
 Level: 29
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_MAY_RUSTBORO_TREECKO ===
+=== TRAINER_MAY_NEWHOPE_TREECKO ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -14070,7 +14071,7 @@ Torchic
 Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_MAY_RUSTBORO_TORCHIC ===
+=== TRAINER_MAY_NEWHOPE_TORCHIC ===
 Name: MAY
 Class: Rival
 Pic: May

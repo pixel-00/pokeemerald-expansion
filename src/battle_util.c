@@ -8606,8 +8606,8 @@ static const u8 sFlailHpScaleToPowerTable[] =
     4, 150,
     9, 100,
     16, 80,
-    32, 40,
-    48, 20
+    32, 60,
+    48, 40
 };
 
 // format: min. weight (hectograms), base power
@@ -9888,9 +9888,6 @@ static inline uq4_12_t GetDefenderAbilitiesModifier(u32 move, u32 moveType, u32 
             return UQ_4_12(0.5);
         break;
     case ABILITY_LEAF_GUARD:
-        if (typeEffectivenessModifier >= UQ_4_12(2.0))
-            return UQ_4_12(0.6);
-        break;
     case ABILITY_FILTER:
     case ABILITY_SOLID_ROCK:
     case ABILITY_PRISM_ARMOR:

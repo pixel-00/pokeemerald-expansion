@@ -11,7 +11,7 @@
 #define MAPSEC_PETALBURG_CITY               0x07
 #define MAPSEC_SLATEPORT_CITY               0x08
 #define MAPSEC_MAUVILLE_CITY                0x09
-#define MAPSEC_RUSTBORO_CITY                0x0A
+#define MAPSEC_NEWHOPE_CITY                0x0A
 #define MAPSEC_FORTREE_CITY                 0x0B
 #define MAPSEC_LILYCOVE_CITY                0x0C
 #define MAPSEC_MOSSDEEP_CITY                0x0D

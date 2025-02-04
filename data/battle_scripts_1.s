@@ -5302,14 +5302,11 @@ BattleScript_EffectRecoilHP25::
 
 BattleScript_EffectMudSport::
 BattleScript_EffectWaterSport::
-	attackcanceler
-	attackstring
-	ppreduce
-	settypebasedhalvers BattleScript_ButItFailed
-	attackanimation
-	waitanimation
+	call BattleScript_EffectHit_Ret
+	settypebasedhalvers BattleScript_TryFaint
 	printfromtable gSportsUsedStringIds
 	waitmessage B_WAIT_TIME_LONG
+	tryfaintmon BS_TARGET
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectTickle::

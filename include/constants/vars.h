@@ -107,14 +107,14 @@
 #define VAR_PETALBURG_CITY_STATE                         0x4057
 #define VAR_SLATEPORT_CITY_STATE                         0x4058
 #define VAR_MAUVILLE_CITY_STATE                          0x4059 // Unused Var
-#define VAR_RUSTBORO_CITY_STATE                          0x405A
+#define VAR_NEWHOPE_CITY_STATE                           0x405A
 #define VAR_FORTREE_CITY_STATE                           0x405B // Unused Var
 #define VAR_LILYCOVE_CITY_STATE                          0x405C // Unused Var
 #define VAR_MOSSDEEP_CITY_STATE                          0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
 #define VAR_EVER_GRANDE_CITY_STATE                       0x405F // Unused Var
-#define VAR_LUSH_CLEARING_STATE                               0x4060
-#define VAR_ROUTE102_STATE                               0x4061 // Unused Var
+#define VAR_LUSH_CLEARING_STATE                          0x4060
+#define VAR_NEWGLADE_TRAIL_STATE                         0x4061 // Unused Var
 #define VAR_ROUTE103_STATE                               0x4062 // Unused Var
 #define VAR_ROUTE104_STATE                               0x4063
 #define VAR_ROUTE105_STATE                               0x4064 // Unused Var

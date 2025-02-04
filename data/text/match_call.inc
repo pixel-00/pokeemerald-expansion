@@ -2059,11 +2059,11 @@ MatchCall_Text_Roxanne2::
 MatchCall_Text_Roxanne3::
 	.string "ROXANNE: {PLAYER}!\n"
 	.string "My GYM is ready!\p"
-	.string "Please visit RUSTBORO whenever\n"
+	.string "Please visit NEWHOPE whenever\n"
 	.string "you can!$"
 
 MatchCall_Text_Roxanne4::
-	.string "ROXANNE: At the RUSTBORO GYM,\n"
+	.string "ROXANNE: At the NEWHOPE GYM,\n"
 	.string "the fact that we battled, {PLAYER},\l"
 	.string "is a matter of pride.$"
 
@@ -2354,7 +2354,7 @@ MatchCall_Text_May2::
 MatchCall_Text_May3::
 	.string "MAY: Hi, {PLAYER}{KUN}!\p"
 	.string "Do you remember a man named\n"
-	.string "the CUTTER in RUSTBORO?\l"
+	.string "the CUTTER in NEWHOPE?\l"
 	.string "He had a house there, remember?\p"
 	.string "Well, I found out his younger\n"
 	.string "brother lives in MAUVILLE.\p"
@@ -2367,7 +2367,7 @@ MatchCall_Text_May4::
 	.string "MAY: {PLAYER}{KUN}?\p"
 	.string "RUSTURF TUNNEL…\n"
 	.string "They named it that because it\l"
-	.string "joins RUSTBORO and VERDANTURF.$"
+	.string "joins NEWHOPE and VERDANTURF.$"
 
 MatchCall_Text_May5::
 	.string "MAY: {PLAYER}{KUN}, how are you?\p"
@@ -2480,7 +2480,7 @@ MatchCall_Text_Brendan2::
 MatchCall_Text_Brendan3::
 	.string "BRENDAN: Yo, {PLAYER}!\p"
 	.string "Do you remember a guy named\n"
-	.string "the CUTTER in RUSTBORO?\l"
+	.string "the CUTTER in NEWHOPE?\l"
 	.string "He had a house there, right?\p"
 	.string "Well, it turns out his little\n"
 	.string "brother lives in MAUVILLE.\p"
@@ -2492,7 +2492,7 @@ MatchCall_Text_Brendan3::
 MatchCall_Text_Brendan4::
 	.string "BRENDAN: This voice… {PLAYER}?\p"
 	.string "They gave RUSTURF TUNNEL its name\n"
-	.string "because it joins RUSTBORO and\l"
+	.string "because it joins NEWHOPE and\l"
 	.string "VERDANTURF.\p"
 	.string "Did you know that?$"
 
@@ -2710,7 +2710,7 @@ MatchCall_Text_Scott7::
 	.string "the POKéNAV's service area…$"
 
 MatchCall_Text_Norman1::
-	.string "DAD: In RUSTBORO, there's a man\n"
+	.string "DAD: In NEWHOPE, there's a man\n"
 	.string "that goes by the odd name of\l"
 	.string "the CUTTER.\p"
 	.string "If you're in the area, you should\n"
@@ -2882,7 +2882,7 @@ MatchCall_Text_MrStone3::
 	.string "MR. STONE: Oh! {PLAYER}{KUN}!\p"
 	.string "Ah, so you've met STEVEN!\n"
 	.string "I'd better reward you, then!\p"
-	.string "When you visit RUSTBORO again,\n"
+	.string "When you visit NEWHOPE again,\n"
 	.string "come see me at my office.\p"
 	.string "I'll be waiting for you!$"
 

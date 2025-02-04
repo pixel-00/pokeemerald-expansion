@@ -1067,7 +1067,6 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
     {
         .battleScript = BattleScript_EffectMudSport,
         .battleTvScore = 0, // TODO: Assign points
-        .encourageEncore = TRUE,
     },
 
     [EFFECT_WEATHER_BALL] =
@@ -1100,7 +1099,6 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
     {
         .battleScript = BattleScript_EffectWaterSport,
         .battleTvScore = 4,
-        .encourageEncore = TRUE,
     },
 
     [EFFECT_CALM_MIND] =
